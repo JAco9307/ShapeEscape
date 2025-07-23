@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://dqu5h8wloab26"]
+
+[ext_resource type="PackedScene" uid="uid://du8lkrvnc16gl" path="res://objects/Rotatable.tscn" id="1_6b465"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6b465"]
+size = Vector3(1, 1, 5.99051)
+
+[node name="Rotatable" instance=ExtResource("1_6b465")]
+initialMass = 6.0
+yTorqueMult = 200.0
+zTorqueMult = 80.0
+
+[node name="CollisionShape3D" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.66452, -0.00264168)
+shape = SubResource("BoxShape3D_6b465")
+
+[node name="MeshInstance3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 5.96618, 0, 0.676347, 0)

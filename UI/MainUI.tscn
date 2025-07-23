@@ -1,0 +1,48 @@
+[gd_scene load_steps=4 format=3 uid="uid://c2qnrd7mneksy"]
+
+[ext_resource type="Script" uid="uid://dhy3kcnievdpq" path="res://UI/MainUI.gd" id="1_xv1u1"]
+[ext_resource type="Script" uid="uid://14odr4cov1sm" path="res://UI/ShapeSelectUI.gd" id="2_wwh41"]
+[ext_resource type="Script" uid="uid://ckv3v1nabgbb3" path="res://UI/MOney.gd" id="3_wa2eh"]
+
+[node name="MainUi" type="CanvasLayer"]
+script = ExtResource("1_xv1u1")
+
+[node name="ShapeButton" type="Button" parent="."]
+offset_left = 869.0
+offset_top = 533.0
+offset_right = 1101.0
+offset_bottom = 616.0
+text = "Shape"
+
+[node name="ShapeSelect" type="PanelContainer" parent="."]
+offset_left = 169.0
+offset_top = 52.0
+offset_right = 896.0
+offset_bottom = 516.0
+script = ExtResource("2_wwh41")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ShapeSelect"]
+layout_mode = 2
+
+[node name="ShapeButtons" type="HFlowContainer" parent="ShapeSelect/ScrollContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/h_separation = 100
+
+[node name="Label" type="Label" parent="."]
+offset_left = 8.0
+offset_top = 6.0
+offset_right = 228.0
+offset_bottom = 77.0
+theme_override_colors/font_color = Color(0.778638, 0.426824, 0.518148, 1)
+theme_override_colors/font_shadow_color = Color(0.611765, 0.788235, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 0.705882, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 13
+theme_override_font_sizes/font_size = 50
+text = "Money: 0"
+script = ExtResource("3_wa2eh")
+
+[connection signal="pressed" from="ShapeButton" to="." method="_on_shape_button_pressed"]

@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://du8lkrvnc16gl"]
+
+[ext_resource type="Script" uid="uid://cvqlceaui3krb" path="res://objects/Rotatable.gd" id="1_vn420"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_vn420"]
+friction = 0.26
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vn420"]
+size = Vector3(1, 1.22449, 1.01085)
+
+[sub_resource type="BoxMesh" id="BoxMesh_gxu5i"]
+
+[node name="Rotatable" type="RigidBody3D"]
+physics_material_override = SubResource("PhysicsMaterial_vn420")
+script = ExtResource("1_vn420")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.66452, 0.0126419)
+shape = SubResource("BoxShape3D_vn420")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.676347, 0)
+mesh = SubResource("BoxMesh_gxu5i")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://b3brrwp5525q2"]
+
+[ext_resource type="PackedScene" uid="uid://djppmw257tqac" path="res://models/horse.glb" id="1_ercyr"]
+[ext_resource type="Script" uid="uid://ck5f4x6jx82bk" path="res://UI/SelectableShape/2d_view_object.gd" id="1_t7wwi"]
+
+[node name="2dViewObject" type="Node3D"]
+script = ExtResource("1_t7wwi")
+
+[node name="horse" parent="." instance=ExtResource("1_ercyr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.1146, 0)
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D"]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.0143, 0)
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.7226, -1.49836)
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.39693, 1.80697)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.99875, -0.0266758, 0.0422761, -0.0149347, 0.966319, 0.256915, -0.0477056, 0.255962, -0.965509, 0.0691954, 3.33261, -8.46037)
+fov = 43.6717
+
+[editable path="horse"]

@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://bggp3whsy8eji"]
+
+[ext_resource type="PackedScene" uid="uid://du8lkrvnc16gl" path="res://objects/Rotatable.tscn" id="1_d5pdq"]
+[ext_resource type="PackedScene" uid="uid://4xn3j7i2njxp" path="res://models/shark.glb" id="2_d5pdq"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_nq7gm"]
+points = PackedVector3Array(-0.133125, -1.72987, 0.749627, 0.132929, -1.72987, 0.749627, -1, -1.00017, 2.81724, -1, -1.17326, 0.749627, -1, -1.00017, -1.00042, -0.696554, -0.364853, -4.35659, 1, -1.17326, 0.749627, 1, -1.00017, 2.81724, 0.696359, -0.364853, -4.35659, 1, -1.00017, -1.00042, -0.686766, -0.563619, 3.42268, -1, 0.999828, 2.81724, -1, 0.999828, -1.00042, -0.696554, 0.364511, -4.35659, 1, 0.999828, 2.81724, 0.68657, -0.563619, 3.42268, 0.696359, 0.364511, -4.35659, 1, 0.999828, -1.00042, -0.686766, 0.563277, 3.42268, -0.5, 1.67717, 0.900414, -0.5, 1.67717, 0.598839, 0.5, 1.67717, 0.900414, 0.68657, 0.563277, 3.42268, 0.5, 1.67717, 0.598839)
+
+[node name="Horse" instance=ExtResource("1_d5pdq")]
+
+[node name="CollisionShape3D" parent="." index="0"]
+disabled = true
+
+[node name="MeshInstance3D" parent="." index="1"]
+visible = false
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="." index="2"]
+transform = Transform3D(0.946571, 0, -0.322497, 0, 1, 0, 0.322497, 0, 0.946571, -0.709573, 1.54197, -2.37729)
+shape = SubResource("ConvexPolygonShape3D_nq7gm")
+
+[node name="shark" parent="." index="3" instance=ExtResource("2_d5pdq")]
+transform = Transform3D(0.946571, 0, -0.322497, 0, 1, 0, 0.322497, 0, 0.946571, -0.709573, 1.54197, -2.37729)
+
+[editable path="shark"]
