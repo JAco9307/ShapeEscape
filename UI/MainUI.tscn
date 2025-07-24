@@ -80,18 +80,4 @@ position = Vector2(-320, 1360)
 scale = Vector2(2.2, 2.2)
 texture = ExtResource("7_475mu")
 
-[node name="Label2" type="Label" parent="AnimatedSprite2D"]
-offset_left = -582.0
-offset_top = 112.0
-offset_right = -496.0
-offset_bottom = 183.0
-text = "test"
-
-[node name="Label3" type="Label" parent="AnimatedSprite2D"]
-offset_left = -598.0
-offset_top = 280.0
-offset_right = -558.0
-offset_bottom = 303.0
-text = "test2"
-
 [connection signal="pressed" from="ShapeButton" to="." method="_on_shape_button_pressed"]
