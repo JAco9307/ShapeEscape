@@ -86,7 +86,6 @@ scale = Vector2(2.2, 2.2)
 texture = ExtResource("7_475mu")
 
 [node name="GachaPanel" type="Panel" parent="."]
-visible = false
 offset_left = 150.0
 offset_top = 32.0
 offset_right = 937.0
@@ -138,4 +137,6 @@ offset_bottom = 626.0
 text = "Get more shapes!!"
 
 [connection signal="pressed" from="ShapeButton" to="." method="_on_shape_button_pressed"]
+[connection signal="pressed" from="GachaPanel/Button1p" to="GachaPanel" method="_on_button_1p_pressed"]
+[connection signal="pressed" from="GachaPanel/Button10p" to="GachaPanel" method="_on_button_10p_pressed"]
 [connection signal="pressed" from="GachaButton" to="." method="_on_gacha_button_pressed"]
