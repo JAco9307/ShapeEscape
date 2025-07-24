@@ -6,6 +6,8 @@ var shapes = GlobalVariables.shapes
 
 var offset = Vector3(0, 10000, 10000)
 
+signal closed
+
 func _ready() -> void:
 	pass
 
@@ -52,3 +54,4 @@ func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
 		if event.button_index == MouseButton.MOUSE_BUTTON_RIGHT:
 				close()
+				closed.emit()
