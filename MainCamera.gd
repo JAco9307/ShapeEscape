@@ -2,7 +2,7 @@ extends Camera3D
 
 var offset = Vector3 (5, 25, 0)
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Input.is_action_pressed("Zoom"):
 		offset = Vector3 (5, 50, 0)
 	elif Input.is_action_pressed("ZoomIn"):

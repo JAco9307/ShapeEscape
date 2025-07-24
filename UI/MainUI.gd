@@ -13,7 +13,6 @@ func _on_shape_button_pressed() -> void:
 	
 func _on_gacha_button_pressed() -> void:
 	$ShapeButton.visible = false
-	$InventoryShape.close()
 	$GachaPanel.visible = true
 	$GachaButton.visible = false
 	

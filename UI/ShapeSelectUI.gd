@@ -13,6 +13,7 @@ func _ready() -> void:
 
 func close():
 	visible = false
+	closed.emit()
 	for button in %ShapeButtons.get_children():
 		button.queue_free()
 

@@ -6,7 +6,7 @@ var axis = Vector3(0,1,0)
 func _ready():
 	camera = get_viewport().get_camera_3d()
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if GlobalVariables.selectedObject == null: #free hand
 		global_position = get_global_mouse_position()
 		frame = 0

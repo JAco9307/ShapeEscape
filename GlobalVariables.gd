@@ -1,6 +1,6 @@
 extends Node
 
-var money:int
+var money:int = 50
 var player:Player
 var selectedObject
 var handrot:Vector3 = Vector3.ZERO
@@ -15,64 +15,64 @@ var shapes = [
 	},
 	{
 		"object": preload("res://models/shark.glb"),
-		"name": "shark",
-		"owned": 1,
-		"rarity": 1,
+		"name": "Common shark",
+		"owned": 0,
+		"rarity": 5,
 		"scene": preload("res://objects/shark.tscn")
 	},
 	{
 		"object": preload("res://models/shark.glb"),
 		"name": "shark2",
-		"owned": 1,
+		"owned": 0,
 		"rarity": 1,
 		"scene": preload("res://objects/shark.tscn")
 	},
 	{
 		"object": preload("res://models/shark.glb"),
 		"name": "shark3",
-		"owned": 2,
+		"owned": 0,
 		"rarity": 1,
 		"scene": preload("res://objects/shark.tscn")
 	},
 	{
 		"object": preload("res://models/shark.glb"),
 		"name": "shark4",
-		"owned": 2,
+		"owned": 0,
 		"rarity": 1,
 		"scene": preload("res://objects/shark.tscn")
 	},
 	{
 		"object": preload("res://models/shark.glb"),
 		"name": "shark5",
-		"owned": 2,
+		"owned": 0,
 		"rarity": 1,
 		"scene": preload("res://objects/shark.tscn")
 	},
 	{
 		"object": preload("res://models/shark.glb"),
 		"name": "shark6",
-		"owned": 2,
+		"owned": 0,
 		"rarity": 1,
 		"scene": preload("res://objects/shark.tscn")
 	},
 	{
 		"object": preload("res://models/shark.glb"),
 		"name": "shark7",
-		"owned": 2,
+		"owned": 0,
 		"rarity": 1,
 		"scene": preload("res://objects/shark.tscn")
 	},
 	{
 		"object": preload("res://models/shark.glb"),
 		"name": "shark8",
-		"owned": 2,
+		"owned": 0,
 		"rarity": 1,
 		"scene": preload("res://objects/shark.tscn")
 	},
 	{
 		"object": preload("res://models/shark.glb"),
 		"name": "shark9",
-		"owned": 2,
+		"owned": 0,
 		"rarity": 1,
 		"scene": preload("res://objects/shark.tscn")
 	},
