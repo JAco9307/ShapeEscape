@@ -1,7 +1,9 @@
 extends CanvasLayer
 
 func _ready() -> void:
-	$ShapeSelect.visible = false
+	$InventoryShape.visible = false
 
 func _on_shape_button_pressed() -> void:
-	$ShapeSelect.visible = true
+	if $InventoryShape.visible == false:
+		$InventoryShape.visible = true
+		$InventoryShape.setup_buttons()
