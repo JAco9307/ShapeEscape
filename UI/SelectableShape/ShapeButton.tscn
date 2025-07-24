@@ -4,36 +4,40 @@
 [ext_resource type="PackedScene" uid="uid://b3brrwp5525q2" path="res://UI/SelectableShape/2dViewObject.tscn" id="1_tvnn6"]
 
 [node name="ShapeButton" type="Button"]
-custom_minimum_size = Vector2(200, 200)
+custom_minimum_size = Vector2(150, 150)
 offset_left = 395.0
 offset_top = 205.0
-offset_right = 642.0
-offset_bottom = 405.0
+offset_right = 577.0
+offset_bottom = 385.0
 script = ExtResource("1_itppa")
 
 [node name="SubViewport" type="SubViewport" parent="."]
+size = Vector2i(200, 200)
 
 [node name="ViewObject" parent="SubViewport" instance=ExtResource("1_tvnn6")]
 unique_name_in_owner = true
 
+[node name="Camera3D" parent="SubViewport/ViewObject" index="5"]
+fov = 40.0
+
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
-offset_right = 246.0
-offset_bottom = 200.0
+offset_right = 187.0
+offset_bottom = 177.0
 expand_mode = 1
 
 [node name="Info" type="Label" parent="."]
 layout_mode = 0
-offset_left = 2.0
-offset_top = 201.0
-offset_right = 248.0
-offset_bottom = 240.0
+offset_left = -11.0
+offset_top = -2.0
+offset_right = 195.0
+offset_bottom = 47.0
 theme_override_colors/font_color = Color(1, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0.882353, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 1, 1)
 theme_override_constants/outline_size = 8
 theme_override_constants/shadow_outline_size = 14
-theme_override_font_sizes/font_size = 28
+theme_override_font_sizes/font_size = 20
 text = "Horse - 5 dollars"
 horizontal_alignment = 1
 vertical_alignment = 1
