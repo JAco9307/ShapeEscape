@@ -34,8 +34,8 @@ func _input(event: InputEvent) -> void:
 				close()
 
 func _on_button_1p_pressed() -> void:
-	if GlobalVariables.money >= 5:
-		GlobalVariables.money -= 5
+	if GlobalVariables.money >= 20:
+		GlobalVariables.money -= 20
 		var shape = singlepull()
 		shape.owned += 1
 		$PanelContainer.clear_roll()
@@ -44,8 +44,8 @@ func _on_button_1p_pressed() -> void:
 		nomoney.emit()
 
 func _on_button_10p_pressed() -> void:
-	if GlobalVariables.money >= 45:
-		GlobalVariables.money -= 45
+	if GlobalVariables.money >= 199:
+		GlobalVariables.money -= 200
 		$PanelContainer.clear_roll()
 		var pulledshapes:Array
 		

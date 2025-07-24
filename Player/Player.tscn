@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bubyfj3d0t4wr"]
 
 [ext_resource type="Script" uid="uid://cayn4psbfrpj1" path="res://Player/Player.gd" id="1_q3lat"]
-[ext_resource type="PackedScene" uid="uid://dxnty4qdey1la" path="res://objects/horse.tscn" id="2_tok1r"]
+[ext_resource type="PackedScene" uid="uid://dxnty4qdey1la" path="res://objects/Animals/horse.tscn" id="2_tok1r"]
 
 [node name="Player" type="Node3D"]
 script = ExtResource("1_q3lat")

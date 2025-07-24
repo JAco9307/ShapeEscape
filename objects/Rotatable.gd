@@ -3,7 +3,7 @@ extends RigidBody3D
 @export var initialMass:float = 5
 @export var yTorqueMult:float = 20
 @export var zTorqueMult:float = 20
-@export var mouse_sensitivity = 0.02
+@export var mouse_sensitivity = 0.002
 
 var prev_mouse_position
 var next_mouse_position

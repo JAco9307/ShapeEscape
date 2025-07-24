@@ -14,11 +14,11 @@ disabled = true
 [node name="MeshInstance3D" parent="." index="1"]
 visible = false
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="." index="2"]
+[node name="horse" parent="." index="2" instance=ExtResource("2_2bhuw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.69673, 0)
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." index="3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.69673, 0)
 shape = SubResource("ConcavePolygonShape3D_w18gr")
-
-[node name="horse" parent="." index="3" instance=ExtResource("2_2bhuw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.69673, 0)
 
 [editable path="horse"]

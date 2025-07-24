@@ -1,10 +1,12 @@
 extends CanvasLayer
 
+
 func _ready() -> void:
 	$InventoryShape.visible = false
 	$GachaButton.visible = false
 	$GachaPanel.visible = false
-
+	$DogMonch._on_signal()
+	
 func _on_shape_button_pressed() -> void:
 	if $InventoryShape.visible == false:
 		$InventoryShape.visible = true

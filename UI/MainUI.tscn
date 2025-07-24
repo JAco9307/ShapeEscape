@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://c2qnrd7mneksy"]
+[gd_scene load_steps=28 format=3 uid="uid://c2qnrd7mneksy"]
 
 [ext_resource type="Script" uid="uid://dhy3kcnievdpq" path="res://UI/MainUI.gd" id="1_xv1u1"]
 [ext_resource type="Script" uid="uid://14odr4cov1sm" path="res://UI/ShapeSelectUI.gd" id="2_wwh41"]
@@ -12,6 +12,12 @@
 [ext_resource type="Texture2D" uid="uid://det83wsqlf7gn" path="res://UI/Gacha/NoMoneyWarn.png" id="10_e10a1"]
 [ext_resource type="Script" uid="uid://bruwpdkd55luk" path="res://UI/NoMoneySprite.gd" id="11_i0lr5"]
 [ext_resource type="Script" uid="uid://c878p30wlmycf" path="res://UI/panel_container.gd" id="12_i0lr5"]
+[ext_resource type="Script" uid="uid://bc3pbjxs3wyvf" path="res://UI/hpbar.gd" id="13_r3ckc"]
+[ext_resource type="Script" uid="uid://bd2vfvt1b0ebn" path="res://UI/dog_monch.gd" id="14_8tlod"]
+[ext_resource type="Texture2D" uid="uid://bitpuna84m4mm" path="res://UI/MoneyEater/evildogwalk1.png" id="15_tdrfi"]
+[ext_resource type="Texture2D" uid="uid://c8cp32145eig6" path="res://UI/MoneyEater/evildogwalk2.png" id="16_mvdky"]
+[ext_resource type="Texture2D" uid="uid://k3ubi3qplbwj" path="res://UI/MoneyEater/evildogchomp1.png" id="17_qw6lw"]
+[ext_resource type="Texture2D" uid="uid://do4hg6sewtl5n" path="res://UI/MoneyEater/evildogchomp2.png" id="18_o8o8p"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ahrf8"]
 animations = [{
@@ -24,6 +30,119 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Gradient" id="Gradient_r3ckc"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_je4cx"]
+gradient = SubResource("Gradient_r3ckc")
+fill_from = Vector2(0.208738, 0)
+fill_to = Vector2(1, 0.572816)
+
+[sub_resource type="Animation" id="Animation_mc3dc"]
+resource_name = "dogwalk"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("DogMonch/AnimatedSprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333333, 2.93333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(952, 234), Vector2(-20, -250)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("DogMonch/AnimatedSprite2D:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0333333, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [&"default", &"eat"]
+}
+
+[sub_resource type="Animation" id="Animation_0n75x"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("DogMonch/AnimatedSprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(952, 234)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("DogMonch/AnimatedSprite2D:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"eat"]
+}
+
+[sub_resource type="Animation" id="Animation_quk8w"]
+resource_name = "Dogleave"
+
+[sub_resource type="Animation" id="Animation_1wmd6"]
+resource_name = "dogleave"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("DogMonch/AnimatedSprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.966667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-20, -250), Vector2(-550, -200)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5vn7e"]
+_data = {
+&"Dogleave": SubResource("Animation_quk8w"),
+&"RESET": SubResource("Animation_0n75x"),
+&"dogleave": SubResource("Animation_1wmd6"),
+&"dogwalk": SubResource("Animation_mc3dc")
+}
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wjiis"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_tdrfi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_mvdky")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.3,
+"texture": ExtResource("17_qw6lw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_o8o8p")
+}],
+"loop": true,
+"name": &"eat",
 "speed": 5.0
 }]
 
@@ -167,6 +286,39 @@ offset_right = 659.0
 offset_bottom = 626.0
 text = "Get more shapes!!"
 
+[node name="hpbar" type="TextureProgressBar" parent="."]
+offset_left = 773.0
+offset_top = 13.0
+offset_right = 1135.0
+offset_bottom = 53.0
+value = 100.0
+nine_patch_stretch = true
+texture_progress = SubResource("GradientTexture2D_je4cx")
+tint_under = Color(1, 0.360783, 0.555143, 1)
+tint_over = Color(0.276729, 0.65352, 0, 1)
+tint_progress = Color(0, 0.955437, 0.229578, 1)
+script = ExtResource("13_r3ckc")
+
+[node name="DogMonch" type="TextureRect" parent="."]
+offset_left = 404.0
+offset_top = 303.0
+offset_right = 632.0
+offset_bottom = 485.0
+script = ExtResource("14_8tlod")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="DogMonch"]
+root_node = NodePath("../..")
+libraries = {
+&"": SubResource("AnimationLibrary_5vn7e")
+}
+movie_quit_on_finish = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="DogMonch"]
+position = Vector2(952, 234)
+sprite_frames = SubResource("SpriteFrames_wjiis")
+animation = &"eat"
+frame_progress = 0.228237
+
 [connection signal="pressed" from="ShapeButton" to="." method="_on_shape_button_pressed"]
 [connection signal="closed" from="InventoryShape" to="." method="_on_inventory_shape_closed"]
 [connection signal="closed" from="GachaPanel" to="." method="_on_gacha_panel_closed"]
@@ -174,3 +326,4 @@ text = "Get more shapes!!"
 [connection signal="pressed" from="GachaPanel/Button1p" to="GachaPanel" method="_on_button_1p_pressed"]
 [connection signal="pressed" from="GachaPanel/Button10p" to="GachaPanel" method="_on_button_10p_pressed"]
 [connection signal="pressed" from="GachaButton" to="." method="_on_gacha_button_pressed"]
+[connection signal="animation_finished" from="DogMonch/AnimationPlayer" to="DogMonch" method="_on_animation_player_animation_finished"]
