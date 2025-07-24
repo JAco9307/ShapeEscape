@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bt5a8babn8gyn"]
+[gd_scene load_steps=8 format=3 uid="uid://bt5a8babn8gyn"]
 
 [ext_resource type="PackedScene" uid="uid://bubyfj3d0t4wr" path="res://Player/Player.tscn" id="1_03owx"]
 [ext_resource type="Script" uid="uid://caucan7ubuwya" path="res://MainCamera.gd" id="2_wkp8b"]
@@ -7,17 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://g5m48diqvglc" path="res://Surfaces/Floor.tscn" id="6_lgr22"]
 [ext_resource type="PackedScene" uid="uid://ch6blfiqhtt67" path="res://objects/Animals/raccoon.tscn" id="7_lgr22"]
 [ext_resource type="PackedScene" uid="uid://c2qnrd7mneksy" path="res://UI/MainUI.tscn" id="8_trn2v"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_glv2v"]
-albedo_color = Color(0.356863, 1, 1, 1)
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_uu6xs"]
-material = SubResource("StandardMaterial3D_glv2v")
-size = Vector2(30, 30)
-
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_glv2v"]
-height = 1.0
-radius = 200.0
 
 [node name="Main" type="Node3D"]
 
@@ -30,23 +19,13 @@ script = ExtResource("2_wkp8b")
 
 [node name="RayCast3D" type="RayCast3D" parent="Camera3D"]
 
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -167.225, 0)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
-mesh = SubResource("PlaneMesh_uu6xs")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.494415, 0)
-shape = SubResource("CylinderShape3D_glv2v")
-
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.177645, -0.645417, 0.742886, -0.293885, 0.685651, 0.665968, -0.939188, -0.336629, -0.067876, 15.6558, 10.5503, -0.157694)
 
 [node name="MainUi" parent="." instance=ExtResource("8_trn2v")]
 
 [node name="Rotatable" parent="." instance=ExtResource("5_fos0i")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.534588, 0.00558501, -0.902103)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.28346, -3.65879, 1.78812)
 
 [node name="Rotatable2" parent="." instance=ExtResource("5_fos0i")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.2561, 0.00558501, 41.8306)
