@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://c2qnrd7mneksy"]
+[gd_scene load_steps=11 format=3 uid="uid://c2qnrd7mneksy"]
 
 [ext_resource type="Script" uid="uid://dhy3kcnievdpq" path="res://UI/MainUI.gd" id="1_xv1u1"]
 [ext_resource type="Script" uid="uid://14odr4cov1sm" path="res://UI/ShapeSelectUI.gd" id="2_wwh41"]
@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://c7je5mlm2sdxm" path="res://UI/Hand/grab.png" id="5_475mu"]
 [ext_resource type="Script" uid="uid://c20fkrqg56dr3" path="res://UI/ArmSprite.gd" id="6_uqb74"]
 [ext_resource type="Texture2D" uid="uid://3ubq0qajrtrm" path="res://UI/Hand/arm.png" id="7_475mu"]
+[ext_resource type="Theme" uid="uid://bool5gjv6pje3" path="res://UI/generaltheme.tres" id="8_uqb74"]
+[ext_resource type="Script" uid="uid://7mcyg3ijl6bn" path="res://UI/gacha_panel.gd" id="9_ahrf8"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ahrf8"]
 animations = [{
@@ -83,11 +85,57 @@ position = Vector2(-320, 1360)
 scale = Vector2(2.2, 2.2)
 texture = ExtResource("7_475mu")
 
-[node name="GachaMenu" type="PanelContainer" parent="."]
+[node name="GachaPanel" type="Panel" parent="."]
 visible = false
-offset_left = 169.0
-offset_top = 52.0
-offset_right = 896.0
-offset_bottom = 516.0
+offset_left = 150.0
+offset_top = 32.0
+offset_right = 937.0
+offset_bottom = 523.0
+theme = ExtResource("8_uqb74")
+script = ExtResource("9_ahrf8")
+
+[node name="Label" type="Label" parent="GachaPanel"]
+offset_left = 18.0
+offset_top = 32.0
+offset_right = 745.0
+offset_bottom = 55.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 1, 1)
+theme_override_constants/outline_size = 12
+theme_override_constants/shadow_outline_size = 24
+text = "Unlock new shapes with pure luck!!"
+horizontal_alignment = 1
+
+[node name="Button1p" type="Button" parent="GachaPanel"]
+offset_left = 126.0
+offset_top = 357.0
+offset_right = 333.0
+offset_bottom = 451.0
+theme = ExtResource("8_uqb74")
+text = "1x shape pull
+5 Money"
+
+[node name="Button10p" type="Button" parent="GachaPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.168
+anchor_bottom = 0.317
+offset_left = 435.0
+offset_top = 364.0
+offset_right = 522.784
+offset_bottom = 307.353
+theme = ExtResource("8_uqb74")
+text = "10x shape pull
+45 Money"
+
+[node name="GachaButton" type="Button" parent="."]
+unique_name_in_owner = true
+offset_left = 428.0
+offset_top = 532.0
+offset_right = 659.0
+offset_bottom = 626.0
+text = "Get more shapes!!"
 
 [connection signal="pressed" from="ShapeButton" to="." method="_on_shape_button_pressed"]
+[connection signal="pressed" from="GachaButton" to="." method="_on_gacha_button_pressed"]
