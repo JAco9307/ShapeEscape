@@ -40,33 +40,8 @@ gradient = SubResource("Gradient_r3ckc")
 fill_from = Vector2(0.208738, 0)
 fill_to = Vector2(1, 0.572816)
 
-[sub_resource type="Animation" id="Animation_mc3dc"]
-resource_name = "dogwalk"
-length = 3.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("DogMonch/AnimatedSprite2D:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0.0333333, 2.93333),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(952, 234), Vector2(-20, -250)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("DogMonch/AnimatedSprite2D:animation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0.0333333, 3),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [&"default", &"eat"]
-}
+[sub_resource type="Animation" id="Animation_quk8w"]
+resource_name = "Dogleave"
 
 [sub_resource type="Animation" id="Animation_0n75x"]
 length = 0.001
@@ -95,9 +70,6 @@ tracks/1/keys = {
 "values": [&"eat"]
 }
 
-[sub_resource type="Animation" id="Animation_quk8w"]
-resource_name = "Dogleave"
-
 [sub_resource type="Animation" id="Animation_1wmd6"]
 resource_name = "dogleave"
 tracks/0/type = "value"
@@ -111,6 +83,34 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(-20, -250), Vector2(-550, -200)]
+}
+
+[sub_resource type="Animation" id="Animation_mc3dc"]
+resource_name = "dogwalk"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("DogMonch/AnimatedSprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333333, 2.93333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(952, 234), Vector2(-20, -250)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("DogMonch/AnimatedSprite2D:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0333333, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [&"default", &"eat"]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_5vn7e"]
@@ -239,7 +239,7 @@ offset_right = 292.0
 offset_bottom = 574.0
 theme = ExtResource("8_uqb74")
 text = "1x shape pull
-5 Helicoin"
+20 Helicoin"
 
 [node name="Button10p" type="Button" parent="GachaPanel"]
 layout_mode = 1
@@ -252,9 +252,10 @@ offset_right = 534.784
 offset_bottom = 386.068
 theme = ExtResource("8_uqb74")
 text = "10x shape pull
-45 Helicoin"
+199 Helicoin"
 
 [node name="Sprite2D" type="Sprite2D" parent="GachaPanel"]
+z_index = 1
 position = Vector2(369, 202)
 scale = Vector2(1.50667, 1.135)
 texture = ExtResource("10_e10a1")
@@ -319,6 +320,7 @@ sprite_frames = SubResource("SpriteFrames_wjiis")
 animation = &"eat"
 frame_progress = 0.228237
 
+[connection signal="dogmunch" from="Label" to="DogMonch" method="_on_label_dogmunch"]
 [connection signal="pressed" from="ShapeButton" to="." method="_on_shape_button_pressed"]
 [connection signal="closed" from="InventoryShape" to="." method="_on_inventory_shape_closed"]
 [connection signal="closed" from="GachaPanel" to="." method="_on_gacha_panel_closed"]

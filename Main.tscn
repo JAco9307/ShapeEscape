@@ -2,10 +2,10 @@
 
 [ext_resource type="PackedScene" uid="uid://bubyfj3d0t4wr" path="res://Player/Player.tscn" id="1_03owx"]
 [ext_resource type="Script" uid="uid://caucan7ubuwya" path="res://MainCamera.gd" id="2_wkp8b"]
-[ext_resource type="PackedScene" uid="uid://tv34yqlttubv" path="res://objects/rotatableLarge.tscn" id="5_fos0i"]
 [ext_resource type="PackedScene" uid="uid://deqhu8psa7fyn" path="res://locations/HauntedMansion.tscn" id="6_3dxm6"]
 [ext_resource type="PackedScene" uid="uid://g5m48diqvglc" path="res://Surfaces/Floor.tscn" id="6_lgr22"]
 [ext_resource type="PackedScene" uid="uid://ch6blfiqhtt67" path="res://objects/Animals/raccoon.tscn" id="7_lgr22"]
+[ext_resource type="PackedScene" uid="uid://hbd5hkve261k" path="res://objects/Environment/RockBig.tscn" id="7_trn2v"]
 [ext_resource type="PackedScene" uid="uid://c2qnrd7mneksy" path="res://UI/MainUI.tscn" id="8_trn2v"]
 
 [node name="Main" type="Node3D"]
@@ -24,30 +24,6 @@ transform = Transform3D(0.177645, -0.645417, 0.742886, -0.293885, 0.685651, 0.66
 
 [node name="MainUi" parent="." instance=ExtResource("8_trn2v")]
 
-[node name="Rotatable" parent="." instance=ExtResource("5_fos0i")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.28346, -3.65879, 1.78812)
-
-[node name="Rotatable2" parent="." instance=ExtResource("5_fos0i")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.2561, 0.00558501, 41.8306)
-
-[node name="Rotatable3" parent="." instance=ExtResource("5_fos0i")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.2561, 0.00558501, -48.0989)
-
-[node name="Rotatable10" parent="." instance=ExtResource("5_fos0i")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.4848, 0.00558501, -0.586246)
-
-[node name="Rotatable8" parent="." instance=ExtResource("5_fos0i")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.3335, 0.00558501, 43.1111)
-
-[node name="Rotatable9" parent="." instance=ExtResource("5_fos0i")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.3335, 0.00558501, -46.7001)
-
-[node name="Rotatable11" parent="." instance=ExtResource("5_fos0i")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.69489, 0.00558501, -46.7001)
-
-[node name="Rotatable12" parent="." instance=ExtResource("5_fos0i")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.0831, 0.00558501, 47.6165)
-
 [node name="HauntedMansion" parent="." instance=ExtResource("6_3dxm6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -149.584, -0.689379, -1.69503)
 
@@ -56,3 +32,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0488815, -0.757728, -1.8272
 
 [node name="Raccoon" parent="." instance=ExtResource("7_lgr22")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -55.0482, 0.242264, 11.5166)
+
+[node name="RockBig" parent="." instance=ExtResource("7_trn2v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44.973, 5.43516, -12.223)

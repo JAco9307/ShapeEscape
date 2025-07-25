@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://tv34yqlttubv"]
+[gd_scene load_steps=3 format=3 uid="uid://1m82htvec2sr"]
 
 [ext_resource type="PackedScene" uid="uid://du8lkrvnc16gl" path="res://objects/Rotatable.tscn" id="1_21koh"]
 
