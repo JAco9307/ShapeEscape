@@ -3,10 +3,11 @@
 [ext_resource type="Script" uid="uid://cvqlceaui3krb" path="res://objects/Rotatable.gd" id="1_vn420"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_vn420"]
-friction = 0.26
+friction = 0.2
+bounce = 0.35
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_vn420"]
-size = Vector3(1, 1.22449, 1.01085)
+size = Vector3(1, 1.22449, 0.992933)
 
 [node name="Rotatable" type="RigidBody3D"]
 physics_material_override = SubResource("PhysicsMaterial_vn420")

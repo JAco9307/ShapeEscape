@@ -19,11 +19,20 @@ func close():
 
 func button_clicked(index):
 	if shapes[index].owned == -1:
-		GlobalVariables.player.change_object(shapes[index].scene.instantiate())
+		var shape = shapes[index].scene.instantiate()
+		shape.physics_material_override.friction = shapes[index].friction
+		shape.physics_material_override.bounce = shapes[index].bounce
+		shape.initialMass = shapes[index].weight
+		GlobalVariables.player.change_object(shape)
 		close()
+		
 	elif shapes[index].owned > 0:
 		shapes[index].owned -= 1
-		GlobalVariables.player.change_object(shapes[index].scene.instantiate())
+		var shape = shapes[index].scene.instantiate()
+		shape.physics_material_override.friction = shapes[index].friction
+		shape.physics_material_override.bounce = shapes[index].bounce
+		shape.initialMass = shapes[index].weight
+		GlobalVariables.player.change_object(shape)
 		close()
 
 func setup_buttons():

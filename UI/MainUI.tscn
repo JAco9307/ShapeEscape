@@ -6,7 +6,7 @@
 [ext_resource type="Theme" uid="uid://bool5gjv6pje3" path="res://UI/generaltheme.tres" id="8_uqb74"]
 [ext_resource type="Script" uid="uid://7mcyg3ijl6bn" path="res://UI/Gacha/gacha_panel.gd" id="9_ahrf8"]
 [ext_resource type="Texture2D" uid="uid://det83wsqlf7gn" path="res://UI/Gacha/NoMoneyWarn.png" id="10_e10a1"]
-[ext_resource type="Script" uid="uid://bruwpdkd55luk" path="res://UI/NoMoneySprite.gd" id="11_i0lr5"]
+[ext_resource type="Script" uid="uid://bruwpdkd55luk" path="res://UI/Gacha/NoMoneySprite.gd" id="11_i0lr5"]
 [ext_resource type="Script" uid="uid://c878p30wlmycf" path="res://UI/panel_container.gd" id="12_i0lr5"]
 [ext_resource type="Script" uid="uid://bc3pbjxs3wyvf" path="res://UI/hpbar.gd" id="13_r3ckc"]
 [ext_resource type="Script" uid="uid://bd2vfvt1b0ebn" path="res://UI/dog_monch.gd" id="14_8tlod"]

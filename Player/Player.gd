@@ -34,4 +34,5 @@ func change_object(object):
 	object.position = objectPosition + Vector3(0, 2, 0)
 	object.rotation = objectRotation
 	object.linear_velocity  = objectVelocity
+
 	playerObject = object

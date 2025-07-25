@@ -26,7 +26,7 @@ radius = 72.2496
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_iriu4"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_c472b"]
-radius = 38.8136
+radius = 56.0
 height = 388.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bt5a8babn8gyn"]
+[gd_scene load_steps=12 format=3 uid="uid://bt5a8babn8gyn"]
 
 [ext_resource type="PackedScene" uid="uid://bubyfj3d0t4wr" path="res://Player/Player.tscn" id="1_03owx"]
 [ext_resource type="Script" uid="uid://caucan7ubuwya" path="res://MainCamera.gd" id="2_wkp8b"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://c2qnrd7mneksy" path="res://UI/MainUI.tscn" id="8_trn2v"]
 [ext_resource type="PackedScene" uid="uid://cru1wb2mirml7" path="res://objects/Environment/RockSmall.tscn" id="9_wkp8b"]
 [ext_resource type="PackedScene" uid="uid://1m82htvec2sr" path="res://objects/rotatableLarge.tscn" id="10_wkp8b"]
+[ext_resource type="PackedScene" uid="uid://dwhaiq5n4rg7g" path="res://objects/Environment/tree.tscn" id="11_20pc6"]
 
 [node name="Main" type="Node3D"]
 
@@ -17,7 +18,7 @@
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42.1941, -0.933056, -2.90973)
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-4.37114e-08, -0.972775, 0.231748, 0, 0.231748, 0.972776, -1, 4.25214e-08, -1.013e-08, -0.213372, 102.096, 0)
+transform = Transform3D(-4.37114e-08, -0.972776, 0.231748, 0, 0.231748, 0.972776, -1, 4.25214e-08, -1.013e-08, -50.7719, 102.096, 0)
 script = ExtResource("2_wkp8b")
 
 [node name="RayCast3D" type="RayCast3D" parent="Camera3D"]
@@ -33,23 +34,43 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -149.584, -0.689379, -1.69503
 [node name="Floor" parent="." instance=ExtResource("6_lgr22")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0488815, -0.757728, -1.82727)
 
+[node name="Rotatable4" parent="Floor" instance=ExtResource("10_wkp8b")]
+transform = Transform3D(0.602317, 0, 0.798257, 0, 1, 0, -0.798257, 0, 0.602317, -46.5388, 0.00558501, -28.3197)
+
 [node name="Raccoon" parent="." instance=ExtResource("7_lgr22")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -55.0482, 0.242264, 11.5166)
 
 [node name="RockBig" parent="." instance=ExtResource("7_trn2v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44.973, 5.43516, -12.223)
-yTorqueMult = 100.0
-zTorqueMult = 100.0
-
-[node name="RockMid" parent="." instance=ExtResource("8_03owx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -55.4851, 3.35801, -3.43609)
-yTorqueMult = 100.0
-zTorqueMult = 100.0
-
-[node name="RockSmall" parent="." instance=ExtResource("9_wkp8b")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46.6435, 2.31943, 6.58049)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56.7712, 10.5349, -18.3717)
 yTorqueMult = 100.0
 zTorqueMult = 100.0
 
 [node name="Rotatable" parent="." instance=ExtResource("10_wkp8b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.2187, -1.17075, 7.69544)
+
+[node name="Rotatable6" parent="." instance=ExtResource("10_wkp8b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.618, 0.016755, -55.8136)
+
+[node name="Rotatable5" parent="." instance=ExtResource("10_wkp8b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -63.5108, 0.01117, 33.0986)
+
+[node name="Rotatable4" parent="." instance=ExtResource("10_wkp8b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -64.1295, 0.00558501, -48.0989)
+
+[node name="RockMid" parent="." instance=ExtResource("8_03owx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -54.842, 3.35801, -4.53507)
+
+[node name="RockSmall" parent="." instance=ExtResource("9_wkp8b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -51.7695, 8.75221, -3.91102)
+
+[node name="RockSmall2" parent="." instance=ExtResource("9_wkp8b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44.2931, 2.31943, 12.5942)
+
+[node name="RockSmall3" parent="." instance=ExtResource("9_wkp8b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -45.175, 6.48399, 13.0912)
+
+[node name="RockSmall4" parent="." instance=ExtResource("9_wkp8b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44.5408, 10.613, 12.3756)
+
+[node name="Tree" parent="." instance=ExtResource("11_20pc6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46.8345, 1.24227, -16.2593)
