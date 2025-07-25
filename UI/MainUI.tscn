@@ -1,10 +1,11 @@
-[gd_scene load_steps=24 format=3 uid="uid://c2qnrd7mneksy"]
+[gd_scene load_steps=25 format=3 uid="uid://c2qnrd7mneksy"]
 
 [ext_resource type="Script" uid="uid://dhy3kcnievdpq" path="res://UI/MainUI.gd" id="1_xv1u1"]
 [ext_resource type="Script" uid="uid://14odr4cov1sm" path="res://UI/ShapeSelectUI.gd" id="2_wwh41"]
 [ext_resource type="Script" uid="uid://ckv3v1nabgbb3" path="res://UI/MOney.gd" id="3_wa2eh"]
 [ext_resource type="Theme" uid="uid://bool5gjv6pje3" path="res://UI/generaltheme.tres" id="8_uqb74"]
 [ext_resource type="Script" uid="uid://7mcyg3ijl6bn" path="res://UI/Gacha/gacha_panel.gd" id="9_ahrf8"]
+[ext_resource type="Texture2D" uid="uid://blkvhq8p7j0pm" path="res://UI/Untitled.png" id="9_lsvm6"]
 [ext_resource type="Texture2D" uid="uid://det83wsqlf7gn" path="res://UI/Gacha/NoMoneyWarn.png" id="10_e10a1"]
 [ext_resource type="Script" uid="uid://bruwpdkd55luk" path="res://UI/Gacha/NoMoneySprite.gd" id="11_i0lr5"]
 [ext_resource type="Script" uid="uid://c878p30wlmycf" path="res://UI/panel_container.gd" id="12_i0lr5"]
@@ -20,8 +21,10 @@
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_je4cx"]
 gradient = SubResource("Gradient_r3ckc")
-fill_from = Vector2(0.208738, 0)
-fill_to = Vector2(1, 0.572816)
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.616505, 0.38835)
+repeat = 1
 
 [sub_resource type="Animation" id="Animation_quk8w"]
 resource_name = "Dogleave"
@@ -255,12 +258,20 @@ offset_right = 659.0
 offset_bottom = 626.0
 text = "Get more shapes!!"
 
-[node name="hpbar" type="TextureProgressBar" parent="."]
-offset_left = 773.0
-offset_top = 13.0
-offset_right = 1135.0
-offset_bottom = 53.0
-value = 100.0
+[node name="Polygon2D" type="Polygon2D" parent="."]
+clip_children = 1
+position = Vector2(1017.25, 4.06355)
+scale = Vector2(0.928635, 0.93957)
+texture = ExtResource("9_lsvm6")
+polygon = PackedVector2Array(23.7424, 19.2901, 5.9841, 45.2446, 1.88602, 77.3462, 13.4973, 114.229, 34.6676, 133.284, 75.2386, 146.808, 110.55, 132.533, 128.582, 116.756, 143.608, 85.9516, 142.854, 58.9029, 130.833, 31.8556, 108.293, 11.5701, 75.9868, 1.05165, 48.9395, 6.31085)
+uv = PackedVector2Array(23.7424, 19.2901, 5.9841, 45.2446, 1.88602, 77.3462, 13.4973, 114.229, 34.6676, 133.284, 75.2386, 146.808, 110.55, 132.533, 128.582, 116.756, 143.608, 85.9516, 142.854, 58.9029, 130.833, 31.8556, 108.293, 11.5701, 75.9868, 1.05165, 48.9395, 6.31085)
+
+[node name="hpbar" type="TextureProgressBar" parent="Polygon2D"]
+offset_left = 4.49578
+offset_top = 6.2859
+offset_right = 140.496
+offset_bottom = 139.286
+fill_mode = 4
 nine_patch_stretch = true
 texture_progress = SubResource("GradientTexture2D_je4cx")
 tint_under = Color(1, 0.360783, 0.555143, 1)
@@ -291,7 +302,7 @@ frame_progress = 0.228237
 [node name="AnimatedSprite2D" parent="." instance=ExtResource("15_5ctpo")]
 position = Vector2(345, 404)
 
-[connection signal="dataout" from="." to="hpbar" method="_on_main_ui_dataout"]
+[connection signal="dataout" from="." to="Polygon2D/hpbar" method="_on_main_ui_dataout"]
 [connection signal="dogmunch" from="Label" to="DogMonch" method="_on_label_dogmunch"]
 [connection signal="pressed" from="ShapeButton" to="." method="_on_shape_button_pressed"]
 [connection signal="closed" from="InventoryShape" to="." method="_on_inventory_shape_closed"]

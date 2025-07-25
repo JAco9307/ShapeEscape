@@ -7,3 +7,4 @@ func _ready() -> void:
 func _on_main_ui_dataout(hp:int, maxhp:int) -> void:
 	self.value = hp
 	self.max_value = maxhp
+	
