@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bt5a8babn8gyn"]
+[gd_scene load_steps=11 format=3 uid="uid://bt5a8babn8gyn"]
 
 [ext_resource type="PackedScene" uid="uid://bubyfj3d0t4wr" path="res://Player/Player.tscn" id="1_03owx"]
 [ext_resource type="Script" uid="uid://caucan7ubuwya" path="res://MainCamera.gd" id="2_wkp8b"]
@@ -6,7 +6,10 @@
 [ext_resource type="PackedScene" uid="uid://g5m48diqvglc" path="res://Surfaces/Floor.tscn" id="6_lgr22"]
 [ext_resource type="PackedScene" uid="uid://ch6blfiqhtt67" path="res://objects/Animals/raccoon.tscn" id="7_lgr22"]
 [ext_resource type="PackedScene" uid="uid://hbd5hkve261k" path="res://objects/Environment/RockBig.tscn" id="7_trn2v"]
+[ext_resource type="PackedScene" uid="uid://116njum48mn0" path="res://objects/Environment/RockMid.tscn" id="8_03owx"]
 [ext_resource type="PackedScene" uid="uid://c2qnrd7mneksy" path="res://UI/MainUI.tscn" id="8_trn2v"]
+[ext_resource type="PackedScene" uid="uid://cru1wb2mirml7" path="res://objects/Environment/RockSmall.tscn" id="9_wkp8b"]
+[ext_resource type="PackedScene" uid="uid://1m82htvec2sr" path="res://objects/rotatableLarge.tscn" id="10_wkp8b"]
 
 [node name="Main" type="Node3D"]
 
@@ -35,3 +38,18 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -55.0482, 0.242264, 11.5166)
 
 [node name="RockBig" parent="." instance=ExtResource("7_trn2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44.973, 5.43516, -12.223)
+yTorqueMult = 100.0
+zTorqueMult = 100.0
+
+[node name="RockMid" parent="." instance=ExtResource("8_03owx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -55.4851, 3.35801, -3.43609)
+yTorqueMult = 100.0
+zTorqueMult = 100.0
+
+[node name="RockSmall" parent="." instance=ExtResource("9_wkp8b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46.6435, 2.31943, 6.58049)
+yTorqueMult = 100.0
+zTorqueMult = 100.0
+
+[node name="Rotatable" parent="." instance=ExtResource("10_wkp8b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.2187, -1.17075, 7.69544)

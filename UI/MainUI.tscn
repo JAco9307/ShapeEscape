@@ -1,12 +1,8 @@
-[gd_scene load_steps=28 format=3 uid="uid://c2qnrd7mneksy"]
+[gd_scene load_steps=24 format=3 uid="uid://c2qnrd7mneksy"]
 
 [ext_resource type="Script" uid="uid://dhy3kcnievdpq" path="res://UI/MainUI.gd" id="1_xv1u1"]
 [ext_resource type="Script" uid="uid://14odr4cov1sm" path="res://UI/ShapeSelectUI.gd" id="2_wwh41"]
 [ext_resource type="Script" uid="uid://ckv3v1nabgbb3" path="res://UI/MOney.gd" id="3_wa2eh"]
-[ext_resource type="Texture2D" uid="uid://dhppfa4y1ur2c" path="res://UI/Hand/open.png" id="4_8cqdv"]
-[ext_resource type="Texture2D" uid="uid://c7je5mlm2sdxm" path="res://UI/Hand/grab.png" id="5_475mu"]
-[ext_resource type="Script" uid="uid://c20fkrqg56dr3" path="res://UI/ArmSprite.gd" id="6_uqb74"]
-[ext_resource type="Texture2D" uid="uid://3ubq0qajrtrm" path="res://UI/Hand/arm.png" id="7_475mu"]
 [ext_resource type="Theme" uid="uid://bool5gjv6pje3" path="res://UI/generaltheme.tres" id="8_uqb74"]
 [ext_resource type="Script" uid="uid://7mcyg3ijl6bn" path="res://UI/Gacha/gacha_panel.gd" id="9_ahrf8"]
 [ext_resource type="Texture2D" uid="uid://det83wsqlf7gn" path="res://UI/Gacha/NoMoneyWarn.png" id="10_e10a1"]
@@ -14,24 +10,11 @@
 [ext_resource type="Script" uid="uid://c878p30wlmycf" path="res://UI/panel_container.gd" id="12_i0lr5"]
 [ext_resource type="Script" uid="uid://bc3pbjxs3wyvf" path="res://UI/hpbar.gd" id="13_r3ckc"]
 [ext_resource type="Script" uid="uid://bd2vfvt1b0ebn" path="res://UI/dog_monch.gd" id="14_8tlod"]
+[ext_resource type="PackedScene" uid="uid://diuwmi2favmjc" path="res://UI/Hand/arm.tscn" id="15_5ctpo"]
 [ext_resource type="Texture2D" uid="uid://bitpuna84m4mm" path="res://UI/MoneyEater/evildogwalk1.png" id="15_tdrfi"]
 [ext_resource type="Texture2D" uid="uid://c8cp32145eig6" path="res://UI/MoneyEater/evildogwalk2.png" id="16_mvdky"]
 [ext_resource type="Texture2D" uid="uid://k3ubi3qplbwj" path="res://UI/MoneyEater/evildogchomp1.png" id="17_qw6lw"]
 [ext_resource type="Texture2D" uid="uid://do4hg6sewtl5n" path="res://UI/MoneyEater/evildogchomp2.png" id="18_o8o8p"]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_ahrf8"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("4_8cqdv")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_475mu")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
 
 [sub_resource type="Gradient" id="Gradient_r3ckc"]
 
@@ -171,6 +154,7 @@ offset_bottom = 616.0
 text = "Shape"
 
 [node name="InventoryShape" type="PanelContainer" parent="."]
+visible = false
 z_index = -2
 offset_left = 169.0
 offset_top = 52.0
@@ -191,24 +175,8 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/h_separation = 100
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(459, 242)
-scale = Vector2(0.5, 0.5)
-sprite_frames = SubResource("SpriteFrames_ahrf8")
-frame = 1
-offset = Vector2(30, -30)
-script = ExtResource("6_uqb74")
-
-[node name="Sprite2D" type="Sprite2D" parent="AnimatedSprite2D"]
-position = Vector2(-138, 510)
-texture = ExtResource("7_475mu")
-
-[node name="Sprite2D" type="Sprite2D" parent="AnimatedSprite2D/Sprite2D"]
-position = Vector2(-320, 1360)
-scale = Vector2(2.2, 2.2)
-texture = ExtResource("7_475mu")
-
 [node name="GachaPanel" type="Panel" parent="."]
+visible = false
 z_index = -1
 offset_left = 150.0
 offset_top = 32.0
@@ -319,6 +287,9 @@ position = Vector2(952, 234)
 sprite_frames = SubResource("SpriteFrames_wjiis")
 animation = &"eat"
 frame_progress = 0.228237
+
+[node name="AnimatedSprite2D" parent="." instance=ExtResource("15_5ctpo")]
+position = Vector2(345, 404)
 
 [connection signal="dogmunch" from="Label" to="DogMonch" method="_on_label_dogmunch"]
 [connection signal="pressed" from="ShapeButton" to="." method="_on_shape_button_pressed"]

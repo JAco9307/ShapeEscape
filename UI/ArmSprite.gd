@@ -11,17 +11,20 @@ func _process(_delta: float) -> void:
 		global_position = get_global_mouse_position()
 		frame = 0
 		rotation_degrees = 0
+		
 	else: 	#grabbing something hand
 		global_position = camera.unproject_position(GlobalVariables.selectedObject.global_position)
 		frame = 1
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-		
 		rotation_degrees = -GlobalVariables.selectedObject.rotation_degrees.y
 		
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
 		if event.button_index == MouseButton.MOUSE_BUTTON_LEFT:
-			if Input.is_action_just_released("LMB"):
-				GlobalVariables.selectedObject = null
+			if Input.is_action_just_released("LMB") and GlobalVariables.selectedObject != null:
 				Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+				Input.warp_mouse(global_position)
+				GlobalVariables.selectedObject = null
+				
+				
 	

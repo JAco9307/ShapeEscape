@@ -1,0 +1,77 @@
+[gd_scene load_steps=10 format=3 uid="uid://diuwmi2favmjc"]
+
+[ext_resource type="Texture2D" uid="uid://dhppfa4y1ur2c" path="res://UI/Hand/open.png" id="1_p0tpq"]
+[ext_resource type="Texture2D" uid="uid://c7je5mlm2sdxm" path="res://UI/Hand/grab.png" id="2_iriu4"]
+[ext_resource type="Script" uid="uid://c20fkrqg56dr3" path="res://UI/ArmSprite.gd" id="3_c472b"]
+[ext_resource type="Script" uid="uid://bk7latk1wu5ok" path="res://UI/Hand/pin_joint_2d.gd" id="4_iriu4"]
+[ext_resource type="Texture2D" uid="uid://3ubq0qajrtrm" path="res://UI/Hand/arm.png" id="4_w6764"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ahrf8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_p0tpq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_iriu4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_p0tpq"]
+radius = 72.2496
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_iriu4"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_c472b"]
+radius = 38.8136
+height = 388.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D"]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_ahrf8")
+frame = 1
+offset = Vector2(30, -30)
+script = ExtResource("3_c472b")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="PinJoint2D" type="PinJoint2D" parent="StaticBody2D" node_paths=PackedStringArray("control_node")]
+position = Vector2(-22, 74)
+scale = Vector2(1, 1)
+node_a = NodePath("..")
+node_b = NodePath("../ArmRigidBody2D")
+bias = 0.9
+angular_limit_lower = 0.349066
+angular_limit_upper = -0.349066
+script = ExtResource("4_iriu4")
+limit_cgw = -25
+limit_gw = 25
+control_node = NodePath("../ArmRigidBody2D")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("CircleShape2D_p0tpq")
+
+[node name="ArmRigidBody2D" type="RigidBody2D" parent="StaticBody2D"]
+position = Vector2(-26, 100)
+rotation = -6.28319
+mass = 2.11
+physics_material_override = SubResource("PhysicsMaterial_iriu4")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D/ArmRigidBody2D"]
+position = Vector2(-76, 264)
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("4_w6764")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D/ArmRigidBody2D/Sprite2D"]
+position = Vector2(-320, 1360)
+scale = Vector2(2.2, 2.2)
+texture = ExtResource("4_w6764")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/ArmRigidBody2D"]
+position = Vector2(-42, 146)
+rotation = 0.23911
+scale = Vector2(1, 1)
+shape = SubResource("CapsuleShape2D_c472b")
