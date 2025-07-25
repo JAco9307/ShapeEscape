@@ -23,6 +23,8 @@ func button_clicked(index):
 		shape.physics_material_override.friction = shapes[index].friction
 		shape.physics_material_override.bounce = shapes[index].bounce
 		shape.initialMass = shapes[index].weight
+		shape.health = shapes[index].health
+		shape.maxhealth = shapes[index].health
 		GlobalVariables.player.change_object(shape)
 		close()
 		
@@ -32,6 +34,8 @@ func button_clicked(index):
 		shape.physics_material_override.friction = shapes[index].friction
 		shape.physics_material_override.bounce = shapes[index].bounce
 		shape.initialMass = shapes[index].weight
+		shape.health = shapes[index].health
+		shape.maxhealth = shapes[index].health
 		GlobalVariables.player.change_object(shape)
 		close()
 

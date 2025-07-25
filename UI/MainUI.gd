@@ -1,5 +1,6 @@
 extends CanvasLayer
 
+signal dataout
 
 func _ready() -> void:
 	$InventoryShape.visible = false
@@ -24,3 +25,7 @@ func _on_gacha_panel_closed() -> void:
 func _on_inventory_shape_closed() -> void:
 	$ShapeButton.visible = true
 	$GachaButton.visible = false
+
+
+func _on_player_hpupdate(hp:int, maxhp:int) -> void:
+	dataout.emit(hp,maxhp) # Replace with function body.

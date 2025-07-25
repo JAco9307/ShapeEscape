@@ -7,6 +7,8 @@ extends RigidBody3D
 
 var prev_mouse_position
 var next_mouse_position
+var health = -1
+var maxhealth = -1
 
 func _ready() -> void:
 	mass = initialMass
