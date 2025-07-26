@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bgn7g0gfx5hom"]
+
+[ext_resource type="PackedScene" uid="uid://g5m48diqvglc" path="res://Surfaces/Floor.tscn" id="1_acdnu"]
+
+[node name="Level" type="Sprite3D"]
+
+[node name="Floor" parent="." instance=ExtResource("1_acdnu")]
+transform = Transform3D(0.15, 0, 0, 0, 1, 0, 0, 0, 0.47, 0, 0, 0)
