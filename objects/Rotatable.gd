@@ -11,6 +11,8 @@ var health = -1
 var maxhealth = -1
 
 func _ready() -> void:
+	contact_monitor = true
+	max_contacts_reported = 30
 	mass = initialMass
 	for child in get_children():
 		var animplayer = self.find_child("AnimationPlayer")

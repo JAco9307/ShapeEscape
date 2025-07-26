@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bke7mcf2cwfqi"]
+
+[ext_resource type="Script" uid="uid://caucan7ubuwya" path="res://MainCamera.gd" id="1_uwct4"]
+
+[node name="Camera3D" type="Camera3D"]
+transform = Transform3D(-4.37114e-08, -0.972776, 0.231748, 0, 0.231748, 0.972776, -1, 4.25214e-08, -1.013e-08, 0, 0, 0)
+script = ExtResource("1_uwct4")
+
+[node name="RayCast3D" type="RayCast3D" parent="."]

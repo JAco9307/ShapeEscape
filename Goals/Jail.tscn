@@ -1,0 +1,59 @@
+[gd_scene load_steps=5 format=3 uid="uid://deb2c3mbmcyp6"]
+
+[ext_resource type="PackedScene" uid="uid://biiuqgmmluxiu" path="res://models/animated/peppermint.glb" id="1_f12td"]
+[ext_resource type="Script" uid="uid://ps0g10fdq67b" path="res://Goals/jail.gd" id="1_nbmhg"]
+[ext_resource type="Texture2D" uid="uid://c6fawc122c27g" path="res://2DAnimals/emilyhorse1.png" id="2_nbmhg"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mjg8f"]
+size = Vector3(9.23804, 10.041, 6.80701)
+
+[node name="Jail" type="Node3D"]
+script = ExtResource("1_nbmhg")
+
+[node name="Jail" type="Node3D" parent="."]
+
+[node name="peppermint" parent="Jail" instance=ExtResource("1_f12td")]
+transform = Transform3D(1, 0, 0, 0, 0.133788, -0.674591, 0, 1.03279, 0.0873866, -4.6382, 0.279248, 1.82643)
+
+[node name="peppermint2" parent="Jail" instance=ExtResource("1_f12td")]
+transform = Transform3D(1, 0, 0, 0, 0.133788, -0.674591, 0, 1.03279, 0.0873866, 0.0206366, 0.279248, 1.82643)
+
+[node name="peppermint3" parent="Jail" instance=ExtResource("1_f12td")]
+transform = Transform3D(1, 0, 0, 0, 0.133788, -0.674591, 0, 1.03279, 0.0873866, -2.28231, 0.279248, 1.82643)
+
+[node name="peppermint4" parent="Jail" instance=ExtResource("1_f12td")]
+transform = Transform3D(1, 0, 0, 0, -0.0600211, -0.679097, 0, 1.03969, -0.039204, -4.6382, 0.279248, -4.49317)
+
+[node name="peppermint8" parent="Jail" instance=ExtResource("1_f12td")]
+transform = Transform3D(1, 0, 0, 0, -0.0600211, -0.679097, 0, 1.03969, -0.039204, 0.0206366, 0.279248, -4.49317)
+
+[node name="peppermint9" parent="Jail" instance=ExtResource("1_f12td")]
+transform = Transform3D(1, 0, 0, 0, -0.0600211, -0.679097, 0, 1.03969, -0.039204, -2.28231, 0.279248, -4.49317)
+
+[node name="peppermint5" parent="Jail" instance=ExtResource("1_f12td")]
+transform = Transform3D(1, 0, 0, 0, -0.0470605, -0.679533, 0, 1.04036, -0.0307385, 2.94918, 0.279248, -4.5385)
+
+[node name="peppermint6" parent="Jail" instance=ExtResource("1_f12td")]
+transform = Transform3D(1, 0, 0, 0, -0.0431381, -0.679644, 0, 1.04053, -0.0281766, 3.17196, 0.279248, -1.5258)
+
+[node name="peppermint10" parent="Jail" instance=ExtResource("1_f12td")]
+transform = Transform3D(1, 0, 0, 0, -0.0431381, -0.679644, 0, 1.04053, -0.0281766, -5.39755, 0.279248, -1.5258)
+
+[node name="peppermint7" parent="Jail" instance=ExtResource("1_f12td")]
+transform = Transform3D(1, 0, 0, 0, 0.133788, -0.674591, 0, 1.03279, 0.0873866, 2.8417, 0.279248, 1.82643)
+
+[node name="Area3D" type="Area3D" parent="Jail"]
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Jail/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.01331, 4.52048, -1.42767)
+shape = SubResource("BoxShape3D_mjg8f")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Jail"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Jail/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.01331, 4.52048, -1.42767)
+shape = SubResource("BoxShape3D_mjg8f")
+
+[node name="Animal" type="Sprite3D" parent="."]
+transform = Transform3D(2.75623, 0, 0, 0, 4.67097, 0, 0, 0, 1, -1.26945, 5.33752, -1.27546)
+texture = ExtResource("2_nbmhg")

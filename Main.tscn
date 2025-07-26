@@ -1,7 +1,7 @@
 [gd_scene load_steps=19 format=3 uid="uid://bt5a8babn8gyn"]
 
 [ext_resource type="PackedScene" uid="uid://bubyfj3d0t4wr" path="res://Player/Player.tscn" id="1_03owx"]
-[ext_resource type="Script" uid="uid://caucan7ubuwya" path="res://MainCamera.gd" id="2_wkp8b"]
+[ext_resource type="PackedScene" uid="uid://bke7mcf2cwfqi" path="res://Camera/camera_3d.tscn" id="2_20pc6"]
 [ext_resource type="PackedScene" uid="uid://deqhu8psa7fyn" path="res://locations/HauntedMansion.tscn" id="6_3dxm6"]
 [ext_resource type="PackedScene" uid="uid://g5m48diqvglc" path="res://Surfaces/Floor.tscn" id="6_lgr22"]
 [ext_resource type="PackedScene" uid="uid://ch6blfiqhtt67" path="res://objects/Animals/raccoon.tscn" id="7_lgr22"]
@@ -24,11 +24,8 @@
 [node name="Player" parent="." instance=ExtResource("1_03owx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.6968, 3.56888, -2.90973)
 
-[node name="Camera3D" type="Camera3D" parent="."]
+[node name="Camera3D" parent="." instance=ExtResource("2_20pc6")]
 transform = Transform3D(-4.37114e-08, -0.972776, 0.231748, 0, 0.231748, 0.972776, -1, 4.25214e-08, -1.013e-08, -50.7719, 102.096, 0)
-script = ExtResource("2_wkp8b")
-
-[node name="RayCast3D" type="RayCast3D" parent="Camera3D"]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.177645, -0.645417, 0.742886, -0.293885, 0.685651, 0.665968, -0.939188, -0.336629, -0.067876, 15.6558, 10.5503, -0.157694)
