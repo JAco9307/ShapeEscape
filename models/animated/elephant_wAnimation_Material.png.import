@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://dq5y4e7vl65f1"
+path.s3tc="res://.godot/imported/elephant_wAnimation_Material.png-0b4c0f58c79e25de95b3a02e3f8ec377.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "af48ce29ab7db303f2bf86ec6e25d8e9"
+}
+
+[deps]
+
+source_file="res://models/animated/elephant_wAnimation_Material.png"
+dest_files=["res://.godot/imported/elephant_wAnimation_Material.png-0b4c0f58c79e25de95b3a02e3f8ec377.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

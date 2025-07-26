@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://bx2ydrg7xfp3f"]
+[gd_scene load_steps=3 format=3 uid="uid://bx2ydrg7xfp3f"]
 
 [ext_resource type="Script" uid="uid://ctan4kigqf4m4" path="res://UI/SelectableShape/ShapeButton.gd" id="1_itppa"]
 [ext_resource type="PackedScene" uid="uid://b3brrwp5525q2" path="res://UI/SelectableShape/2dViewObject.tscn" id="1_tvnn6"]
-[ext_resource type="FontFile" uid="uid://bsaugx2gnphri" path="res://UI/Comic Sans MS.ttf" id="3_4v4el"]
 
 [node name="ShapeButton" type="Button"]
 custom_minimum_size = Vector2(150, 150)
@@ -23,25 +22,23 @@ fov = 40.0
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
-offset_right = 179.0
+offset_right = 187.0
 offset_bottom = 177.0
 expand_mode = 1
 
 [node name="Info" type="Label" parent="."]
 layout_mode = 0
-offset_left = 3.0
-offset_top = 4.0
-offset_right = 177.0
-offset_bottom = 63.0
+offset_left = -11.0
+offset_top = -2.0
+offset_right = 195.0
+offset_bottom = 47.0
 theme_override_colors/font_color = Color(1, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0.882353, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 1, 1)
 theme_override_constants/outline_size = 8
 theme_override_constants/shadow_outline_size = 14
-theme_override_fonts/font = ExtResource("3_4v4el")
 theme_override_font_sizes/font_size = 20
-text = "Lorem ipsum
- or whatever"
+text = "Horse - 5 dollars"
 horizontal_alignment = 1
 vertical_alignment = 1
 

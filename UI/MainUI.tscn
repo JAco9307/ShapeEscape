@@ -157,12 +157,11 @@ offset_bottom = 616.0
 text = "Shape"
 
 [node name="InventoryShape" type="PanelContainer" parent="."]
-visible = false
 z_index = -2
 offset_left = 169.0
-offset_top = 52.0
+offset_top = 74.0
 offset_right = 896.0
-offset_bottom = 516.0
+offset_bottom = 529.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("2_wwh41")
@@ -176,6 +175,7 @@ clip_contents = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+size_flags_stretch_ratio = 14.33
 theme_override_constants/h_separation = 100
 
 [node name="GachaPanel" type="Panel" parent="."]
@@ -199,7 +199,8 @@ theme_override_colors/font_shadow_color = Color(0, 1, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 1, 1)
 theme_override_constants/outline_size = 12
 theme_override_constants/shadow_outline_size = 24
-text = "Unlock new shapes with pure luck!!"
+text = "Débloquez de nouvelles formes avec de la pure chance !!
+Les taux de drop sont un secret"
 horizontal_alignment = 1
 
 [node name="Button1p" type="Button" parent="GachaPanel"]
@@ -225,7 +226,7 @@ theme = ExtResource("8_uqb74")
 text = "10x shape pull
 199 Helicoin"
 
-[node name="Sprite2D" type="Sprite2D" parent="GachaPanel"]
+[node name="NoMoneyWarn" type="Sprite2D" parent="GachaPanel"]
 z_index = 1
 position = Vector2(369, 202)
 scale = Vector2(1.50667, 1.135)
@@ -307,7 +308,7 @@ position = Vector2(345, 404)
 [connection signal="pressed" from="ShapeButton" to="." method="_on_shape_button_pressed"]
 [connection signal="closed" from="InventoryShape" to="." method="_on_inventory_shape_closed"]
 [connection signal="closed" from="GachaPanel" to="." method="_on_gacha_panel_closed"]
-[connection signal="nomoney" from="GachaPanel" to="GachaPanel/Sprite2D" method="_on_gacha_panel_nomoney"]
+[connection signal="nomoney" from="GachaPanel" to="GachaPanel/NoMoneyWarn" method="_on_gacha_panel_nomoney"]
 [connection signal="pressed" from="GachaPanel/Button1p" to="GachaPanel" method="_on_button_1p_pressed"]
 [connection signal="pressed" from="GachaPanel/Button10p" to="GachaPanel" method="_on_button_10p_pressed"]
 [connection signal="pressed" from="GachaButton" to="." method="_on_gacha_button_pressed"]

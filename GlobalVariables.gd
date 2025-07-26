@@ -7,7 +7,7 @@ var handrot:Vector3 = Vector3.ZERO
 
 var shapes = [
 	{
-		"name": "horse",
+		"name": "Horse",
 		"owned": -1,
 		"rarity": 0,
 		"health": -1,
@@ -18,13 +18,13 @@ var shapes = [
 		"scene": preload("res://objects/Animals/horse.tscn")
 	},
 	{
-		"name": "Common shark",
+		"name": "Shark",
 		"owned": 0,
 		"rarity": 5,
 		"health": 200,
 		"friction": 0.2,
 		"bounce": 1,
-		"weight": 4,
+		"weight": 1,
 		"object": preload("res://models/shark.glb"),
 		"scene": preload("res://objects/Animals/shark.tscn")
 	},
@@ -43,7 +43,7 @@ var shapes = [
 		"name": "Guitar",
 		"owned": 0,
 		"rarity": 2,
-		"health": 50,
+		"health": 15,
 		"friction": 20,
 		"bounce": 0,
 		"weight": 1,

@@ -12,6 +12,13 @@ var maxhealth = -1
 
 func _ready() -> void:
 	mass = initialMass
+	for child in get_children():
+		var animplayer = self.find_child("AnimationPlayer")
+		if animplayer != null:
+			var anim : Animation= animplayer.get_animation("Circle_004Action")
+			if anim != null:
+				anim.loop_mode =(Animation.LOOP_LINEAR)
+				animplayer.play("Circle_004Action")
 		
 func _input(event):
 	if event is InputEventMouseMotion and GlobalVariables.selectedObject == self:
@@ -26,4 +33,3 @@ func _on_input_event(_camera: Node, event: InputEvent, _event_position: Vector3,
 		if Input.is_action_pressed("LMB"):
 			prev_mouse_position = get_viewport().get_mouse_position()
 			GlobalVariables.selectedObject = self
-			

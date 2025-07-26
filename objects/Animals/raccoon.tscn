@@ -17,9 +17,10 @@ disabled = true
 visible = false
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="." index="2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.80874, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.28543, 0)
 shape = SubResource("ConvexPolygonShape3D_ko0kv")
 
 [node name="raccoon" parent="." index="3" instance=ExtResource("2_8psji")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.51697, 0)
 
 [editable path="raccoon"]
