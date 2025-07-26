@@ -7,3 +7,5 @@
 script = ExtResource("1_q3lat")
 
 [node name="Horse" parent="." instance=ExtResource("2_tok1r")]
+
+[connection signal="body_entered" from="Horse" to="." method="_on_horse_body_entered"]

@@ -3,7 +3,7 @@ extends RigidBody3D
 @export var initialMass:float = 5
 @export var yTorqueMult:float = 20
 @export var zTorqueMult:float = 20
-@export var mouse_sensitivity = 0.002
+@export var mouse_sensitivity = 0.02
 
 var prev_mouse_position
 var next_mouse_position
@@ -11,6 +11,8 @@ var health = -1
 var maxhealth = -1
 
 func _ready() -> void:
+	contact_monitor = true
+	max_contacts_reported = 30
 	mass = initialMass
 	for child in get_children():
 		var animplayer = self.find_child("AnimationPlayer")
