@@ -1,0 +1,53 @@
+[gd_scene load_steps=9 format=3 uid="uid://u7bdboxc0d11"]
+
+[ext_resource type="PackedScene" uid="uid://du8lkrvnc16gl" path="res://objects/Rotatable.tscn" id="1_qqjn8"]
+[ext_resource type="PackedScene" uid="uid://ch03qibt15lla" path="res://models/Player/super.glb" id="2_u25vh"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_v5s0y"]
+size = Vector3(1, 0.557373, 3.00427)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_eju5u"]
+size = Vector3(1.59039, 0.417236, 1.6825)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_j7bc0"]
+radius = 1.80868
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_eh7ms"]
+size = Vector3(1, 1, 2.89502)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gl815"]
+size = Vector3(1, 1.29102, 1.73038)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_snsmb"]
+size = Vector3(1, 1.80615, 1.33398)
+
+[node name="Rotatable" instance=ExtResource("1_qqjn8")]
+
+[node name="super" parent="." index="0" instance=ExtResource("2_u25vh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.51775, 0.084)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1"]
+transform = Transform3D(0.97437, 0.224951, 0, -0.190746, 0.826213, 0.530082, 0.119243, -0.516496, 0.847946, -0.0316063, -1.50567, -1.38607)
+shape = SubResource("BoxShape3D_v5s0y")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." index="2"]
+transform = Transform3D(0.55787, 0.753804, -0.347219, -0.786821, 0.3473, -0.510191, -0.263995, 0.557819, 0.786857, -0.472504, -1.54001, 1.42927)
+shape = SubResource("BoxShape3D_eju5u")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.321491, -0.519015, 0)
+shape = SubResource("SphereShape3D_j7bc0")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="." index="4"]
+transform = Transform3D(0.912292, 0.409541, 0, -0.409541, 0.912292, 0, 0, 0, 1, 0.684085, 0.425676, -0.94751)
+shape = SubResource("BoxShape3D_eh7ms")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="." index="5"]
+transform = Transform3D(0.767008, 0.641637, 0, -0.641637, 0.767008, 0, 0, 0, 1, 0.534258, -0.111606, 1.47613)
+shape = SubResource("BoxShape3D_gl815")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="." index="6"]
+transform = Transform3D(0.754125, 0.656731, 0, -0.656731, 0.754125, 0, 0, 0, 1, 1.48236, 1.35534, -0.166992)
+shape = SubResource("BoxShape3D_snsmb")
+
+[editable path="super"]

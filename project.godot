@@ -19,6 +19,11 @@ config/icon="res://icon.svg"
 
 GlobalVariables="*res://GlobalVariables.gd"
 
+[debug]
+
+shapes/navigation/geometry_edge_color=Color(0, 0.884342, 0.888461, 1)
+shapes/navigation/geometry_face_color=Color(0.501961, 1, 1, 0.737255)
+
 [input]
 
 LMB={
