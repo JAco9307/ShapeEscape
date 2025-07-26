@@ -14,7 +14,7 @@ var shapes = [
 		"friction": 0.2,
 		"bounce": 0,
 		"weight": 5,
-		"object": preload("res://models/horse.glb"),
+		"object": preload("res://models/animated/horse_wAnimation.glb"),
 		"scene": preload("res://objects/Animals/horse.tscn")
 	},
 	{
@@ -25,7 +25,7 @@ var shapes = [
 		"friction": 0.2,
 		"bounce": 1,
 		"weight": 1,
-		"object": preload("res://models/shark.glb"),
+		"object": preload("res://models/animated/shark_wAnimation.glb"),
 		"scene": preload("res://objects/Animals/shark.tscn")
 	},
 	{
@@ -36,7 +36,7 @@ var shapes = [
 		"friction": 0.001,
 		"bounce": 0,
 		"weight": 50,
-		"object": preload("res://models/raccoon.glb"),
+		"object": preload("res://models/Animals/untextured/raccoon.glb"),
 		"scene": preload("res://objects/Animals/raccoon.tscn")
 	},
 	{
@@ -47,7 +47,7 @@ var shapes = [
 		"friction": 20,
 		"bounce": 0,
 		"weight": 1,
-		"object": preload("res://models/guitar.glb"),
+		"object": preload("res://models/Objects/guitar.glb"),
 		"scene": preload("res://objects/guitar.tscn")
 	},
 ]

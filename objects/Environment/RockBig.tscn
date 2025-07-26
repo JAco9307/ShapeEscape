@@ -1,8 +1,8 @@
 [gd_scene load_steps=9 format=4 uid="uid://hbd5hkve261k"]
 
 [ext_resource type="Script" uid="uid://cvqlceaui3krb" path="res://objects/Rotatable.gd" id="1_vrfid"]
-[ext_resource type="PackedScene" uid="uid://by81yf0l78id3" path="res://models/rock(1).glb" id="2_pvvva"]
-[ext_resource type="Texture2D" uid="uid://bh5l7m42ptvxh" path="res://models/rock(1)_rock-texture.png" id="3_u8xvj"]
+[ext_resource type="PackedScene" uid="uid://by81yf0l78id3" path="res://models/Objects/rock.glb" id="2_pvvva"]
+[ext_resource type="Texture2D" uid="uid://bh5l7m42ptvxh" path="res://models/Objects/rock_rock-texture.png" id="3_u8xvj"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_vn420"]
 friction = 0.26

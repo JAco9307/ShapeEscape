@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://bfih2570vgmri"]
+
+[ext_resource type="PackedScene" uid="uid://du8lkrvnc16gl" path="res://objects/Rotatable.tscn" id="1_88o8y"]
+
+[node name="Pig" instance=ExtResource("1_88o8y")]
