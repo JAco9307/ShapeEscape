@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bfih2570vgmri"]
+
+[ext_resource type="PackedScene" uid="uid://du8lkrvnc16gl" path="res://objects/Rotatable.tscn" id="1_88o8y"]
+[ext_resource type="PackedScene" uid="uid://baxa4ye7yg71g" path="res://models/animated/pig_wAnimation.glb" id="2_3r52w"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_par1e"]
+points = PackedVector3Array(5.18711, -2.97232, 0.720705, 0.463747, 1.21027, 0.653272, 0.463747, 1.21027, -0.669969, 5.56887, 0.264588, -0.00845003, 2.20606, -3.08375, -0.93671, 5.34089, -1.23843, -1.0012, -0.482174, -0.491867, 0.558799, 2.20606, -3.08375, 0.91981, 5.28674, -0.528102, 0.965084, 4.97961, -3.22444, -1.0012, -0.482174, -0.491867, -0.480818, 4.75337, 0.0905688, -0.80414, 5.08128, -3.23405, 0.988706, 2.1224, -0.301097, 0.917784, 2.1224, -0.301097, -0.934684, 4.7786, 0.103686, 0.796515, -0.198457, -0.586035, -0.669969, 5.0854, -0.445442, -0.972701, -0.298289, 0.184164, -0.452108, -0.198457, -0.586035, 0.653272, 5.3359, -1.95889, -0.548949, 5.56887, 0.264588, -0.197194, 5.34075, -1.32873, 0.98425, 0.368977, 1.21027, 0.653272, 5.34577, -1.96207, 0.53396, 4.80879, -0.274697, 0.950062, 0.368977, 1.21027, -0.669969, -0.27415, 0.173607, 0.519797, 5.16359, -2.95529, -0.550547, 5.56887, -0.018805, 0.0860235, 5.25162, -0.534894, -0.969522, 4.69613, -0.283615, -0.956059)
+
+[node name="Pig" instance=ExtResource("1_88o8y")]
+
+[node name="pig_wAnimation" parent="." index="2" instance=ExtResource("2_3r52w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.004, -2.10947, 0)
+
+[node name="piggy_001" parent="pig_wAnimation" index="0"]
+blend_shapes/frame_0039 = 1.0
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.38571, 1.10147, 0)
+shape = SubResource("ConvexPolygonShape3D_par1e")
+
+[editable path="pig_wAnimation"]

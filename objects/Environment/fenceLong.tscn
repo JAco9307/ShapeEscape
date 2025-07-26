@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://bbuqegh24i7f1"]
+
+[ext_resource type="PackedScene" uid="uid://du8lkrvnc16gl" path="res://objects/Rotatable.tscn" id="1_ei3k5"]
+[ext_resource type="PackedScene" uid="uid://c53w15fcgauug" path="res://models/Objects/fence.glb" id="2_douf4"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ei3k5"]
+size = Vector3(1, 9.69727, 59.9914)
+
+[node name="Fence" instance=ExtResource("1_ei3k5")]
+
+[node name="fence" parent="." index="0" instance=ExtResource("2_douf4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 2, 1.11405, -3.57866, 1.50754)
+
+[node name="fence" parent="fence" index="1" instance=ExtResource("2_douf4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0201091, 0.0367396, -9.40563)
+
+[node name="fence2" parent="fence" index="2" instance=ExtResource("2_douf4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0316964, 0.103776, 9.42163)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.999915, -0.0130198, 0, 0.0130198, 0.999915, 0, 0.222164, -1.44374)
+shape = SubResource("BoxShape3D_ei3k5")

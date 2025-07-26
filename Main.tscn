@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bt5a8babn8gyn"]
+[gd_scene load_steps=11 format=3 uid="uid://bt5a8babn8gyn"]
 
 [ext_resource type="PackedScene" uid="uid://bubyfj3d0t4wr" path="res://Player/Player.tscn" id="1_03owx"]
 [ext_resource type="Script" uid="uid://caucan7ubuwya" path="res://MainCamera.gd" id="2_wkp8b"]
@@ -9,7 +9,6 @@
 [ext_resource type="PackedScene" uid="uid://116njum48mn0" path="res://objects/Environment/RockMid.tscn" id="8_03owx"]
 [ext_resource type="PackedScene" uid="uid://c2qnrd7mneksy" path="res://UI/MainUI.tscn" id="8_trn2v"]
 [ext_resource type="PackedScene" uid="uid://cru1wb2mirml7" path="res://objects/Environment/RockSmall.tscn" id="9_wkp8b"]
-[ext_resource type="PackedScene" uid="uid://1m82htvec2sr" path="res://objects/rotatableLarge.tscn" id="10_wkp8b"]
 [ext_resource type="PackedScene" uid="uid://dwhaiq5n4rg7g" path="res://objects/Environment/tree.tscn" id="11_20pc6"]
 
 [node name="Main" type="Node3D"]
@@ -32,10 +31,7 @@ transform = Transform3D(0.177645, -0.645417, 0.742886, -0.293885, 0.685651, 0.66
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -149.584, -0.689379, -1.69503)
 
 [node name="Floor" parent="." instance=ExtResource("6_lgr22")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0488815, -0.757728, -1.82727)
-
-[node name="Rotatable4" parent="Floor" instance=ExtResource("10_wkp8b")]
-transform = Transform3D(0.602317, 0, 0.798257, 0, 1, 0, -0.798257, 0, 0.602317, -46.5388, 0.00558501, -28.3197)
+transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0.0488815, -0.757728, -1.82727)
 
 [node name="Raccoon" parent="." instance=ExtResource("7_lgr22")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -55.0482, 0.242264, 11.5166)
@@ -44,18 +40,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -55.0482, 0.242264, 11.5166)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56.7712, 10.5349, -18.3717)
 yTorqueMult = 100.0
 zTorqueMult = 100.0
-
-[node name="Rotatable" parent="." instance=ExtResource("10_wkp8b")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.2187, -1.17075, 7.69544)
-
-[node name="Rotatable6" parent="." instance=ExtResource("10_wkp8b")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.618, 0.016755, -55.8136)
-
-[node name="Rotatable5" parent="." instance=ExtResource("10_wkp8b")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -63.5108, 0.01117, 33.0986)
-
-[node name="Rotatable4" parent="." instance=ExtResource("10_wkp8b")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -64.1295, 0.00558501, -48.0989)
 
 [node name="RockMid" parent="." instance=ExtResource("8_03owx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -54.842, 3.35801, -4.53507)

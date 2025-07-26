@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://c07i21ahef5mj"]
+
+[ext_resource type="PackedScene" uid="uid://du8lkrvnc16gl" path="res://objects/Rotatable.tscn" id="1_08fmf"]
+[ext_resource type="PackedScene" uid="uid://dotaq162bx1vm" path="res://models/animated/platypus_wAnimation.glb" id="2_nuadb"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ebl43"]
+points = PackedVector3Array(0.878138, -1.3475, -0.952417, 7.91037, 1.99261, 0.453906, 8.08662, 1.64087, 0.453906, -3.16672, -0.819901, 0.453906, 3.07753, -1.15569, 0.8645, -0.528528, 0.761876, -0.600647, 8.08662, 1.11327, -0.424762, -0.528528, 0.761876, 0.453906, 7.73412, 1.99261, -0.424762, 0.878138, -1.3475, 0.98175, -3.16672, -0.46851, -0.600647, 3.0798, -1.16081, -0.838296, 1.50856, 0.370336, 0.76244, 3.34151, 0.381399, -0.794061, 8.08662, 1.11327, 0.453906, -3.16672, -0.46851, 0.453906, -3.16672, -0.819901, -0.600647, 3.49264, 0.0871684, 0.827063, 1.9962, -1.31374, -0.837097, 0.878138, -1.17164, -0.952417, 8.08662, 1.64087, -0.424762, 0.878138, -1.17164, 0.98175, 7.73412, 1.99261, 0.453906, 3.31639, 0.377216, 0.800349, 1.99725, -1.31023, 0.8645, 1.47631, 0.374937, -0.758457, 3.4976, 0.0864593, -0.801637, 2.32456, 0.506238, 0.762212, 7.91037, 1.99261, -0.424762, 2.04773, 0.509715, -0.742446, -2.81422, -0.292642, 0.453906, -2.81422, -0.292642, -0.424762)
+
+[node name="Platypus" instance=ExtResource("1_08fmf")]
+
+[node name="platypus_wAnimation" parent="." index="2" instance=ExtResource("2_nuadb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.24382, 0)
+
+[node name="platypus" parent="platypus_wAnimation" index="0"]
+blend_shapes/tailUp = 0.352941
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." index="3"]
+transform = Transform3D(1.14004, 0.189022, 0, -0.189022, 1.14004, 0, 0, 0, 1.1556, -2.72269, 0.616305, 0)
+shape = SubResource("ConvexPolygonShape3D_ebl43")
+
+[editable path="platypus_wAnimation"]

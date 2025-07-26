@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://dy6k84vuv5a55"]
+
+[ext_resource type="PackedScene" uid="uid://du8lkrvnc16gl" path="res://objects/Rotatable.tscn" id="1_qhuxj"]
+[ext_resource type="PackedScene" uid="uid://bonl088qofa8p" path="res://models/Objects/bench.glb" id="2_cc1yk"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_1px7l"]
+points = PackedVector3Array(1.18454, 5.1181, 7.88199, -1, -2.92632, -8.20686, 4.68958, -2.9766, -8.30741, 1.18454, 5.1181, -8.56439, 4.67269, -2.9531, 7.57801, -1, -2.92632, 7.52446, -0.961306, 4.8855, -8.09919, 4.78193, 1.00651, 7.88199, -0.961306, 4.8855, 7.41679, 4.78193, 1.00651, -8.56439)
+
+[node name="Bench" instance=ExtResource("1_qhuxj")]
+
+[node name="bench" parent="." index="2" instance=ExtResource("2_cc1yk")]
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.31084, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_1px7l")
+
+[editable path="bench"]
