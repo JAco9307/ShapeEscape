@@ -48,8 +48,6 @@ func setup_buttons():
 		var newButton = shapeButtonScene.instantiate()
 		var buttonObject = shape.scene.instantiate()
 		
-		#need to load texture and animation too?
-		
 		%ShapeButtons.add_child(newButton)
 		
 		newButton.set_location_offset(offset)

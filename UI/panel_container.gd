@@ -8,8 +8,10 @@ func clear_roll():
 		child.queue_free()
 
 func show_roll(shape):
+	
+	
 	var newButton = shapeButtonScene.instantiate()
-	var buttonObject = shape.object.instantiate()
+	var buttonObject = shape.scene.instantiate()
 	$ScrollContainer/GachaButtons.add_child(newButton)
 	buttonObject.scale = Vector3(1,1,1) * 0.8
 	
@@ -18,4 +20,10 @@ func show_roll(shape):
 	
 	newButton.change_object(buttonObject)
 	newButton.custom_minimum_size = Vector2(150,150)
-	newButton.set_info(shape.name + " - " + str(shape.owned) + " owned")
+
+	var info = shape.name + " - " + str(shape.owned) + " possédée"
+	info += "\nSanté:" + str(shape.health)
+	info += "\nDésaccord:" + str(shape.friction)
+	info += "\nBondir:" + str(shape.bounce)
+	info += "\nPesanteur:" + str(shape.weight)
+	newButton.set_info(info)
