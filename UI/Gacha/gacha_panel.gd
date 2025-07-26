@@ -31,6 +31,7 @@ func singlepull():
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
 		if event.button_index == MouseButton.MOUSE_BUTTON_RIGHT:
+				$PanelContainer.clear_roll()
 				close()
 
 func _on_button_1p_pressed() -> void:

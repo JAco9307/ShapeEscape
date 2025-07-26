@@ -179,7 +179,6 @@ size_flags_stretch_ratio = 14.33
 theme_override_constants/h_separation = 100
 
 [node name="GachaPanel" type="Panel" parent="."]
-visible = false
 z_index = -1
 offset_left = 150.0
 offset_top = 32.0
@@ -228,7 +227,7 @@ text = "10x shape pull
 
 [node name="NoMoneyWarn" type="Sprite2D" parent="GachaPanel"]
 z_index = 1
-position = Vector2(369, 202)
+position = Vector2(369, 285)
 scale = Vector2(1.50667, 1.135)
 texture = ExtResource("10_e10a1")
 script = ExtResource("11_i0lr5")
@@ -236,7 +235,7 @@ script = ExtResource("11_i0lr5")
 [node name="PanelContainer" type="PanelContainer" parent="GachaPanel"]
 layout_mode = 0
 offset_left = 44.0
-offset_top = 73.0
+offset_top = 89.0
 offset_right = 732.0
 offset_bottom = 478.0
 script = ExtResource("12_i0lr5")
