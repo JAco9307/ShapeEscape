@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://4xn3j7i2njxp"
-path="res://.godot/imported/shark.glb-69498c2c78f6b4617b74efc59eb64fff.scn"
+uid="uid://couatgfsi63cx"
+path="res://.godot/imported/starter.glb-3c1b560ebec95232bd9c6d60b6588f26.scn"
 
 [deps]
 
-source_file="res://models/Animals/untextured/shark.glb"
-dest_files=["res://.godot/imported/shark.glb-69498c2c78f6b4617b74efc59eb64fff.scn"]
+source_file="res://models/Player/starter.glb"
+dest_files=["res://.godot/imported/starter.glb-3c1b560ebec95232bd9c6d60b6588f26.scn"]
 
 [params]
 

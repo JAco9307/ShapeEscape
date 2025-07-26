@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bt5a8babn8gyn"]
+[gd_scene load_steps=19 format=3 uid="uid://bt5a8babn8gyn"]
 
 [ext_resource type="PackedScene" uid="uid://bubyfj3d0t4wr" path="res://Player/Player.tscn" id="1_03owx"]
 [ext_resource type="Script" uid="uid://caucan7ubuwya" path="res://MainCamera.gd" id="2_wkp8b"]
@@ -10,6 +10,14 @@
 [ext_resource type="PackedScene" uid="uid://c2qnrd7mneksy" path="res://UI/MainUI.tscn" id="8_trn2v"]
 [ext_resource type="PackedScene" uid="uid://cru1wb2mirml7" path="res://objects/Environment/RockSmall.tscn" id="9_wkp8b"]
 [ext_resource type="PackedScene" uid="uid://dwhaiq5n4rg7g" path="res://objects/Environment/tree.tscn" id="11_20pc6"]
+[ext_resource type="PackedScene" uid="uid://dy6k84vuv5a55" path="res://objects/Environment/bench.tscn" id="11_kjvhd"]
+[ext_resource type="PackedScene" uid="uid://d2a0oy5ml2mdc" path="res://objects/Environment/benchLong.tscn" id="12_5tuhn"]
+[ext_resource type="PackedScene" uid="uid://cxlv0wo6r2qki" path="res://objects/Environment/carrot.tscn" id="13_2gh4u"]
+[ext_resource type="PackedScene" uid="uid://j2mprqmq7jvo" path="res://objects/Environment/fence.tscn" id="14_devvj"]
+[ext_resource type="PackedScene" uid="uid://bbuqegh24i7f1" path="res://objects/Environment/fenceLong.tscn" id="15_3b0ty"]
+[ext_resource type="PackedScene" uid="uid://c07i21ahef5mj" path="res://objects/Animals/platypus.tscn" id="16_bg4s2"]
+[ext_resource type="PackedScene" uid="uid://bfih2570vgmri" path="res://objects/Animals/pig.tscn" id="17_hhcpw"]
+[ext_resource type="PackedScene" uid="uid://cigf60064etxa" path="res://objects/Animals/elephant.tscn" id="18_mxvw5"]
 
 [node name="Main" type="Node3D"]
 
@@ -58,5 +66,29 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44.5408, 10.613, 12.3756)
 
 [node name="Tree" parent="." instance=ExtResource("11_20pc6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46.8345, 1.24227, -16.2593)
+
+[node name="Bench" parent="." instance=ExtResource("11_kjvhd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -41.2852, 4.36122, -36.889)
+
+[node name="Bench2" parent="." instance=ExtResource("12_5tuhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.8433, 3.21889, 15.8433)
+
+[node name="Carrot" parent="." instance=ExtResource("13_2gh4u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -107.192, 3.1939, 37.7684)
+
+[node name="Fence" parent="." instance=ExtResource("14_devvj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -68.1329, 4.82093, -6.82977)
+
+[node name="Fence2" parent="." instance=ExtResource("15_3b0ty")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -87.5615, 4.88928, 3.30925)
+
+[node name="Platypus" parent="." instance=ExtResource("16_bg4s2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -59.9314, 2.82462, 24.3608)
+
+[node name="Pig" parent="." instance=ExtResource("17_hhcpw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -60.0775, 5.63199, 14.0005)
+
+[node name="Elephant" parent="." instance=ExtResource("18_mxvw5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -60.879, 5.41054, 3.37174)
 
 [connection signal="hpupdate" from="Player" to="MainUi" method="_on_player_hpupdate"]

@@ -8,8 +8,7 @@ func clear_roll():
 		child.queue_free()
 
 func show_roll(shape):
-	
-	
+
 	var newButton = shapeButtonScene.instantiate()
 	var buttonObject = shape.scene.instantiate()
 	$ScrollContainer/GachaButtons.add_child(newButton)

@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://c2s8u70ph2krm"
-path="res://.godot/imported/platypus.glb-f08f5c773b581c527f77e54d033954ed.scn"
+uid="uid://7xln0yvdg61n"
+path="res://.godot/imported/grimace.glb-5569e27cd2397b1d1062b6b9925a38be.scn"
 
 [deps]
 
-source_file="res://models/Animals/untextured/platypus.glb"
-dest_files=["res://.godot/imported/platypus.glb-f08f5c773b581c527f77e54d033954ed.scn"]
+source_file="res://models/Player/grimace.glb"
+dest_files=["res://.godot/imported/grimace.glb-5569e27cd2397b1d1062b6b9925a38be.scn"]
 
 [params]
 

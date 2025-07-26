@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://fko54cd5nx20"]
+
+[ext_resource type="PackedScene" uid="uid://du8lkrvnc16gl" path="res://objects/Rotatable.tscn" id="1_oo25k"]
+[ext_resource type="PackedScene" uid="uid://7xln0yvdg61n" path="res://models/Player/grimace.glb" id="2_ykmul"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_jqr10"]
+points = PackedVector3Array(1.53824, -1.3364, -1.54837, 0.309368, -0.271823, 1.70251, 0.196568, -0.26019, 1.6713, 0.71223, 2.20596, -0.428665, -0.958683, -0.502883, -1.00487, 1.30128, -1.27339, 0.966616, -0.84058, -0.903425, 0.664365, -0.756115, 0.36155, 0.816843, 1.10072, 2.11283, -0.0249836, -0.374328, 1.33015, -0.879978, 1.57537, -0.386425, -1.57948, 0.192172, -1.32932, -1.4833, 0.250902, 0.129661, -1.59185, 1.26095, -0.141801, 1.09432, 1.62807, -0.26888, -0.541017, 1.5192, -1.48277, 0.031696, -0.0226476, 1.24892, 0.585937, 0.253017, 2.17306, -0.590966, -0.0955548, -1.08425, 1.07335, 0.197145, 0.192901, 1.55196, -0.902405, -0.965428, -0.602419, -0.207117, -0.441554, 1.58194, -0.89011, 0.36155, -0.538676, 0.769276, -0.501211, 1.64263, 1.10896, 2.13173, -0.424356, 1.65686, -0.927817, -1.66698, 1.16355, 0.0205678, -1.56206, 1.49651, -0.0340124, 0.257391, -0.838262, -0.211981, 0.950466, 0.774625, -0.919458, -1.71434, -0.414471, 1.1417, 0.254189, 0.648057, 2.10948, -0.0246094)
+
+[node name="Grimace" instance=ExtResource("1_oo25k")]
+
+[node name="grimace" parent="." index="0" instance=ExtResource("2_ykmul")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1"]
+shape = SubResource("ConvexPolygonShape3D_jqr10")
+
+[editable path="grimace"]

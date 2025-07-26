@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://b56fsbd8j46f5"]
+
+[ext_resource type="PackedScene" uid="uid://du8lkrvnc16gl" path="res://objects/Rotatable.tscn" id="1_gvxxx"]
+[ext_resource type="PackedScene" uid="uid://couatgfsi63cx" path="res://models/Player/starter.glb" id="2_ep71x"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_7tafm"]
+points = PackedVector3Array(-0.0196164, 0.799022, 0.839202, -0.0830835, -0.989918, -0.981853, -0.397727, -0.987165, -0.915815, 0.998418, -0.934288, 0.919573, 0.993955, 0.495715, -0.51036, -0.901381, -0.892807, 0.720863, -0.96256, 0.396662, -0.599993, 0.923747, -0.609108, -0.94683, -0.948991, 0.855564, 0.492848, -0.113608, 0.676596, -0.816083, 0.481809, 0.92914, 0.530144, -0.967213, -0.51617, -0.981762, -0.967034, 0.0831594, 0.943552, 0.990477, -0.0114605, 0.97552, -0.177359, -0.987639, 0.972988, 0.989023, -0.988771, -0.539069, -0.93557, -0.990021, -0.508255, 0.514533, 0.0512165, -0.97821, 0.45239, 0.839151, -0.506937, -0.0199122, 0.492135, 1.03589, -0.522609, 0.836805, -0.411417, 1.02174, -1.02142, 0.564743, -0.99749, 0.429927, 0.848064, 0.797493, 0.397197, -0.820537, -0.491312, 0.931014, -0.00294969, 0.988987, -0.515816, 1.00569, -0.992484, 0.772585, -0.0343468, 0.548609, -0.991, -0.983007, -0.933322, -0.0115467, -0.916422, -0.967818, -0.832429, 0.407153, 0.886474, 0.488207, 0.434436, 0.293099, 0.89611, 0.74836)
+
+[node name="StarterShape" instance=ExtResource("1_gvxxx")]
+
+[node name="starter" parent="." index="0" instance=ExtResource("2_ep71x")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1"]
+shape = SubResource("ConvexPolygonShape3D_7tafm")
+
+[editable path="starter"]

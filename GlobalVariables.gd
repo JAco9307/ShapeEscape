@@ -7,26 +7,26 @@ var handrot:Vector3 = Vector3.ZERO
 
 var shapes = [
 	{
-		"name": "Horse",
+		"name": "Default",
 		"owned": -1,
 		"rarity": 0,
 		"health": -1,
-		"friction": 0.2,
+		"friction": 0.5,
 		"bounce": 0,
-		"weight": 5,
-		"object": preload("res://models/animated/horse_wAnimation.glb"),
-		"scene": preload("res://objects/Animals/horse.tscn")
+		"weight": 50,
+		"object": preload("res://models/Player/starter.glb"),
+		"scene": preload("res://objects/Player/starter_shape.tscn")
 	},
 	{
-		"name": "Shark",
+		"name": "Grimace",
 		"owned": 0,
 		"rarity": 5,
 		"health": 200,
 		"friction": 0.2,
 		"bounce": 1,
 		"weight": 1,
-		"object": preload("res://models/animated/shark_wAnimation.glb"),
-		"scene": preload("res://objects/Animals/shark.tscn")
+		"object": preload("res://models/Player/grimace.glb"),
+		"scene": preload("res://objects/Player/grimace.tscn")
 	},
 	{
 		"name": "Raccoon",
@@ -48,6 +48,6 @@ var shapes = [
 		"bounce": 0,
 		"weight": 1,
 		"object": preload("res://models/Objects/guitar.glb"),
-		"scene": preload("res://objects/guitar.tscn")
+		"scene": preload("res://objects/Environment/Guitar.tscn")
 	},
 ]

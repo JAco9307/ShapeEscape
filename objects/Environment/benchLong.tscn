@@ -6,12 +6,15 @@
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_bnvwv"]
 points = PackedVector3Array(1.18454, 5.1181, 7.88199, -1, -2.92632, -8.20686, 4.68958, -2.9766, -8.30741, 1.18454, 5.1181, -8.56439, 4.67269, -2.9531, 7.57801, -1, -2.92632, 7.52446, -0.961306, 4.8855, -8.09919, 4.78193, 1.00651, 7.88199, -0.961306, 4.8855, 7.41679, 4.78193, 1.00651, -8.56439)
 
-[node name="Bench" instance=ExtResource("1_bnvwv")]
+[node name="BenchLong" instance=ExtResource("1_bnvwv")]
+initialMass = 20.0
+yTorqueMult = 200.0
+zTorqueMult = 200.0
 
-[node name="bench" parent="." index="2" instance=ExtResource("2_o12ob")]
+[node name="bench" parent="." index="0" instance=ExtResource("2_o12ob")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 3, 0, 0, 0)
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="." index="3"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." index="1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 3, -1.31084, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_bnvwv")
 

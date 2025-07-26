@@ -10,6 +10,15 @@ signal hpupdate
 func _ready() -> void:
 	GlobalVariables.player = self
 	playerObject = $Horse
+	var shapedata = GlobalVariables.shapes[0]
+	var shape = shapedata.scene.instantiate()
+	shape.physics_material_override.friction = shapedata.friction
+	shape.physics_material_override.bounce = shapedata.bounce
+	shape.initialMass = shapedata.weight
+	shape.health = shapedata.health
+	shape.maxhealth = shapedata.health
+	GlobalVariables.player.change_object(shape)
+	
 
 func _process(delta: float) -> void:
 	if playerObject.global_position.y <= -100:
