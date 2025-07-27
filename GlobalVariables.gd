@@ -51,7 +51,7 @@ var shapes = [
 		"bounce": 0,
 		"weight": 1,
 		"object": preload("res://models/Objects/guitar.glb"),
-		"scene": preload("res://objects/Environment/Guitar.tscn")
+		"scene": preload("res://objects/Environment/NonFunctional/Guitar.tscn")
 	},
 ]
 
