@@ -1,11 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://bgn7g0gfx5hom"]
+[gd_scene load_steps=6 format=3 uid="uid://bgn7g0gfx5hom"]
 
+[ext_resource type="Script" uid="uid://b7ix6bmw2tblr" path="res://Levels/Level.gd" id="1_286st"]
 [ext_resource type="PackedScene" uid="uid://g5m48diqvglc" path="res://Surfaces/Floor.tscn" id="1_acdnu"]
 [ext_resource type="PackedScene" uid="uid://c2qnrd7mneksy" path="res://UI/MainUI.tscn" id="2_wbw1h"]
 [ext_resource type="PackedScene" uid="uid://bke7mcf2cwfqi" path="res://Camera/camera_3d.tscn" id="3_286st"]
 [ext_resource type="PackedScene" uid="uid://bubyfj3d0t4wr" path="res://Player/Player.tscn" id="4_q1ycg"]
 
-[node name="Level" type="Sprite3D"]
+[node name="Level" type="Sprite3D" node_paths=PackedStringArray("targets")]
+script = ExtResource("1_286st")
+targets = [null]
 
 [node name="Floor" parent="." instance=ExtResource("1_acdnu")]
 transform = Transform3D(0.15, 0, 0, 0, 1, 0, 0, 0, 0.47, 0, 0, 0)

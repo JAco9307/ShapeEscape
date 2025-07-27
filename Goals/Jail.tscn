@@ -1,9 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://deb2c3mbmcyp6"]
 
-[ext_resource type="PackedScene" uid="uid://biiuqgmmluxiu" path="res://models/Objects/peppermint.glb" id="1_f12td"]
+[ext_resource type="PackedScene" uid="uid://extqly48yboa" path="res://models/Objects/peppermint.glb" id="1_f12td"]
 [ext_resource type="Script" uid="uid://ps0g10fdq67b" path="res://Goals/jail.gd" id="1_nbmhg"]
-[ext_resource type="Texture2D" uid="uid://cuwbgkpwjo2cv" path="res://2DAnimals/emilyhorse1.png" id="2_nbmhg"]
-
+[ext_resource type="Texture2D" uid="uid://c6fawc122c27g" path="res://2DAnimals/emilyhorse1.png" id="2_nbmhg"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_mjg8f"]
 size = Vector3(9.23804, 10.041, 6.80701)

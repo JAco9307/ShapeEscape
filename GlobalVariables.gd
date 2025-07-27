@@ -1,6 +1,8 @@
 extends Node
 
-var money:int = 500
+var currentLevel:Level
+
+var money:int = 0
 var player:Player
 var selectedObject
 var handrot:Vector3 = Vector3.ZERO

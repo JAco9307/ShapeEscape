@@ -8,8 +8,8 @@ points = PackedVector3Array(1.18454, 5.1181, 7.88199, -1, -2.92632, -8.20686, 4.
 
 [node name="BenchLong" instance=ExtResource("1_bnvwv")]
 initialMass = 20.0
-yTorqueMult = 200.0
-zTorqueMult = 200.0
+yTorqueMult = 5000.0
+zTorqueMult = 5000.0
 
 [node name="bench" parent="." index="0" instance=ExtResource("2_o12ob")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 3, 0, 0, 0)
