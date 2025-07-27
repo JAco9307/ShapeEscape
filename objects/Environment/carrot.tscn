@@ -1,20 +1,18 @@
 [gd_scene load_steps=4 format=3 uid="uid://cxlv0wo6r2qki"]
 
 [ext_resource type="PackedScene" uid="uid://du8lkrvnc16gl" path="res://objects/Rotatable.tscn" id="1_22sse"]
-[ext_resource type="PackedScene" uid="uid://c6frqt501b2ui" path="res://models/Objects/carrot.glb" id="2_dtxq5"]
+[ext_resource type="PackedScene" uid="uid://bh6qkqkgxmj63" path="res://models/Objects/goodcarrot.glb" id="2_22sse"]
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_krarw"]
-points = PackedVector3Array(-2.02775, -2.98989, -6.82025, -2.02775, 2.979, -6.82025, -2.02775, 2.979, 6.82025, -1.38819, -2.98989, 6.82025, 1.13944, -0.736435, -0.730491, -2.02775, -2.98989, 6.82025, -1.38819, 2.979, -6.82025, -1.38819, -2.98989, -6.82025, -1.38819, 2.979, 6.82025, 1.13934, 0.7255, 0.730442, 1.02083, -0.965246, 0.959616, 1.13944, 0.725549, -0.730491, 1.02094, -0.965325, -0.959694, 1.13934, -0.736385, 0.730442)
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_dtxq5"]
+points = PackedVector3Array(-54.9016, -3.64631, -9.30773, -54.9016, 3.64631, -9.30773, -41.1507, -3.64631, -9.30773, -54.9016, -3.64631, 9.22409, -54.9016, 3.64631, 9.22409, -41.1507, 3.64631, -9.30773, -41.1507, -3.64631, 9.22409, 47.6385, -0.963688, -0.801885, 40.0705, -1.26493, -1.42227, -41.1507, 3.64631, 9.22409, 40.0705, 1.26422, -1.42227, 47.6385, 0.962974, -0.801885, 40.0705, -1.26493, 1.33682, 47.6385, -0.963688, 0.716434, 47.6385, 0.962974, 0.716434, 40.0705, 1.26422, 1.33682)
 
 [node name="Carrot" instance=ExtResource("1_22sse")]
-yTorqueMult = 200.0
-zTorqueMult = 200.0
+yTorqueMult = 500.0
+zTorqueMult = 500.0
 
-[node name="carrot" parent="." index="0" instance=ExtResource("2_dtxq5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1)
+[node name="goodcarrot" parent="." index="0" instance=ExtResource("2_22sse")]
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="." index="1"]
-transform = Transform3D(36.021, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1)
-shape = SubResource("ConvexPolygonShape3D_krarw")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1"]
+shape = SubResource("ConvexPolygonShape3D_dtxq5")
 
-[editable path="carrot"]
+[editable path="goodcarrot"]
