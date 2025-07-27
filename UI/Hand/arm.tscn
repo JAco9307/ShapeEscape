@@ -53,7 +53,7 @@ control_node = NodePath("../ArmRigidBody2D")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="StaticBody2D/PinJoint2D"]
 stream = ExtResource("6_c472b")
-volume_db = -4.685
+volume_db = 5.0
 max_polyphony = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
