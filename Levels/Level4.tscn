@@ -1,0 +1,944 @@
+[gd_scene load_steps=5 format=3 uid="uid://cswfnsqtv0rrb"]
+
+[ext_resource type="PackedScene" uid="uid://b4hf1pkfx6qnn" path="res://Levels/Level_base.tscn" id="1_rkafn"]
+[ext_resource type="PackedScene" uid="uid://c07i21ahef5mj" path="res://objects/Animals/platypus.tscn" id="2_0sogr"]
+[ext_resource type="PackedScene" uid="uid://deb2c3mbmcyp6" path="res://Goals/Jail.tscn" id="2_2qv2g"]
+[ext_resource type="AudioStream" uid="uid://cufvmagrn6q8" path="res://music/Alone.mp3" id="3_0sogr"]
+
+[node name="Level4" node_paths=PackedStringArray("targets") instance=ExtResource("1_rkafn")]
+targets = [NodePath("Jail")]
+
+[node name="Player" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.4848, 3.90448, -2.45226)
+
+[node name="Platypus" parent="." index="3" instance=ExtResource("2_0sogr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.4802, 2.58235, 12.118)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus2" parent="." index="4" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, -20.4512, 2.58235, -1.90646)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus3" parent="." index="5" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, -20.4512, 2.58235, -20.2338)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus4" parent="." index="6" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, -15.5317, 2.58235, -39.5428)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus5" parent="." index="7" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, -19.0007, 2.58235, -62.1957)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus6" parent="." index="8" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, -19.0007, 2.58235, 28.0439)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus7" parent="." index="9" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, -23.8833, 2.58235, 60.5044)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus8" parent="." index="10" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, -21.3927, 2.58235, 81.5232)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus9" parent="." index="11" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, -21.3927, 2.58235, 44.9711)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus10" parent="." index="12" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, -21.3927, 2.58235, -82.6336)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus11" parent="." index="13" instance=ExtResource("2_0sogr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.9731, 2.58235, 12.118)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus12" parent="." index="14" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, -13.9441, 2.58235, -1.90646)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus13" parent="." index="15" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, -13.9441, 2.58235, -20.2338)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus14" parent="." index="16" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, -9.02461, 2.58235, -39.5428)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus15" parent="." index="17" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, -12.4937, 2.58235, -62.1957)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus16" parent="." index="18" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, -12.4937, 2.58235, 28.0439)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus17" parent="." index="19" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, -17.3762, 2.58235, 60.5044)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus18" parent="." index="20" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, -14.8857, 2.58235, 81.5232)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus19" parent="." index="21" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, -14.8857, 2.58235, 44.9711)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus20" parent="." index="22" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, -14.8857, 2.58235, -82.6336)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus21" parent="." index="23" instance=ExtResource("2_0sogr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.27056, 2.58235, 12.118)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus22" parent="." index="24" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, -5.24155, 2.58235, -1.90646)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus23" parent="." index="25" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, -5.24155, 2.58235, -20.2338)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus24" parent="." index="26" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, -0.322054, 2.58235, -39.5428)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus25" parent="." index="27" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, -3.79111, 2.58235, -62.1957)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus26" parent="." index="28" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, -3.79111, 2.58235, 28.0439)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus27" parent="." index="29" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, -8.67364, 2.58235, 60.5044)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus28" parent="." index="30" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, -6.18311, 2.58235, 81.5232)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus29" parent="." index="31" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, -6.18311, 2.58235, 44.9711)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus30" parent="." index="32" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, -6.18311, 2.58235, -82.6336)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus31" parent="." index="33" instance=ExtResource("2_0sogr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0243225, 2.58235, 12.118)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus32" parent="." index="34" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, 3.05333, 2.58235, -1.90646)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus33" parent="." index="35" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, 3.05333, 2.58235, -20.2338)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus34" parent="." index="36" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, 7.97283, 2.58235, -39.5428)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus35" parent="." index="37" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, 4.50377, 2.58235, -62.1957)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus36" parent="." index="38" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, 4.50377, 2.58235, 28.0439)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus37" parent="." index="39" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, -0.378759, 2.58235, 60.5044)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus38" parent="." index="40" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, 2.11177, 2.58235, 81.5232)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus39" parent="." index="41" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, 2.11177, 2.58235, 44.9711)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus40" parent="." index="42" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, 2.11177, 2.58235, -82.6336)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus41" parent="." index="43" instance=ExtResource("2_0sogr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.85142, 2.58235, 12.118)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus42" parent="." index="44" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, 12.8804, 2.58235, -1.90646)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus43" parent="." index="45" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, 12.8804, 2.58235, -20.2338)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus44" parent="." index="46" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, 17.7999, 2.58235, -39.5428)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus45" parent="." index="47" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, 14.3309, 2.58235, -62.1957)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus46" parent="." index="48" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, 14.3309, 2.58235, 28.0439)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus47" parent="." index="49" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, 9.44834, 2.58235, 60.5044)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus48" parent="." index="50" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, 11.9389, 2.58235, 81.5232)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus49" parent="." index="51" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, 11.9389, 2.58235, 44.9711)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus50" parent="." index="52" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, 11.9389, 2.58235, -82.6336)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus51" parent="." index="53" instance=ExtResource("2_0sogr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.0797, 2.58235, 12.118)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus52" parent="." index="54" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, 20.1087, 2.58235, -1.90646)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus53" parent="." index="55" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, 20.1087, 2.58235, -20.2338)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus54" parent="." index="56" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, 25.0282, 2.58235, -39.5428)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus55" parent="." index="57" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, 21.5592, 2.58235, -62.1957)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus56" parent="." index="58" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, 21.5592, 2.58235, 28.0439)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus57" parent="." index="59" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, 16.6766, 2.58235, 60.5044)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus58" parent="." index="60" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, 19.1672, 2.58235, 81.5232)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus59" parent="." index="61" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, 19.1672, 2.58235, 44.9711)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus60" parent="." index="62" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, 19.1672, 2.58235, -82.6336)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus61" parent="." index="63" instance=ExtResource("2_0sogr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.4168, 2.58235, 12.118)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus62" parent="." index="64" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, 28.4458, 2.58235, -1.90646)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus63" parent="." index="65" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, 28.4458, 2.58235, -20.2338)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus64" parent="." index="66" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, 33.3653, 2.58235, -39.5428)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus65" parent="." index="67" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, 29.8962, 2.58235, -62.1957)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus66" parent="." index="68" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, 29.8962, 2.58235, 28.0439)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus67" parent="." index="69" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, 25.0137, 2.58235, 60.5044)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus68" parent="." index="70" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, 27.5042, 2.58235, 81.5232)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus69" parent="." index="71" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, 27.5042, 2.58235, 44.9711)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus70" parent="." index="72" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, 27.5042, 2.58235, -82.6336)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus71" parent="." index="73" instance=ExtResource("2_0sogr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.3509, 2.58235, 12.118)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus72" parent="." index="74" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, 35.38, 2.58235, -1.90646)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus73" parent="." index="75" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, 35.38, 2.58235, -20.2338)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus74" parent="." index="76" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, 40.2994, 2.58235, -39.5428)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus75" parent="." index="77" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, 36.8304, 2.58235, -62.1957)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus76" parent="." index="78" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, 36.8304, 2.58235, 28.0439)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus77" parent="." index="79" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, 31.9479, 2.58235, 60.5044)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus78" parent="." index="80" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, 34.4384, 2.58235, 81.5232)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus79" parent="." index="81" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, 34.4384, 2.58235, 44.9711)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus80" parent="." index="82" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, 34.4384, 2.58235, -82.6336)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus81" parent="." index="83" instance=ExtResource("2_0sogr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.6196, 2.58235, 12.118)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus82" parent="." index="84" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, 41.6486, 2.58235, -1.90646)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus83" parent="." index="85" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, 41.6486, 2.58235, -20.2338)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus84" parent="." index="86" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, 46.5681, 2.58235, -39.5428)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus85" parent="." index="87" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, 43.099, 2.58235, -62.1957)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus86" parent="." index="88" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, 43.099, 2.58235, 28.0439)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus87" parent="." index="89" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, 38.2165, 2.58235, 60.5044)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus88" parent="." index="90" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, 40.707, 2.58235, 81.5232)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus89" parent="." index="91" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, 40.707, 2.58235, 44.9711)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus90" parent="." index="92" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, 40.707, 2.58235, -82.6336)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus91" parent="." index="93" instance=ExtResource("2_0sogr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.0767, 2.58235, 12.118)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus92" parent="." index="94" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, 51.1057, 2.58235, -1.90646)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus93" parent="." index="95" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, 51.1057, 2.58235, -20.2338)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus94" parent="." index="96" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, 56.0252, 2.58235, -39.5428)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus95" parent="." index="97" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, 52.5562, 2.58235, -62.1957)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus96" parent="." index="98" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, 52.5562, 2.58235, 28.0439)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus97" parent="." index="99" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, 47.6737, 2.58235, 60.5044)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus98" parent="." index="100" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, 50.1642, 2.58235, 81.5232)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus99" parent="." index="101" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, 50.1642, 2.58235, 44.9711)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus100" parent="." index="102" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, 50.1642, 2.58235, -82.6336)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus101" parent="." index="103" instance=ExtResource("2_0sogr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46.1874, 2.58235, 12.118)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus102" parent="." index="104" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, -43.1584, 2.58235, -1.90646)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus103" parent="." index="105" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, -43.1584, 2.58235, -20.2338)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus104" parent="." index="106" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, -38.2389, 2.58235, -39.5428)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus105" parent="." index="107" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, -41.708, 2.58235, -62.1957)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus106" parent="." index="108" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, -41.708, 2.58235, 28.0439)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus107" parent="." index="109" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, -46.5905, 2.58235, 60.5044)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus108" parent="." index="110" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, -44.1, 2.58235, 81.5232)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus109" parent="." index="111" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, -44.1, 2.58235, 44.9711)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus110" parent="." index="112" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, -44.1, 2.58235, -82.6336)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus111" parent="." index="113" instance=ExtResource("2_0sogr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56.1945, 2.58235, 12.118)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus112" parent="." index="114" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, -53.1655, 2.58235, -1.90646)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus113" parent="." index="115" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, -53.1655, 2.58235, -20.2338)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus114" parent="." index="116" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, -48.246, 2.58235, -39.5428)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus115" parent="." index="117" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, -51.7151, 2.58235, -62.1957)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus116" parent="." index="118" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, -51.7151, 2.58235, 28.0439)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus117" parent="." index="119" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, -56.5976, 2.58235, 60.5044)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus118" parent="." index="120" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, -54.1071, 2.58235, 81.5232)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus119" parent="." index="121" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, -54.1071, 2.58235, 44.9711)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus120" parent="." index="122" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, -54.1071, 2.58235, -82.6336)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus121" parent="." index="123" instance=ExtResource("2_0sogr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.1751, 2.58235, 12.118)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus122" parent="." index="124" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, -32.1461, 2.58235, -1.90646)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus123" parent="." index="125" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, -32.1461, 2.58235, -20.2338)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus124" parent="." index="126" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, -27.2266, 2.58235, -39.5428)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus125" parent="." index="127" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, -30.6956, 2.58235, -62.1957)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus126" parent="." index="128" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, -30.6956, 2.58235, 28.0439)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus127" parent="." index="129" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, -35.5782, 2.58235, 60.5044)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus128" parent="." index="130" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, -33.0876, 2.58235, 81.5232)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus129" parent="." index="131" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, -33.0876, 2.58235, 44.9711)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus130" parent="." index="132" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, -33.0876, 2.58235, -82.6336)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus131" parent="." index="133" instance=ExtResource("2_0sogr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -68.3825, 2.58235, 12.118)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus132" parent="." index="134" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, -65.3535, 2.58235, -1.90646)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus133" parent="." index="135" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, -65.3535, 2.58235, -20.2338)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus134" parent="." index="136" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, -60.434, 2.58235, -39.5428)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus135" parent="." index="137" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, -63.903, 2.58235, -62.1957)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus136" parent="." index="138" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, -63.903, 2.58235, 28.0439)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus137" parent="." index="139" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, -68.7855, 2.58235, 60.5044)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus138" parent="." index="140" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, -66.295, 2.58235, 81.5232)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus139" parent="." index="141" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, -66.295, 2.58235, 44.9711)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus140" parent="." index="142" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, -66.295, 2.58235, -82.6336)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus141" parent="." index="143" instance=ExtResource("2_0sogr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -68.3825, 2.58235, 12.118)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus142" parent="." index="144" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, -65.3535, 2.58235, -1.90646)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus143" parent="." index="145" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, -65.3535, 2.58235, -20.2338)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus144" parent="." index="146" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, -60.434, 2.58235, -39.5428)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus145" parent="." index="147" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, -63.903, 2.58235, -62.1957)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus146" parent="." index="148" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, -63.903, 2.58235, 28.0439)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus147" parent="." index="149" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, -68.7855, 2.58235, 60.5044)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus148" parent="." index="150" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, -66.295, 2.58235, 81.5232)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus149" parent="." index="151" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, -66.295, 2.58235, 44.9711)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Platypus150" parent="." index="152" instance=ExtResource("2_0sogr")]
+transform = Transform3D(-0.0681689, 0.0960369, -0.993041, 0.00657712, 0.995378, 0.0958114, 0.997652, 0, -0.0684854, -66.295, 2.58235, -82.6336)
+initialMass = 50.0
+yTorqueMult = 1000.0
+zTorqueMult = 1000.0
+
+[node name="Label2" type="Label" parent="MainUi" index="8"]
+offset_left = 61.0
+offset_top = 86.0
+offset_right = 362.0
+offset_bottom = 155.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.556863, 0.568627, 0.839216, 1)
+theme_override_font_sizes/font_size = 50
+text = "Alone world 2"
+
+[node name="AdButton" parent="MainUi" index="9"]
+visible = false
+
+[node name="Floor" parent="." index="154"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.0496, 0, 0)
+scaleX = 200
+scaleZ = 200
+
+[node name="MeshInstance3D" parent="Floor/StaticBody3D" index="1"]
+transform = Transform3D(-0.0119377, 0, -0.999929, 0, 1, 0, 0.999929, 0, -0.0119377, 0, 0, 0)
+
+[node name="Jail" parent="." index="155" instance=ExtResource("2_2qv2g")]
+transform = Transform3D(-0.000820323, 0, -1, 0, 1, 0, 1, 0, -0.000820323, -13.2853, -0.425413, -57.2922)
+health = 50
+
+[node name="AudioStreamPlayer" parent="." index="156"]
+stream = ExtResource("3_0sogr")
+volume_db = -1.755
+
+[editable path="MainUi"]
+[editable path="Floor"]
