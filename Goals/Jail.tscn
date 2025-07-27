@@ -73,6 +73,7 @@ shape = SubResource("BoxShape3D_mjg8f")
 [node name="Animal" type="AnimatedSprite3D" parent="."]
 transform = Transform3D(2.75623, 0, 0, 0, 4.67097, 0, 0, 0, 1, -1.26945, 5.33752, -1.27546)
 sprite_frames = SubResource("SpriteFrames_87311")
+frame_progress = 0.802465
 
 [node name="HealthLabel" type="Label3D" parent="."]
 unique_name_in_owner = true

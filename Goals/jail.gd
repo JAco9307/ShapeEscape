@@ -6,6 +6,9 @@ signal exploded
 @export var health = 20
 var explodedAlready = false
 
+func _ready() -> void:
+	$Animal.play()
+
 func _process(_delta: float) -> void:
 	%HealthLabel.text = "HEALTH: " + str(health)
 
