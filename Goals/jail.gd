@@ -6,7 +6,7 @@ signal exploded
 @export var health = 20
 var explodedAlready = false
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	%HealthLabel.text = "HEALTH: " + str(health)
 
 func take_damage(amount):

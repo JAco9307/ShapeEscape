@@ -4,13 +4,14 @@ extends RigidBody3D
 @export var yTorqueMult:float = 20
 @export var zTorqueMult:float = 20
 
+var mouse_sensitivity:float 
 var prev_mouse_position
 var next_mouse_position
 var health = -1
 var maxhealth = -1
 
 func _ready() -> void:
-	var mouse_sensitivity = GlobalVariables.mouse_sensitivity
+	mouse_sensitivity = GlobalVariables.mouse_sensitivity
 	contact_monitor = true
 	max_contacts_reported = 30
 	mass = initialMass

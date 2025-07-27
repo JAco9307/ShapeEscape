@@ -9,7 +9,7 @@ func _ready() -> void:
 	for target in targets:
 		target.exploded.connect(target_exploded)
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if targetsLeft == 0:
 		win()
 

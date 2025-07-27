@@ -79,7 +79,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -66.2876, 5.49015, 40.7414)
 initialMass = 50.0
 yTorqueMult = 1000.0
 zTorqueMult = 10.0
-mouse_sensitivity = 0.2
 
 [node name="Fence" parent="." instance=ExtResource("14_devvj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -68.1329, 4.82093, -6.82977)

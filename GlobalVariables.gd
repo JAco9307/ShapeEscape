@@ -55,7 +55,7 @@ var shapes = [
 	},
 ]
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Input.is_physical_key_pressed(KEY_CTRL):
 		reset()
 	if Input.is_physical_key_pressed(KEY_ALT):
