@@ -1,15 +1,15 @@
 [gd_scene load_steps=8 format=3 uid="uid://cfltgxv14klo8"]
 
 [ext_resource type="PackedScene" uid="uid://b4hf1pkfx6qnn" path="res://Levels/Level_base.tscn" id="1_w77jt"]
-[ext_resource type="PackedScene" uid="uid://deb2c3mbmcyp6" path="res://Goals/Jail.tscn" id="2_fhqol"]
 [ext_resource type="PackedScene" uid="uid://d2a0oy5ml2mdc" path="res://objects/Environment/benchLong.tscn" id="3_iotdp"]
 [ext_resource type="PackedScene" uid="uid://hbd5hkve261k" path="res://objects/Environment/NonFunctional/RockBig.tscn" id="4_nutv8"]
 [ext_resource type="PackedScene" uid="uid://dwhaiq5n4rg7g" path="res://objects/Environment/NonFunctional/tree.tscn" id="5_05pb0"]
 [ext_resource type="PackedScene" uid="uid://cru1wb2mirml7" path="res://objects/Environment/NonFunctional/RockSmall.tscn" id="6_dl8mf"]
+[ext_resource type="PackedScene" uid="uid://044pmihu1j0b" path="res://Goals/JailPolarBear.tscn" id="7_dl8mf"]
 [ext_resource type="PackedScene" uid="uid://dy6k84vuv5a55" path="res://objects/Environment/bench.tscn" id="7_xcayt"]
 
 [node name="Level1" node_paths=PackedStringArray("targets") instance=ExtResource("1_w77jt")]
-targets = [NodePath("Jail")]
+targets = [NodePath("Jail2")]
 
 [node name="Player" parent="." index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.3706, 3.90448, 0)
@@ -32,36 +32,36 @@ scaleZ = 200
 [node name="MeshInstance3D" parent="Floor/StaticBody3D" index="1"]
 transform = Transform3D(-0.0119377, 0, -0.999929, 0, 1, 0, 0.999929, 0, -0.0119377, 0, 0, 0)
 
-[node name="Jail" parent="." index="5" instance=ExtResource("2_fhqol")]
-transform = Transform3D(-0.000820323, 0, -1, 0, 1, 0, 1, 0, -0.000820323, -36.3725, -0.425413, -1.38989)
-
-[node name="BenchLong" parent="." index="6" instance=ExtResource("3_iotdp")]
+[node name="BenchLong" parent="." index="5" instance=ExtResource("3_iotdp")]
 transform = Transform3D(-0.942478, 0, -0.334267, 0, 1, 0, 0.334267, 0, -0.942478, -1.3267, 2.9766, -7.09313)
 initialMass = 60.0
 
-[node name="BenchLong2" parent="." index="7" instance=ExtResource("3_iotdp")]
+[node name="BenchLong2" parent="." index="6" instance=ExtResource("3_iotdp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52.1738, 2.97663, 1.38563)
 initialMass = 60.0
 
-[node name="RockBig" parent="." index="8" instance=ExtResource("4_nutv8")]
+[node name="RockBig" parent="." index="7" instance=ExtResource("4_nutv8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.8137, 5.1929, 23.6992)
 
-[node name="Tree" parent="." index="9" instance=ExtResource("5_05pb0")]
+[node name="Tree" parent="." index="8" instance=ExtResource("5_05pb0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.11487, 1, 27.3941)
 
-[node name="Tree2" parent="." index="10" instance=ExtResource("5_05pb0")]
+[node name="Tree2" parent="." index="9" instance=ExtResource("5_05pb0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -41.0987, 1, -29.2618)
 
-[node name="RockSmall" parent="." index="11" instance=ExtResource("6_dl8mf")]
+[node name="RockSmall" parent="." index="10" instance=ExtResource("6_dl8mf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.4417, 2.07716, -14.8647)
 
-[node name="RockSmall2" parent="." index="12" instance=ExtResource("6_dl8mf")]
+[node name="RockSmall2" parent="." index="11" instance=ExtResource("6_dl8mf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.57168, 2.07716, 26.2709)
 
-[node name="Bench" parent="." index="13" instance=ExtResource("7_xcayt")]
+[node name="Bench" parent="." index="12" instance=ExtResource("7_xcayt")]
 transform = Transform3D(0.0907108, -0.0366088, -0.995204, 0.00332304, 0.99933, -0.0364577, 0.995872, 0, 0.0907717, -14.2458, 3.26964, 5.76853)
 initialMass = 60.0
 yTorqueMult = 2000.0
 zTorqueMult = 2000.0
+
+[node name="Jail2" parent="." index="15" instance=ExtResource("7_dl8mf")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -33.5836, -0.425413, -3.50468)
 
 [editable path="Floor"]

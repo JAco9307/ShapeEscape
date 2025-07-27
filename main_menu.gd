@@ -11,6 +11,7 @@ func _on_level_button_pressed() -> void:
 
 func _on_credits_button_pressed() -> void:
 	$Credits.visible = true
+	$Credits.play_video()
 
 func _on_v_slider_drag_ended(_value_changed: bool) -> void:
 	var scaledval = remap($VSlider.value, 0,1000,0.2,0.0002)

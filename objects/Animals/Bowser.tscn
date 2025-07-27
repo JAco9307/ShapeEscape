@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://83xoekkqxmku"]
+
+[ext_resource type="PackedScene" uid="uid://du8lkrvnc16gl" path="res://objects/Rotatable.tscn" id="1_bfujn"]
+[ext_resource type="PackedScene" uid="uid://b0q0stufeqt6" path="res://models/animated/bestBowser.glb" id="2_8ejiu"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ltyip"]
+size = Vector3(6.94812, 5.75275, 4.22338)
+
+[node name="Rotatable" instance=ExtResource("1_bfujn")]
+
+[node name="bestBowser" parent="." index="0" instance=ExtResource("2_8ejiu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.92513, -1.35754, 0)
+
+[node name="bowser_001" parent="bestBowser" index="0"]
+blend_shapes/frame_0050 = 1.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.722351, 1.64474, 0.114758)
+shape = SubResource("BoxShape3D_ltyip")
+
+[editable path="bestBowser"]

@@ -1,0 +1,67 @@
+[gd_scene load_steps=8 format=3 uid="uid://044pmihu1j0b"]
+
+[ext_resource type="Script" uid="uid://ps0g10fdq67b" path="res://Goals/jail.gd" id="1_aopue"]
+[ext_resource type="PackedScene" uid="uid://c53w15fcgauug" path="res://models/Objects/fence.glb" id="2_aopue"]
+[ext_resource type="Texture2D" uid="uid://con8buo01ckk4" path="res://2DAnimals/polarbear1.png" id="3_aopue"]
+[ext_resource type="Texture2D" uid="uid://bqsevwmfxcqnh" path="res://2DAnimals/polarbear2.png" id="4_8dwvd"]
+[ext_resource type="AudioStream" uid="uid://cipapiqurdx2h" path="res://music/Sounds/crash.mp3" id="5_j832b"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mjg8f"]
+size = Vector3(11.2352, 10.041, 7.86459)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_87311"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_aopue")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_8dwvd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Jail" type="Node3D"]
+script = ExtResource("1_aopue")
+
+[node name="Jail" type="Node3D" parent="."]
+
+[node name="Area3D" type="Area3D" parent="Jail"]
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Jail/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.01331, 4.52048, -1.42767)
+shape = SubResource("BoxShape3D_mjg8f")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Jail"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Jail/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.993351, 4.52048, -1.39561)
+shape = SubResource("BoxShape3D_mjg8f")
+
+[node name="fence" parent="Jail" instance=ExtResource("2_aopue")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.332862, -0.2653, 0.440532)
+
+[node name="fence2" parent="Jail" instance=ExtResource("2_aopue")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.332862, -0.2653, -5.19626)
+
+[node name="fence3" parent="Jail" instance=ExtResource("2_aopue")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.53, 5.32015, -0.2653, -0.655227)
+
+[node name="fence4" parent="Jail" instance=ExtResource("2_aopue")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.53, -5.68076, -0.2653, -0.655227)
+
+[node name="Animal" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(2.75623, 0, 0, 0, 4.67097, 0, 0, 0, 1, -1.26945, 5.33752, -1.27546)
+sprite_frames = SubResource("SpriteFrames_87311")
+
+[node name="HealthLabel" type="Label3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.986217, 12.8179, 0)
+text = "Health: 20"
+font_size = 500
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_j832b")
+max_polyphony = 3

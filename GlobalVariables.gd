@@ -163,13 +163,24 @@ var shapes = [
 	{
 		"name": "Guitar",
 		"owned": 0,
-		"rarity": 0.1,
+		"rarity": 0.2,
 		"health": 200,
 		"friction": 0.01,
 		"bounce": 0.5,
 		"weight": 5,
 		"sound" : preload("res://music/Sounds/guitar.mp3"),
 		"scene": preload("res://objects/Environment/NonFunctional/Guitar.tscn")
+	},
+	{
+		"name": "Bowser",
+		"owned": 0,
+		"rarity": 0.2,
+		"health": 200,
+		"friction": 0,
+		"bounce": 0.1,
+		"weight": 10,
+		"sound" : null,
+		"scene": preload("res://objects/Animals/Bowser.tscn")
 	},
 ]
 
