@@ -16,42 +16,128 @@ var shapes = [
 		"health": -1,
 		"friction": 0.5,
 		"bounce": 0,
-		"weight": 40,
-		"object": preload("res://models/Player/starter.glb"),
+		"weight": 30,
 		"scene": preload("res://objects/Player/starter_shape.tscn")
 	},
 	{
 		"name": "Grimace",
 		"owned": 0,
 		"rarity": 5,
-		"health": 200,
+		"health": 100,
 		"friction": 0.2,
-		"bounce": 1,
-		"weight": 1,
-		"object": preload("res://models/Player/grimace.glb"),
+		"bounce": 0.2,
+		"weight": 5,
 		"scene": preload("res://objects/Player/grimace.tscn")
+	},
+	{
+		"name": "Super",
+		"owned": 0,
+		"rarity": 0.5,
+		"health": 20,
+		"friction": 0.001,
+		"bounce": 0.1,
+		"weight": 1,
+		"scene": preload("res://objects/Player/Super.tscn")
+	},
+	{
+		"name": "Bear",
+		"owned": 0,
+		"rarity": 1,
+		"health": 40,
+		"friction": 20,
+		"bounce": 0,
+		"weight": 30,
+		"scene": preload("res://objects/Animals/bear.tscn")
+	},
+	{
+		"name": "Elephant",
+		"owned": 0,
+		"rarity": 1,
+		"health": 70,
+		"friction": 40,
+		"bounce": 0.1,
+		"weight": 40,
+		"scene": preload("res://objects/Animals/elephant.tscn")
+	},
+	{
+		"name": "Giraffe",
+		"owned": 0,
+		"rarity": 1,
+		"health": 10,
+		"friction": 0.5,
+		"bounce": 0.9,
+		"weight": 10,
+		"scene": preload("res://objects/Animals/giraffe.tscn")
+	},
+	{
+		"name": "Goose",
+		"owned": 0,
+		"rarity": 1,
+		"health": 15,
+		"friction": 0.1,
+		"bounce": 0.3,
+		"weight": 5,
+		"scene": preload("res://objects/Animals/goose.tscn")
+	},
+	{
+		"name": "Horse",
+		"owned": 0,
+		"rarity": 1,
+		"health": 10,
+		"friction": 0.1,
+		"bounce": 0.1,
+		"weight": 5,
+		"scene": preload("res://objects/Animals/horse.tscn")
+	},
+	{
+		"name": "Pig",
+		"owned": 0,
+		"rarity": 1,
+		"health": 15,
+		"friction": 0.1,
+		"bounce": 1000,
+		"weight": 5,
+		"scene": preload("res://objects/Animals/pig.tscn")
+	},
+	{
+		"name": "Platypus",
+		"owned": 0,
+		"rarity": 1,
+		"health": 10,
+		"friction": 0.00001,
+		"bounce": 0,
+		"weight": 5,
+		"scene": preload("res://objects/Animals/platypus.tscn")
 	},
 	{
 		"name": "Raccoon",
 		"owned": 0,
-		"rarity": 2,
-		"health": 20,
-		"friction": 0.001,
-		"bounce": 0,
-		"weight": 50,
-		"object": preload("res://models/Animals/untextured/raccoon.glb"),
+		"rarity": 1,
+		"health": 10,
+		"friction": 0.1,
+		"bounce": 0.1,
+		"weight": 4,
 		"scene": preload("res://objects/Animals/raccoon.tscn")
 	},
 	{
-		"name": "Guitar",
+		"name": "Shark",
 		"owned": 0,
-		"rarity": 2,
-		"health": 15,
-		"friction": 20,
-		"bounce": 0,
-		"weight": 1,
-		"object": preload("res://models/Objects/guitar.glb"),
-		"scene": preload("res://objects/Environment/NonFunctional/Guitar.tscn")
+		"rarity": 1,
+		"health": 10,
+		"friction": 0.1,
+		"bounce": 0.2,
+		"weight": 7,
+		"scene": preload("res://objects/Animals/shark.tscn")
+	},
+	{
+		"name": "Whale",
+		"owned": 0,
+		"rarity": 1,
+		"health": 10,
+		"friction": 0.1,
+		"bounce": 0.2,
+		"weight": 14,
+		"scene": preload("res://objects/Animals/whale.tscn")
 	},
 ]
 
