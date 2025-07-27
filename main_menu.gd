@@ -10,7 +10,7 @@ func _on_level_button_pressed() -> void:
 
 
 func _on_credits_button_pressed() -> void:
-	pass # Replace with function body.
+	$Credits.visible = true
 
 
 func _on_v_slider_drag_ended(value_changed: bool) -> void:

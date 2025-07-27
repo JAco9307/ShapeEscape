@@ -1,15 +1,14 @@
 [gd_scene load_steps=4 format=3 uid="uid://du28ms063nekj"]
 
-[ext_resource type="PackedScene" uid="uid://du8lkrvnc16gl" path="res://objects/Rotatable.tscn" id="1_xeilh"]
-[ext_resource type="PackedScene" uid="uid://pd5m8fbj1dfd" path="res://models/Objects/Flags/prideflag.glb" id="2_mc8mr"]
-
+[ext_resource type="PackedScene" uid="uid://du8lkrvnc16gl" path="res://objects/Rotatable.tscn" id="1_07yhp"]
+[ext_resource type="PackedScene" uid="uid://c2uutj1jdcnft" path="res://models/Objects/Flags/prideflag.glb" id="2_2yq5a"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xcnuv"]
 size = Vector3(1, 15.0596, 1)
 
-[node name="flag" instance=ExtResource("1_xeilh")]
+[node name="flag" instance=ExtResource("1_07yhp")]
 
-[node name="prideflag" parent="." index="0" instance=ExtResource("2_mc8mr")]
+[node name="prideflag" parent="." index="0" instance=ExtResource("2_2yq5a")]
 transform = Transform3D(1, 0, 0, 0, 0.998118, 0.0613273, 0, -0.0613273, 0.998118, 0.0772142, -6.60761, 0.623556)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1"]
