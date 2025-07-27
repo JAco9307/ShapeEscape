@@ -7,6 +7,8 @@ var player:Player
 var selectedObject
 var handrot:Vector3 = Vector3.ZERO
 var mouse_sensitivity: float = 0.02
+var adtimermax = 180
+var adtimer = 0
 
 var achivements:Dictionary = {
 		"ads": false,
@@ -175,6 +177,9 @@ func set_shape_rarity(rarity:float, name:String):
 	for shape in shapes:
 		if shape.name == name:
 			shape.rarity = rarity
+			
+func reset_ad_timer():
+	adtimer = adtimermax
 
 func _process(_delta: float) -> void:
 	if Input.is_physical_key_pressed(KEY_CTRL):
@@ -185,6 +190,9 @@ func _process(_delta: float) -> void:
 		reset()
 	if Input.is_physical_key_pressed(KEY_ENTER):
 		achivements["enter"] = true
+	if adtimer > 0:
+		adtimer -= _delta
+		
 
 func reset():
 	get_tree().reload_current_scene()

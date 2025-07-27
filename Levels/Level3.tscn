@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://h2etp0ih0cjy"]
 
 [ext_resource type="PackedScene" uid="uid://b4hf1pkfx6qnn" path="res://Levels/Level_base.tscn" id="1_q5lgr"]
-[ext_resource type="PackedScene" uid="uid://deb2c3mbmcyp6" path="res://Goals/Jail.tscn" id="2_hy5j1"]
 [ext_resource type="AudioStream" uid="uid://broi0chncv7tp" path="res://music/Alone.mp3" id="3_jon3f"]
 [ext_resource type="PackedScene" uid="uid://d3wf6gs4yjcbs" path="res://Surfaces/Floor2.tscn" id="4_8eiv4"]
+[ext_resource type="PackedScene" uid="uid://c3y4eoaye0cjr" path="res://Goals/JailShark.tscn" id="4_yd8fq"]
 
 [node name="Level3" node_paths=PackedStringArray("targets") instance=ExtResource("1_q5lgr")]
 targets = [NodePath("Jail")]
@@ -29,19 +29,18 @@ scaleZ = 200
 [node name="MeshInstance3D" parent="Floor/StaticBody3D" index="1"]
 transform = Transform3D(-0.0119377, 0, -0.999929, 0, 1, 0, 0.999929, 0, -0.0119377, 0, 0, 0)
 
-[node name="Jail" parent="." index="5" instance=ExtResource("2_hy5j1")]
-transform = Transform3D(-0.000820323, 0, -1, 0, 1, 0, 1, 0, -0.000820323, -36.3725, -0.425413, -1.38989)
-health = 50
-
-[node name="AudioStreamPlayer" parent="." index="6"]
+[node name="AudioStreamPlayer" parent="." index="5"]
 stream = ExtResource("3_jon3f")
 volume_db = -1.755
 
-[node name="VictorySound" parent="." index="7"]
+[node name="VictorySound" parent="." index="6"]
 volume_db = 2.948
 
-[node name="Floor2" parent="." index="8" instance=ExtResource("4_8eiv4")]
+[node name="Floor2" parent="." index="7" instance=ExtResource("4_8eiv4")]
 scaleX = 200
 scaleZ = 200
+
+[node name="Jail" parent="." index="8" instance=ExtResource("4_yd8fq")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -36.3725, -0.425413, -1.38989)
 
 [editable path="Floor"]

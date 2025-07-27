@@ -300,13 +300,23 @@ frame_progress = 0.228237
 [node name="ArmSprite" parent="." instance=ExtResource("15_5ctpo")]
 position = Vector2(345, 404)
 
+[node name="AdLabel" type="Label" parent="."]
+offset_left = 15.0
+offset_top = 526.0
+offset_right = 225.0
+offset_bottom = 575.0
+text = "Level Skippable 
+in: 180 seconds"
+
 [node name="AdButton" type="Button" parent="."]
+visible = false
 offset_left = 11.0
 offset_top = 443.0
 offset_right = 211.0
 offset_bottom = 521.0
 text = "Watch an ad to skip level
-100 money"
+Cost: 100 Helicoin
+"
 
 [connection signal="dataout" from="." to="Polygon2D/hpbar" method="_on_main_ui_dataout"]
 [connection signal="dogmunch" from="Label" to="DogMonch" method="_on_label_dogmunch"]

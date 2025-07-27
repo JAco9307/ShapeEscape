@@ -109,6 +109,10 @@ texture = ExtResource("3_jiccr")
 [node name="Jail" parent="." index="12" instance=ExtResource("4_nlffy")]
 transform = Transform3D(0.849202, 0, 0.528068, 0, 1, 0, -0.528068, 0, 0.849202, -17.0453, 0.0734644, 16.1167)
 
+[node name="Animal" parent="Jail" index="1"]
+transform = Transform3D(2.75623, 0, 2.98023e-08, 0, 4.67097, 0, -1.19209e-07, 0, 1, -1.26945, 9.17714, -1.27546)
+frame_progress = 0.823198
+
 [node name="flag" parent="." index="13" instance=ExtResource("6_g6ghg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.1839, 7.81487, 39.8117)
 
@@ -165,3 +169,4 @@ transform = Transform3D(-0.64363, 0, 0.765337, 0, 1, 0, -0.765337, 0, -0.64363, 
 transform = Transform3D(-0.990755, 0, -0.135664, 0, 1, 0, 0.135664, 0, -0.990755, -47.3989, 17.9308, 47.9596)
 
 [editable path="Floor"]
+[editable path="Jail"]

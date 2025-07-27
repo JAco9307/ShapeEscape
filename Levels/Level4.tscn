@@ -2,9 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://b4hf1pkfx6qnn" path="res://Levels/Level_base.tscn" id="1_rkafn"]
 [ext_resource type="PackedScene" uid="uid://c07i21ahef5mj" path="res://objects/Animals/platypus.tscn" id="2_0sogr"]
-[ext_resource type="PackedScene" uid="uid://deb2c3mbmcyp6" path="res://Goals/Jail.tscn" id="2_2qv2g"]
 [ext_resource type="AudioStream" uid="uid://broi0chncv7tp" path="res://music/Alone.mp3" id="3_0sogr"]
 [ext_resource type="PackedScene" uid="uid://d3wf6gs4yjcbs" path="res://Surfaces/Floor2.tscn" id="5_0sogr"]
+[ext_resource type="PackedScene" uid="uid://cak6jqtpbwhn8" path="res://Goals/JailPig.tscn" id="5_5brs8"]
 
 [node name="Level4" node_paths=PackedStringArray("targets") instance=ExtResource("1_rkafn")]
 targets = [NodePath("Jail")]
@@ -922,9 +922,6 @@ theme_override_colors/font_shadow_color = Color(0.556863, 0.568627, 0.839216, 1)
 theme_override_font_sizes/font_size = 50
 text = "Alone world 2"
 
-[node name="AdButton" parent="MainUi" index="9"]
-visible = false
-
 [node name="Floor" parent="." index="154"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.0496, -2.28088, 0)
 scaleX = 200
@@ -933,18 +930,17 @@ scaleZ = 200
 [node name="MeshInstance3D" parent="Floor/StaticBody3D" index="1"]
 transform = Transform3D(-0.0119377, 0, -0.999929, 0, 1, 0, 0.999929, 0, -0.0119377, 0, 0, 0)
 
-[node name="Jail" parent="." index="155" instance=ExtResource("2_2qv2g")]
-transform = Transform3D(-0.000820323, 0, -1, 0, 1, 0, 1, 0, -0.000820323, -13.2853, -0.425413, -57.2922)
-health = 50
-
-[node name="AudioStreamPlayer" parent="." index="156"]
+[node name="AudioStreamPlayer" parent="." index="155"]
 stream = ExtResource("3_0sogr")
 volume_db = -1.755
 
-[node name="Floor2" parent="." index="158" instance=ExtResource("5_0sogr")]
+[node name="Floor2" parent="." index="157" instance=ExtResource("5_0sogr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.05, 0, 0)
 scaleX = 200
 scaleZ = 200
+
+[node name="Jail" parent="." index="158" instance=ExtResource("5_5brs8")]
+transform = Transform3D(-0.000820323, 0, -1, 0, 1, 0, 1, 0, -0.000820323, -13.2853, -0.425413, -57.2922)
 
 [editable path="MainUi"]
 [editable path="Floor"]

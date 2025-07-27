@@ -54,6 +54,23 @@ position = Vector2(35, 102)
 scale = Vector2(0.190667, 0.133292)
 texture = ExtResource("5_qe4sl")
 
+[node name="lookedbadge" type="Label" parent="."]
+visible = false
+offset_left = 883.0
+offset_top = 460.0
+offset_right = 1031.0
+offset_bottom = 509.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 1, 1)
+text = "Looked at the
+game  files award "
+
+[node name="Sprite2D" type="Sprite2D" parent="lookedbadge"]
+position = Vector2(78, 109)
+scale = Vector2(0.234744, 0.287458)
+texture = ExtResource("3_6l5gm")
+
 [node name="enterbadge" type="Label" parent="."]
 visible = false
 offset_left = 496.0

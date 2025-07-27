@@ -1,0 +1,85 @@
+[gd_scene load_steps=8 format=3 uid="uid://c3y4eoaye0cjr"]
+
+[ext_resource type="Script" uid="uid://ps0g10fdq67b" path="res://Goals/jail.gd" id="1_7r5v7"]
+[ext_resource type="PackedScene" uid="uid://dva87470ygqll" path="res://models/Objects/peppermint.glb" id="2_sw18c"]
+[ext_resource type="Texture2D" uid="uid://c7msvdtqykjs5" path="res://2DAnimals/shark1.png" id="3_7r5v7"]
+[ext_resource type="Texture2D" uid="uid://bhhoi3vayig5q" path="res://2DAnimals/shark2.png" id="4_sw18c"]
+[ext_resource type="AudioStream" uid="uid://cipapiqurdx2h" path="res://music/Sounds/crash.mp3" id="5_8wrqk"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mjg8f"]
+size = Vector3(11.2352, 10.041, 7.86459)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_87311"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_7r5v7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_sw18c")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Jail" type="Node3D"]
+script = ExtResource("1_7r5v7")
+
+[node name="Jail" type="Node3D" parent="."]
+
+[node name="peppermint" parent="Jail" instance=ExtResource("2_sw18c")]
+transform = Transform3D(0.8, 0, 0, 0, 0.102774, -0.674591, 0, 0.793371, 0.0873868, -4.6382, 0.279248, 1.82643)
+
+[node name="peppermint2" parent="Jail" instance=ExtResource("2_sw18c")]
+transform = Transform3D(0.8, 0, 0, 0, 0.102774, -0.674591, 0, 0.793371, 0.0873868, 0.0206366, 0.279248, 1.82643)
+
+[node name="peppermint3" parent="Jail" instance=ExtResource("2_sw18c")]
+transform = Transform3D(0.8, 0, 0, 0, 0.102774, -0.674591, 0, 0.793371, 0.0873868, -2.28231, 0.279248, 1.82643)
+
+[node name="peppermint4" parent="Jail" instance=ExtResource("2_sw18c")]
+transform = Transform3D(0.8, 0, 0, 0, -0.046107, -0.679097, 0, 0.79867, -0.0392041, -4.6382, 0.279248, -4.49317)
+
+[node name="peppermint8" parent="Jail" instance=ExtResource("2_sw18c")]
+transform = Transform3D(0.8, 0, 0, 0, -0.046107, -0.679097, 0, 0.79867, -0.0392041, 0.0206366, 0.279248, -4.49317)
+
+[node name="peppermint9" parent="Jail" instance=ExtResource("2_sw18c")]
+transform = Transform3D(0.8, 0, 0, 0, -0.046107, -0.679097, 0, 0.79867, -0.0392041, -2.28231, 0.279248, -4.49317)
+
+[node name="peppermint5" parent="Jail" instance=ExtResource("2_sw18c")]
+transform = Transform3D(0.8, 0, 0, 0, -0.0361509, -0.679533, 0, 0.799183, -0.0307385, 2.94918, 0.279248, -4.5385)
+
+[node name="peppermint6" parent="Jail" instance=ExtResource("2_sw18c")]
+transform = Transform3D(0.8, 0, 0, 0, -0.0331378, -0.679644, 0, 0.799313, -0.0281766, 3.17196, 0.279248, -1.5258)
+
+[node name="peppermint10" parent="Jail" instance=ExtResource("2_sw18c")]
+transform = Transform3D(0.8, 0, 0, 0, -0.0331378, -0.679644, 0, 0.799313, -0.0281766, -5.39755, 0.279248, -1.5258)
+
+[node name="peppermint7" parent="Jail" instance=ExtResource("2_sw18c")]
+transform = Transform3D(0.8, 0, 0, 0, 0.102774, -0.674591, 0, 0.793371, 0.0873868, 2.8417, 0.279248, 1.82643)
+
+[node name="Area3D" type="Area3D" parent="Jail"]
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Jail/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.01331, 4.52048, -1.42767)
+shape = SubResource("BoxShape3D_mjg8f")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Jail"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Jail/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.993351, 4.52048, -1.39561)
+shape = SubResource("BoxShape3D_mjg8f")
+
+[node name="Animal" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(2.75623, 0, 0, 0, 4.67097, 0, 0, 0, 1, -1.26945, 5.33752, -1.27546)
+sprite_frames = SubResource("SpriteFrames_87311")
+
+[node name="HealthLabel" type="Label3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.986217, 12.8179, 0)
+text = "Health: 20"
+font_size = 500
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_8wrqk")
+max_polyphony = 3

@@ -6,6 +6,12 @@ func _ready() -> void:
 	$InventoryShape.visible = false
 	$GachaButton.visible = false
 	$GachaPanel.visible = false
+
+func _process(delta: float) -> void:
+	if GlobalVariables.adtimer <= 0:
+		$AdButton.visible = true
+	var rounded = round(GlobalVariables.adtimer * 10)/10
+	$AdLabel.text = "Level Skippable\nin: " + str(rounded) + " seconds"
 	
 func _on_shape_button_pressed() -> void:
 	if $InventoryShape.visible == false:

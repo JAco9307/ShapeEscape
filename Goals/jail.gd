@@ -11,6 +11,7 @@ func _process(_delta: float) -> void:
 
 func take_damage(amount):
 	health -= amount
+	$AudioStreamPlayer.play()
 	if health <= 0:
 		explode()
 

@@ -1,11 +1,27 @@
-[gd_scene load_steps=5 format=3 uid="uid://deb2c3mbmcyp6"]
+[gd_scene load_steps=8 format=3 uid="uid://deb2c3mbmcyp6"]
 
-[ext_resource type="PackedScene" uid="uid://extqly48yboa" path="res://models/Objects/peppermint.glb" id="1_f12td"]
+[ext_resource type="PackedScene" uid="uid://dva87470ygqll" path="res://models/Objects/peppermint.glb" id="1_f12td"]
 [ext_resource type="Script" uid="uid://ps0g10fdq67b" path="res://Goals/jail.gd" id="1_nbmhg"]
-[ext_resource type="Texture2D" uid="uid://c6fawc122c27g" path="res://2DAnimals/emilyhorse1.png" id="2_nbmhg"]
+[ext_resource type="Texture2D" uid="uid://bpfbdpf85muie" path="res://2DAnimals/emilyhorse1.png" id="2_nbmhg"]
+[ext_resource type="Texture2D" uid="uid://bl4fohia22b0p" path="res://2DAnimals/emilyhorse2.png" id="4_mjg8f"]
+[ext_resource type="AudioStream" uid="uid://cipapiqurdx2h" path="res://music/Sounds/crash.mp3" id="5_87311"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_mjg8f"]
 size = Vector3(11.2352, 10.041, 7.86459)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_87311"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_nbmhg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_mjg8f")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Jail" type="Node3D"]
 script = ExtResource("1_nbmhg")
@@ -54,12 +70,16 @@ shape = SubResource("BoxShape3D_mjg8f")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.993351, 4.52048, -1.39561)
 shape = SubResource("BoxShape3D_mjg8f")
 
-[node name="Animal" type="Sprite3D" parent="."]
+[node name="Animal" type="AnimatedSprite3D" parent="."]
 transform = Transform3D(2.75623, 0, 0, 0, 4.67097, 0, 0, 0, 1, -1.26945, 5.33752, -1.27546)
-texture = ExtResource("2_nbmhg")
+sprite_frames = SubResource("SpriteFrames_87311")
 
 [node name="HealthLabel" type="Label3D" parent="."]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.986217, 12.8179, 0)
 text = "Health: 20"
 font_size = 500
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_87311")
+max_polyphony = 3

@@ -12,6 +12,7 @@ var levels = [
 
 func win():
 	levelIndex += 1
+	GlobalVariables.reset_ad_timer()
 	if levelIndex >= levels.size():
 		get_tree().change_scene_to_file("res://Levels/WinLevel/WinLevel.tscn")
 	else:
