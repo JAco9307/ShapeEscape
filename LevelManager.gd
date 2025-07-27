@@ -2,7 +2,9 @@ extends Node
 
 var levelIndex = 0
 var levels = [
-	
+	"res://Levels/Level1.tscn",
+	"res://Levels/emilylevel1.tscn",
+	"res://Levels/Level1.tscn",
 ]
 
 func win():

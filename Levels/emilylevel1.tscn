@@ -1,16 +1,18 @@
-[gd_scene load_steps=10 format=3 uid="uid://cu81n2cnuvkkg"]
+[gd_scene load_steps=11 format=3 uid="uid://cu81n2cnuvkkg"]
 
 [ext_resource type="PackedScene" uid="uid://b4hf1pkfx6qnn" path="res://Levels/Level_base.tscn" id="1_2btkb"]
 [ext_resource type="PackedScene" uid="uid://j2mprqmq7jvo" path="res://objects/Environment/fence.tscn" id="2_keydt"]
-[ext_resource type="PackedScene" uid="uid://bgbdtbs4te8is" path="res://locations/grassy-floor.glb" id="3_kmnuf"]
+[ext_resource type="PackedScene" uid="uid://bytxc86m231hq" path="res://locations/grassy-floor.glb" id="3_kmnuf"]
 [ext_resource type="PackedScene" uid="uid://by81yf0l78id3" path="res://models/Objects/rock.glb" id="4_vj068"]
 [ext_resource type="PackedScene" uid="uid://bonl088qofa8p" path="res://models/Objects/bench.glb" id="5_3t7nh"]
 [ext_resource type="PackedScene" uid="uid://b2hd2b8ovnrau" path="res://models/Objects/tree.glb" id="6_tl5iy"]
-[ext_resource type="PackedScene" uid="uid://biiuqgmmluxiu" path="res://models/Objects/peppermint.glb" id="7_pn4k8"]
+[ext_resource type="PackedScene" uid="uid://extqly48yboa" path="res://models/Objects/peppermint.glb" id="7_pn4k8"]
 [ext_resource type="PackedScene" uid="uid://cxlv0wo6r2qki" path="res://objects/Environment/carrot.tscn" id="8_lhjwa"]
 [ext_resource type="PackedScene" uid="uid://dxnty4qdey1la" path="res://objects/Animals/horse.tscn" id="9_vj068"]
+[ext_resource type="PackedScene" uid="uid://deb2c3mbmcyp6" path="res://Goals/Jail.tscn" id="10_3t7nh"]
 
-[node name="Level" instance=ExtResource("1_2btkb")]
+[node name="Level" node_paths=PackedStringArray("targets") instance=ExtResource("1_2btkb")]
+targets = [NodePath("Jail"), NodePath("Jail2")]
 
 [node name="Fence4" parent="." index="0" instance=ExtResource("2_keydt")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -30, 6.75, -12.163)
@@ -61,7 +63,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -41.4515, 3.23516, 31.0378)
 transform = Transform3D(0.995341, 0, 0, 0, 2.0632, 0, 0, 0, 1.34684, -58.7833, 2.95418, 52.3075)
 
 [node name="peppermint" parent="." index="19" instance=ExtResource("7_pn4k8")]
-transform = Transform3D(2.98992, 0, 0, 0, 4.65995, 0, 0, 0, 2.40657, -10.8336, 2.19795, 44.0092)
+transform = Transform3D(2.98992, 0, 0, 0, 4.65995, 0, 0, 0, 2.40657, -10.8336, 6.23287, 44.0092)
 
 [node name="Horse" parent="." index="20" instance=ExtResource("9_vj068")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -41.0672, 5.48665, -3.09281)
@@ -72,5 +74,11 @@ visible = false
 
 [node name="Carrot" parent="." index="22" instance=ExtResource("8_lhjwa")]
 transform = Transform3D(0.422187, 0, -0.267877, 0, 0.5, 0, 0.267877, 0, 0.422187, -9.04422, 6.58031, -17.5042)
+
+[node name="Jail" parent="." index="23" instance=ExtResource("10_3t7nh")]
+transform = Transform3D(-0.00293211, 0, 0.999996, 0, 1, 0, -0.999996, 0, -0.00293211, -39.5963, 2.934, 4.87914)
+
+[node name="Jail2" parent="." index="24" instance=ExtResource("10_3t7nh")]
+transform = Transform3D(-0.00293211, 0, 0.999996, 0, 1, 0, -0.999996, 0, -0.00293211, -39.5963, 2.934, -12.2203)
 
 [editable path="Floor"]

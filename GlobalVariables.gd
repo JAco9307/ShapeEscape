@@ -64,3 +64,4 @@ func _process(delta: float) -> void:
 
 func reset():
 	get_tree().reload_current_scene()
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
