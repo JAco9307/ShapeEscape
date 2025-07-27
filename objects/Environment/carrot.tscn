@@ -7,11 +7,13 @@
 points = PackedVector3Array(-2.02775, -2.98989, -6.82025, -2.02775, 2.979, -6.82025, -2.02775, 2.979, 6.82025, -1.38819, -2.98989, 6.82025, 1.13944, -0.736435, -0.730491, -2.02775, -2.98989, 6.82025, -1.38819, 2.979, -6.82025, -1.38819, -2.98989, -6.82025, -1.38819, 2.979, 6.82025, 1.13934, 0.7255, 0.730442, 1.02083, -0.965246, 0.959616, 1.13944, 0.725549, -0.730491, 1.02094, -0.965325, -0.959694, 1.13934, -0.736385, 0.730442)
 
 [node name="Carrot" instance=ExtResource("1_22sse")]
+yTorqueMult = 200.0
+zTorqueMult = 200.0
 
-[node name="carrot" parent="." index="2" instance=ExtResource("2_dtxq5")]
+[node name="carrot" parent="." index="0" instance=ExtResource("2_dtxq5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1)
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="." index="3"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." index="1"]
 transform = Transform3D(36.021, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1)
 shape = SubResource("ConvexPolygonShape3D_krarw")
 

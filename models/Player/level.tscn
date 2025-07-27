@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cybr5s3by7t4h"]
+
+[ext_resource type="PackedScene" uid="uid://bgn7g0gfx5hom" path="res://Levels/Level.tscn" id="1_lsosp"]
+
+[node name="Level" instance=ExtResource("1_lsosp")]
+
+[node name="Floor" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, -1, 4.10887e-08, 0, -8.74228e-08, -0.47, 0, 0, 0)

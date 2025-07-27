@@ -1,18 +1,29 @@
-[gd_scene load_steps=3 format=3 uid="uid://g5m48diqvglc"]
+[gd_scene load_steps=6 format=3 uid="uid://g5m48diqvglc"]
 
-[ext_resource type="PackedScene" uid="uid://bqyeo1mq0f35e" path="res://locations/stage.glb" id="1_y6dek"]
+[ext_resource type="Texture2D" uid="uid://dh5bbkqjb741n" path="res://Textures/grass-texture2.png" id="1_jm8jd"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_y6dek"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jm8jd"]
-size = Vector3(152.307, 2, 151.213)
+size = Vector3(200, 2, 200)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jm8jd"]
+albedo_color = Color(0.695503, 0.695503, 0.695503, 1)
+albedo_texture = ExtResource("1_jm8jd")
+uv1_scale = Vector3(20, 20, 20)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_l1jxy"]
+material = SubResource("StandardMaterial3D_jm8jd")
+size = Vector2(200, 200)
 
 [node name="Floor" type="Node3D"]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
+physics_material_override = SubResource("PhysicsMaterial_y6dek")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.265808, 0, 0.487366)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
 shape = SubResource("BoxShape3D_jm8jd")
 
-[node name="stage" parent="." instance=ExtResource("1_y6dek")]
-
-[editable path="stage"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+mesh = SubResource("PlaneMesh_l1jxy")
