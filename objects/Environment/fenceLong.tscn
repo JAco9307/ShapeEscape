@@ -7,6 +7,8 @@
 size = Vector3(1, 9.69727, 59.9914)
 
 [node name="FenceLong" instance=ExtResource("1_ei3k5")]
+center_of_mass_mode = 1
+center_of_mass = Vector3(0, -10, 0)
 
 [node name="fence" parent="." index="0" instance=ExtResource("2_douf4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 2, 1.11405, -3.57866, 1.50754)
