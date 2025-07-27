@@ -15,7 +15,6 @@ func _ready() -> void:
 	max_contacts_reported = 30
 	mass = initialMass
 	
-	# this shit needs to be generalized so it doesnt care about animation name
 	for child in get_children():
 		var aplayer = self.find_child("AnimationPlayer")
 		if aplayer != null:
