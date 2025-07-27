@@ -1,7 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://g5m48diqvglc"]
+[gd_scene load_steps=6 format=3 uid="uid://g5m48diqvglc"]
 
 [ext_resource type="Texture2D" uid="uid://dh5bbkqjb741n" path="res://Textures/grass-texture2.png" id="1_jm8jd"]
-[ext_resource type="Script" uid="uid://cofn84w0xhtrd" path="res://Surfaces/floor.gd" id="1_l1jxy"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_y6dek"]
 
@@ -18,9 +17,6 @@ material = SubResource("StandardMaterial3D_jm8jd")
 size = Vector2(200, 200)
 
 [node name="Floor" type="Node3D"]
-script = ExtResource("1_l1jxy")
-scaleX = 200
-scaleZ = 300
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 physics_material_override = SubResource("PhysicsMaterial_y6dek")
