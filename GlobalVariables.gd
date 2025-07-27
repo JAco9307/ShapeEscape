@@ -53,3 +53,14 @@ var shapes = [
 		"scene": preload("res://objects/Environment/Guitar.tscn")
 	},
 ]
+
+func _process(delta: float) -> void:
+	if Input.is_physical_key_pressed(KEY_CTRL):
+		reset()
+	if Input.is_physical_key_pressed(KEY_ALT):
+		reset()
+	if Input.is_physical_key_pressed(KEY_ESCAPE):
+		reset()
+
+func reset():
+	get_tree().reload_current_scene()
