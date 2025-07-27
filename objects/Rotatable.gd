@@ -19,10 +19,10 @@ func _ready() -> void:
 	for child in get_children():
 		var animplayer = self.find_child("AnimationPlayer")
 		if animplayer != null:
-			var anim : Animation= animplayer.get_animation("Circle_004Action")
+			var anim = animplayer.get_animation_list()
 			if anim != null:
-				anim.loop_mode =(Animation.LOOP_LINEAR)
-				animplayer.play("Circle_004Action")
+				animplayer.get_animation(anim[0]).loop_mode =(Animation.LOOP_LINEAR)
+				animplayer.play(anim[0])
 		
 func _input(event):
 	if event is InputEventMouseMotion and GlobalVariables.selectedObject == self:
