@@ -14,7 +14,7 @@ func _process(delta: float) -> void:
 		win()
 
 func win():
-	pass
+	%WinLabel.visible = true
 
 func target_exploded():
 	targetsLeft -= 1
