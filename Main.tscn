@@ -87,7 +87,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -60.879, 5.41054, 3.37174)
 
 [node name="Floor" parent="." instance=ExtResource("6_lgr22")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -73.921, 0, 0)
-scaleZ = 200
 
 [connection signal="hpupdate" from="Player" to="MainUi" method="_on_player_hpupdate"]
 
