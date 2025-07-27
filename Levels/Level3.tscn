@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://850sheetuvr"]
+
+[ext_resource type="PackedScene" uid="uid://b4hf1pkfx6qnn" path="res://Levels/Level_base.tscn" id="1_q5lgr"]
+[ext_resource type="PackedScene" uid="uid://deb2c3mbmcyp6" path="res://Goals/Jail.tscn" id="2_hy5j1"]
+
+[node name="Level3" node_paths=PackedStringArray("targets") instance=ExtResource("1_q5lgr")]
+targets = [NodePath("Jail")]
+
+[node name="Player" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.9756, 3.90448, -2.45226)
+
+[node name="Label2" type="Label" parent="MainUi" index="8"]
+offset_left = 61.0
+offset_top = 86.0
+offset_right = 362.0
+offset_bottom = 155.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.556863, 0.568627, 0.839216, 1)
+theme_override_font_sizes/font_size = 50
+text = "Alone world"
+
+[node name="Floor" parent="." index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.0496, 0, 0)
+scaleX = 200
+scaleZ = 200
+
+[node name="MeshInstance3D" parent="Floor/StaticBody3D" index="1"]
+transform = Transform3D(-0.0119377, 0, -0.999929, 0, 1, 0, 0.999929, 0, -0.0119377, 0, 0, 0)
+
+[node name="Jail" parent="." index="5" instance=ExtResource("2_hy5j1")]
+transform = Transform3D(-0.000820323, 0, -1, 0, 1, 0, 1, 0, -0.000820323, -36.3725, -0.425413, -1.38989)
+
+[editable path="Floor"]
