@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://caaa0lxly1fmq"]
+[gd_scene load_steps=8 format=3 uid="uid://cfltgxv14klo8"]
 
 [ext_resource type="PackedScene" uid="uid://b4hf1pkfx6qnn" path="res://Levels/Level_base.tscn" id="1_w77jt"]
 [ext_resource type="PackedScene" uid="uid://deb2c3mbmcyp6" path="res://Goals/Jail.tscn" id="2_fhqol"]
@@ -24,8 +24,13 @@ theme_override_colors/font_shadow_color = Color(0.556863, 0.568627, 0.839216, 1)
 theme_override_font_sizes/font_size = 50
 text = "Bench world"
 
+[node name="Floor" parent="." index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.0496, 0, 0)
+scaleX = 200
+scaleZ = 200
+
 [node name="MeshInstance3D" parent="Floor/StaticBody3D" index="1"]
-transform = Transform3D(-0.00377692, 0, -0.999929, 0, 1, 0, 0.316362, 0, -0.0119377, -84.9956, 0, 0)
+transform = Transform3D(-0.0119377, 0, -0.999929, 0, 1, 0, 0.999929, 0, -0.0119377, 0, 0, 0)
 
 [node name="Jail" parent="." index="5" instance=ExtResource("2_fhqol")]
 transform = Transform3D(-0.000820323, 0, -1, 0, 1, 0, 1, 0, -0.000820323, -36.3725, -0.425413, -1.38989)
