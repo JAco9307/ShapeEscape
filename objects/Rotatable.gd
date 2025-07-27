@@ -22,6 +22,7 @@ func _ready() -> void:
 			if anim != null:
 				aplayer.get_animation(anim[0]).loop_mode =(Animation.LOOP_LINEAR)
 				aplayer.play(anim[0])
+
 		
 func _input(event):
 	if event is InputEventMouseMotion and GlobalVariables.selectedObject == self:
