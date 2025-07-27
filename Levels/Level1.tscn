@@ -3,10 +3,11 @@
 [ext_resource type="PackedScene" uid="uid://b4hf1pkfx6qnn" path="res://Levels/Level_base.tscn" id="1_w77jt"]
 [ext_resource type="PackedScene" uid="uid://deb2c3mbmcyp6" path="res://Goals/Jail.tscn" id="2_fhqol"]
 [ext_resource type="PackedScene" uid="uid://d2a0oy5ml2mdc" path="res://objects/Environment/benchLong.tscn" id="3_iotdp"]
-[ext_resource type="PackedScene" uid="uid://hbd5hkve261k" path="res://objects/Environment/RockBig.tscn" id="4_nutv8"]
-[ext_resource type="PackedScene" uid="uid://dwhaiq5n4rg7g" path="res://objects/Environment/tree.tscn" id="5_05pb0"]
-[ext_resource type="PackedScene" uid="uid://cru1wb2mirml7" path="res://objects/Environment/RockSmall.tscn" id="6_dl8mf"]
+[ext_resource type="PackedScene" uid="uid://hbd5hkve261k" path="res://objects/Environment/NonFunctional/RockBig.tscn" id="4_nutv8"]
+[ext_resource type="PackedScene" uid="uid://dwhaiq5n4rg7g" path="res://objects/Environment/NonFunctional/tree.tscn" id="5_05pb0"]
+[ext_resource type="PackedScene" uid="uid://cru1wb2mirml7" path="res://objects/Environment/NonFunctional/RockSmall.tscn" id="6_dl8mf"]
 [ext_resource type="PackedScene" uid="uid://dy6k84vuv5a55" path="res://objects/Environment/bench.tscn" id="7_xcayt"]
+
 
 [node name="Level1" node_paths=PackedStringArray("targets") instance=ExtResource("1_w77jt")]
 targets = [NodePath("Jail")]

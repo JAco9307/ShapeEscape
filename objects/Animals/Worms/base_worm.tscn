@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://baawabg2rc4sy"]
+
+[ext_resource type="PackedScene" uid="uid://du8lkrvnc16gl" path="res://objects/Rotatable.tscn" id="1_a5a6w"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_qhbr2"]
+points = PackedVector3Array(-15, 0, -180, 15, 0, -180, 0, 15, -180, -15, 0, 180, 15, 0, 180, 0, 15, 180)
+
+[node name="BaseWorm" instance=ExtResource("1_a5a6w")]
+yTorqueMult = 2000.0
+zTorqueMult = 10.0
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." index="0"]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, -0.694451, 0)
+shape = SubResource("ConvexPolygonShape3D_qhbr2")
