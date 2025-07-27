@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://cvya4tiv8mqxm"]
+
+[ext_resource type="PackedScene" uid="uid://baawabg2rc4sy" path="res://objects/Animals/Worms/base_worm.tscn" id="1_8rgkc"]
+[ext_resource type="PackedScene" uid="uid://g7pkc43adgw" path="res://models/Animals/Worms/gayworm.glb" id="2_w4cb7"]
+
+[node name="GayWorm" instance=ExtResource("1_8rgkc")]
+
+[node name="gayworm" parent="." index="1" instance=ExtResource("2_w4cb7")]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 0, 0)

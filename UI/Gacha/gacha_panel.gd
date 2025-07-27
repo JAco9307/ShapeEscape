@@ -54,15 +54,15 @@ func _on_button_10p_pressed() -> void:
 			var shape = singlepull()
 			shape.owned += 1
 			var pulled = false
-			for name in pulledshapes:
-				if name == shape.name:
+			for pullname in pulledshapes:
+				if pullname == shape.name:
 					pulled = true
 			if not pulled:
 				pulledshapes.append(shape.name)
 		
-		for name in pulledshapes:
+		for pullname in pulledshapes:
 			for shape in GlobalVariables.shapes:
-				if shape.name == name:
+				if shape.name == pullname:
 					$PanelContainer.show_roll(shape)
 			
 	else:

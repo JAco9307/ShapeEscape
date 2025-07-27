@@ -6,6 +6,7 @@ var money:int = 0
 var player:Player
 var selectedObject
 var handrot:Vector3 = Vector3.ZERO
+var mouse_sensitivity: float = 0.02
 
 var shapes = [
 	{
@@ -54,7 +55,7 @@ var shapes = [
 	},
 ]
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Input.is_physical_key_pressed(KEY_CTRL):
 		reset()
 	if Input.is_physical_key_pressed(KEY_ALT):

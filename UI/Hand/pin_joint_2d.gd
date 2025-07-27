@@ -6,7 +6,7 @@ extends PinJoint2D
 
 var lastangle = 0
 
-func _process(delta):	
+func _process(_delta):	
 	# motor
 	if control_node.rotation_degrees < limit_cgw - 20:
 		control_node.angular_velocity = 4

@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://du28ms063nekj"]
+
+[ext_resource type="PackedScene" uid="uid://du8lkrvnc16gl" path="res://objects/Rotatable.tscn" id="1_07yhp"]
+[ext_resource type="PackedScene" uid="uid://c2uutj1jdcnft" path="res://models/Objects/Flags/prideflag.glb" id="2_2yq5a"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xcnuv"]
+size = Vector3(0.934082, 11.6049, 0.579712)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_07yhp"]
+size = Vector3(6.23926, 3.87738, 0.473694)
+
+[node name="flag" instance=ExtResource("1_07yhp")]
+center_of_mass_mode = 1
+
+[node name="prideflag" parent="." index="0" instance=ExtResource("2_2yq5a")]
+transform = Transform3D(1, 0, 0, 0, 0.998118, 0.0613273, 0, -0.0613273, 0.998118, 0.0772142, -6.60761, 0.623556)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.121338, -1.54466, -0.0253296)
+shape = SubResource("BoxShape3D_xcnuv")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.72217, 5.79335, -0.0951233)
+shape = SubResource("BoxShape3D_07yhp")
+
+[editable path="prideflag"]
