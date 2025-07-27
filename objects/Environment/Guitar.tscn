@@ -8,19 +8,13 @@ points = PackedVector3Array(0.387408, 0.00167, 0.849792, -0.677182, -0.0699422, 
 
 [node name="Guitar" instance=ExtResource("1_cspjk")]
 
-[node name="CollisionShape3D" parent="." index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.776764, 0.0126419)
-
-[node name="MeshInstance3D" parent="." index="1"]
-visible = false
-
-[node name="guitar" parent="." index="2" instance=ExtResource("2_7o8wp")]
+[node name="guitar" parent="." index="0" instance=ExtResource("2_7o8wp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.860674, 1.69696, -1.47113)
 
 [node name="Cube" parent="guitar" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.16232, -1.55275, 1.38892)
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="." index="3"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." index="1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.301646, 0.14421, -0.0822101)
 shape = SubResource("ConvexPolygonShape3D_g5n83")
 

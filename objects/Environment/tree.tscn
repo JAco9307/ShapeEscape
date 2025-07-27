@@ -10,9 +10,9 @@ points = PackedVector3Array(-4.23104, 4.42923, -3.80592, -1.00061, -1, -1.00065,
 center_of_mass_mode = 1
 center_of_mass = Vector3(0, -4, 0)
 
-[node name="tree" parent="." index="2" instance=ExtResource("2_bfrft")]
+[node name="tree" parent="." index="0" instance=ExtResource("2_bfrft")]
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="." index="3"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." index="1"]
 shape = SubResource("ConvexPolygonShape3D_de71g")
 
 [editable path="tree"]

@@ -1,12 +1,11 @@
 [gd_scene load_steps=5 format=3 uid="uid://deb2c3mbmcyp6"]
 
-[ext_resource type="PackedScene" uid="uid://biiuqgmmluxiu" path="res://models/Objects/peppermint.glb" id="1_f12td"]
+[ext_resource type="PackedScene" uid="uid://extqly48yboa" path="res://models/Objects/peppermint.glb" id="1_f12td"]
 [ext_resource type="Script" uid="uid://ps0g10fdq67b" path="res://Goals/jail.gd" id="1_nbmhg"]
-[ext_resource type="Texture2D" uid="uid://cuwbgkpwjo2cv" path="res://2DAnimals/emilyhorse1.png" id="2_nbmhg"]
-
+[ext_resource type="Texture2D" uid="uid://c6fawc122c27g" path="res://2DAnimals/emilyhorse1.png" id="2_nbmhg"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_mjg8f"]
-size = Vector3(9.23804, 10.041, 6.80701)
+size = Vector3(11.2352, 10.041, 7.86459)
 
 [node name="Jail" type="Node3D"]
 script = ExtResource("1_nbmhg")
@@ -52,9 +51,15 @@ shape = SubResource("BoxShape3D_mjg8f")
 [node name="StaticBody3D" type="StaticBody3D" parent="Jail"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Jail/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.01331, 4.52048, -1.42767)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.993351, 4.52048, -1.39561)
 shape = SubResource("BoxShape3D_mjg8f")
 
 [node name="Animal" type="Sprite3D" parent="."]
 transform = Transform3D(2.75623, 0, 0, 0, 4.67097, 0, 0, 0, 1, -1.26945, 5.33752, -1.27546)
 texture = ExtResource("2_nbmhg")
+
+[node name="HealthLabel" type="Label3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.986217, 12.8179, 0)
+text = "Health: 20"
+font_size = 500

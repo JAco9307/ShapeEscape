@@ -1,7 +1,13 @@
 extends Node3D
 class_name Jail
 
+signal exploded
+
 @export var health = 20
+var explodedAlready = false
+
+func _process(delta: float) -> void:
+	%HealthLabel.text = "HEALTH: " + str(health)
 
 func take_damage(amount):
 	health -= amount
@@ -9,4 +15,7 @@ func take_damage(amount):
 		explode()
 
 func explode():
-	remove_child(get_node("Jail"))
+	if !explodedAlready:
+		explodedAlready = true
+		exploded.emit()
+		remove_child(get_node("Jail"))

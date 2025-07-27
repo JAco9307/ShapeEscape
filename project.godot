@@ -18,6 +18,11 @@ config/icon="res://icon.svg"
 [autoload]
 
 GlobalVariables="*res://GlobalVariables.gd"
+LevelManager="*res://LevelManager.gd"
+
+[debug]
+
+shapes/navigation/geometry_face_color=Color(0.501961, 1, 1, 0.737255)
 
 [input]
 
