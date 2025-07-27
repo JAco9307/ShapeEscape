@@ -22,7 +22,7 @@ var shapes = [
 	{
 		"name": "Grimace",
 		"owned": 0,
-		"rarity": 5,
+		"rarity": 1,
 		"health": 100,
 		"friction": 0.2,
 		"bounce": 0.2,
@@ -139,7 +139,22 @@ var shapes = [
 		"weight": 14,
 		"scene": preload("res://objects/Animals/whale.tscn")
 	},
+	{
+		"name": "Guitar",
+		"owned": 0,
+		"rarity": 0.1,
+		"health": 200,
+		"friction": 0.01,
+		"bounce": 0.5,
+		"weight": 5,
+		"scene": preload("res://objects/Environment/NonFunctional/Guitar.tscn")
+	},
 ]
+
+func set_shape_rarity(rarity:float, name:String):
+	for shape in shapes:
+		if shape.name == name:
+			shape.rarity = rarity
 
 func _process(_delta: float) -> void:
 	if Input.is_physical_key_pressed(KEY_CTRL):
