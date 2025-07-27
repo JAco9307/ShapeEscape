@@ -937,6 +937,7 @@ transform = Transform3D(-0.000820323, 0, -1, 0, 1, 0, 1, 0, -0.000820323, -13.28
 health = 50
 
 [node name="AudioStreamPlayer" parent="." index="156"]
+unique_name_in_owner = true
 stream = ExtResource("3_0sogr")
 volume_db = -1.755
 

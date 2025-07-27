@@ -76,4 +76,7 @@ transform = Transform3D(0.147084, 0, -0.989124, 0, 1, 0, 0.989124, 0, 0.147084, 
 initialMass = 100.0
 yTorqueMult = 200000.0
 
+[node name="AudioStreamPlayer" parent="." index="15"]
+unique_name_in_owner = true
+
 [editable path="Floor"]

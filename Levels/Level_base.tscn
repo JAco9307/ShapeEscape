@@ -40,6 +40,7 @@ text = " GAGNER"
 [node name="Floor" parent="." instance=ExtResource("17_yt31g")]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
 stream = ExtResource("6_kvav3")
 volume_db = -20.163
 autoplay = true
