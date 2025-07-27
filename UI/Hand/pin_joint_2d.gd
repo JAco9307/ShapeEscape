@@ -18,8 +18,7 @@ func _process(_delta):
 	elif control_node.rotation_degrees > limit_gw:
 		control_node.angular_velocity = -1
 		
-	# crunch
 	var sum = lastangle - control_node.rotation_degrees
 	if sum > 200 or sum < -200:
-		print("Wrist break")
+		$AudioStreamPlayer.play()
 	lastangle = control_node.rotation_degrees

@@ -1,11 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://diuwmi2favmjc"]
+[gd_scene load_steps=11 format=3 uid="uid://diuwmi2favmjc"]
 
 [ext_resource type="Texture2D" uid="uid://dhppfa4y1ur2c" path="res://UI/Hand/open.png" id="1_p0tpq"]
 [ext_resource type="Texture2D" uid="uid://c7je5mlm2sdxm" path="res://UI/Hand/grab.png" id="2_iriu4"]
 [ext_resource type="Script" uid="uid://c20fkrqg56dr3" path="res://UI/Hand/ArmSprite.gd" id="3_c472b"]
 [ext_resource type="Script" uid="uid://bk7latk1wu5ok" path="res://UI/Hand/pin_joint_2d.gd" id="4_iriu4"]
 [ext_resource type="Texture2D" uid="uid://3ubq0qajrtrm" path="res://UI/Hand/arm.png" id="4_w6764"]
-
+[ext_resource type="AudioStream" uid="uid://cji1bbfs15cht" path="res://music/Sounds/snap.mp3" id="6_c472b"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ahrf8"]
 animations = [{
@@ -30,7 +30,7 @@ radius = 72.2496
 radius = 56.0
 height = 388.0
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D"]
+[node name="HandSprite" type="AnimatedSprite2D"]
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_ahrf8")
 frame = 1
@@ -41,7 +41,6 @@ script = ExtResource("3_c472b")
 
 [node name="PinJoint2D" type="PinJoint2D" parent="StaticBody2D" node_paths=PackedStringArray("control_node")]
 position = Vector2(-22, 74)
-scale = Vector2(1, 1)
 node_a = NodePath("..")
 node_b = NodePath("../ArmRigidBody2D")
 bias = 0.9
@@ -51,6 +50,10 @@ script = ExtResource("4_iriu4")
 limit_cgw = -25
 limit_gw = 25
 control_node = NodePath("../ArmRigidBody2D")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="StaticBody2D/PinJoint2D"]
+stream = ExtResource("6_c472b")
+volume_db = -4.685
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 shape = SubResource("CircleShape2D_p0tpq")
@@ -74,5 +77,4 @@ texture = ExtResource("4_w6764")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/ArmRigidBody2D"]
 position = Vector2(-42, 146)
 rotation = 0.23911
-scale = Vector2(1, 1)
 shape = SubResource("CapsuleShape2D_c472b")

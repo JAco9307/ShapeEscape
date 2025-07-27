@@ -17,6 +17,7 @@ var shapes = [
 		"friction": 0.5,
 		"bounce": 0,
 		"weight": 30,
+		"sound" : null,
 		"scene": preload("res://objects/Player/starter_shape.tscn")
 	},
 	{
@@ -27,6 +28,7 @@ var shapes = [
 		"friction": 0.2,
 		"bounce": 0.2,
 		"weight": 5,
+		"sound" : null,
 		"scene": preload("res://objects/Player/grimace.tscn")
 	},
 	{
@@ -37,6 +39,7 @@ var shapes = [
 		"friction": 0.001,
 		"bounce": 0.1,
 		"weight": 1,
+		"sound" : null,
 		"scene": preload("res://objects/Player/Super.tscn")
 	},
 	{
@@ -47,6 +50,7 @@ var shapes = [
 		"friction": 20,
 		"bounce": 0,
 		"weight": 30,
+		"sound" : preload("res://music/Sounds/bear.mp3"),
 		"scene": preload("res://objects/Animals/bear.tscn")
 	},
 	{
@@ -57,6 +61,7 @@ var shapes = [
 		"friction": 40,
 		"bounce": 0.1,
 		"weight": 40,
+		"sound" : null,
 		"scene": preload("res://objects/Animals/elephant.tscn")
 	},
 	{
@@ -67,6 +72,7 @@ var shapes = [
 		"friction": 0.5,
 		"bounce": 0.9,
 		"weight": 10,
+		"sound" : preload("res://music/Sounds/giraffe.mp3"),
 		"scene": preload("res://objects/Animals/giraffe.tscn")
 	},
 	{
@@ -77,6 +83,7 @@ var shapes = [
 		"friction": 0.1,
 		"bounce": 0.3,
 		"weight": 5,
+		"sound" : preload("res://music/Sounds/goose.mp3"),
 		"scene": preload("res://objects/Animals/goose.tscn")
 	},
 	{
@@ -87,6 +94,7 @@ var shapes = [
 		"friction": 0.1,
 		"bounce": 0.1,
 		"weight": 5,
+		"sound" : preload("res://music/Sounds/horse.mp3"),
 		"scene": preload("res://objects/Animals/horse.tscn")
 	},
 	{
@@ -97,6 +105,7 @@ var shapes = [
 		"friction": 0.1,
 		"bounce": 1000,
 		"weight": 5,
+		"sound" : preload("res://music/Sounds/pig.mp3"),
 		"scene": preload("res://objects/Animals/pig.tscn")
 	},
 	{
@@ -107,6 +116,7 @@ var shapes = [
 		"friction": 0.00001,
 		"bounce": 0,
 		"weight": 5,
+		"sound" : preload("res://music/Sounds/platypus.mp3"),
 		"scene": preload("res://objects/Animals/platypus.tscn")
 	},
 	{
@@ -117,6 +127,7 @@ var shapes = [
 		"friction": 0.1,
 		"bounce": 0.1,
 		"weight": 4,
+		"sound" : null,
 		"scene": preload("res://objects/Animals/raccoon.tscn")
 	},
 	{
@@ -127,6 +138,7 @@ var shapes = [
 		"friction": 0.1,
 		"bounce": 0.2,
 		"weight": 7,
+		"sound" : preload("res://music/Sounds/shark.mp3"),
 		"scene": preload("res://objects/Animals/shark.tscn")
 	},
 	{
@@ -137,6 +149,7 @@ var shapes = [
 		"friction": 0.1,
 		"bounce": 0.2,
 		"weight": 14,
+		"sound" : preload("res://music/Sounds/whale.mp3"),
 		"scene": preload("res://objects/Animals/whale.tscn")
 	},
 	{
@@ -147,6 +160,7 @@ var shapes = [
 		"friction": 0.01,
 		"bounce": 0.5,
 		"weight": 5,
+		"sound" : preload("res://music/Sounds/guitar.mp3"),
 		"scene": preload("res://objects/Environment/NonFunctional/Guitar.tscn")
 	},
 ]

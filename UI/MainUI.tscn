@@ -297,7 +297,7 @@ sprite_frames = SubResource("SpriteFrames_wjiis")
 animation = &"eat"
 frame_progress = 0.228237
 
-[node name="AnimatedSprite2D" parent="." instance=ExtResource("15_5ctpo")]
+[node name="ArmSprite" parent="." instance=ExtResource("15_5ctpo")]
 position = Vector2(345, 404)
 
 [node name="AdButton" type="Button" parent="."]

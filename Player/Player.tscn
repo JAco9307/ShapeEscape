@@ -8,4 +8,8 @@ script = ExtResource("1_q3lat")
 
 [node name="Horse" parent="." instance=ExtResource("2_tok1r")]
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+volume_db = -11.243
+max_polyphony = 4
+
 [connection signal="body_entered" from="Horse" to="." method="_on_horse_body_entered"]
