@@ -11,6 +11,7 @@ var mouse_sensitivity: float = 0.02
 var achivements:Dictionary = {
 		"ads": false,
 		"fall": 0,
+		"enter": false
 	}
 
 var shapes = [
@@ -182,6 +183,8 @@ func _process(_delta: float) -> void:
 		reset()
 	if Input.is_physical_key_pressed(KEY_ESCAPE):
 		reset()
+	if Input.is_physical_key_pressed(KEY_ENTER):
+		achivements["enter"] = true
 
 func reset():
 	get_tree().reload_current_scene()

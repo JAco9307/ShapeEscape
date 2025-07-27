@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://dfax238xjs6b0"]
+[gd_scene load_steps=8 format=3 uid="uid://dfax238xjs6b0"]
 
 [ext_resource type="Script" uid="uid://b70je64v37u52" path="res://Levels/WinLevel/win_level.gd" id="1_8t158"]
 [ext_resource type="AudioStream" uid="uid://bxgkgtg070wwe" path="res://music/Victory.mp3" id="2_6l5gm"]
 [ext_resource type="Texture2D" uid="uid://bk4krbwq8j4u5" path="res://you_win_francais.png" id="3_6l5gm"]
 [ext_resource type="Texture2D" uid="uid://bxf10tryi3dpr" path="res://Textures/adsbadge.png" id="4_peu3d"]
 [ext_resource type="Texture2D" uid="uid://cyldb855pr5he" path="res://Textures/fallicon.jpg" id="5_peu3d"]
+[ext_resource type="Texture2D" uid="uid://ccx0tuj1g565f" path="res://Textures/noaward.jpg" id="5_qe4sl"]
+[ext_resource type="Texture2D" uid="uid://danukl4l8f6uh" path="res://Textures/entericon.jpg" id="6_o8rub"]
 
 [node name="WinLevel" type="Node2D"]
 script = ExtResource("1_8t158")
@@ -28,12 +30,46 @@ offset_bottom = 490.0
 theme_override_colors/font_color = Color(1, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 1, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 1, 1)
-text = "No ads"
+text = "No ads award"
 
 [node name="Sprite2D" type="Sprite2D" parent="adsbadge"]
 position = Vector2(28, 79)
 scale = Vector2(0.121739, 0.133292)
 texture = ExtResource("4_peu3d")
+
+[node name="nobadge" type="Label" parent="."]
+visible = false
+offset_left = 678.0
+offset_top = 462.0
+offset_right = 765.0
+offset_bottom = 511.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 1, 1)
+text = "No awards 
+award "
+
+[node name="Sprite2D" type="Sprite2D" parent="nobadge"]
+position = Vector2(35, 102)
+scale = Vector2(0.190667, 0.133292)
+texture = ExtResource("5_qe4sl")
+
+[node name="enterbadge" type="Label" parent="."]
+visible = false
+offset_left = 496.0
+offset_top = 464.0
+offset_right = 595.0
+offset_bottom = 513.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 1, 1)
+text = "You pressed 
+enter award"
+
+[node name="Sprite2D" type="Sprite2D" parent="enterbadge"]
+position = Vector2(48, 82)
+scale = Vector2(0.121739, 0.133292)
+texture = ExtResource("6_o8rub")
 
 [node name="fallbadge" type="Label" parent="."]
 visible = false

@@ -45,37 +45,23 @@ initialMass = 60.0
 
 [node name="RockBig" parent="." index="8" instance=ExtResource("4_nutv8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.8137, 5.1929, 23.6992)
-initialMass = null
-yTorqueMult = null
-zTorqueMult = null
 
 [node name="Tree" parent="." index="9" instance=ExtResource("5_05pb0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.11487, 1, 27.3941)
-initialMass = null
 
 [node name="Tree2" parent="." index="10" instance=ExtResource("5_05pb0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -41.0987, 1, -29.2618)
-initialMass = null
 
 [node name="RockSmall" parent="." index="11" instance=ExtResource("6_dl8mf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.4417, 2.07716, -14.8647)
-initialMass = null
-yTorqueMult = null
-zTorqueMult = null
 
 [node name="RockSmall2" parent="." index="12" instance=ExtResource("6_dl8mf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.57168, 2.07716, 26.2709)
-initialMass = null
-yTorqueMult = null
-zTorqueMult = null
 
 [node name="Bench" parent="." index="13" instance=ExtResource("7_xcayt")]
 transform = Transform3D(0.0907108, -0.0366088, -0.995204, 0.00332304, 0.99933, -0.0364577, 0.995872, 0, 0.0907717, -14.2458, 3.26964, 5.76853)
 initialMass = 60.0
 yTorqueMult = 2000.0
 zTorqueMult = 2000.0
-
-[node name="AudioStreamPlayer" parent="." index="14"]
-unique_name_in_owner = true
 
 [editable path="Floor"]
