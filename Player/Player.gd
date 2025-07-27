@@ -62,7 +62,10 @@ func change_object(object):
 	object.linear_velocity  = objectVelocity
 
 	playerObject = object
+	
+	playerObject.body_entered.connect(_on_horse_body_entered)
 
 func _on_horse_body_entered(body: Node) -> void:
+	print(body.get_parent().get_parent().name)
 	if body.get_parent().get_parent() is Jail:
 		body.get_parent().get_parent().take_damage(10)

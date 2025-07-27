@@ -15,7 +15,7 @@ var shapes = [
 		"health": -1,
 		"friction": 0.5,
 		"bounce": 0,
-		"weight": 50,
+		"weight": 40,
 		"object": preload("res://models/Player/starter.glb"),
 		"scene": preload("res://objects/Player/starter_shape.tscn")
 	},
