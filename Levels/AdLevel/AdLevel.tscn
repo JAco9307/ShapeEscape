@@ -51,10 +51,9 @@ show_percentage = false
 [node name="SkipButton" type="Button" parent="CanvasLayer"]
 unique_name_in_owner = true
 visible = false
-offset_left = 1.0
-offset_top = 643.0
-offset_right = 44.0
-offset_bottom = 665.0
+offset_top = 630.0
+offset_right = 43.0
+offset_bottom = 652.0
 theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)

@@ -1,5 +1,12 @@
 extends Node2D
 
+var bonusSprites = [
+	preload("res://gifs/nosheen/nosheen.tscn"),
+	preload("res://gifs/getcweam/getcweam.tscn"),
+	preload("res://gifs/feelclean/FeelsClean.tscn"),
+	preload("res://gifs/cweam/Cweam.tscn"),
+]
+
 var adTime = 103
 var progressValue = 0
 
@@ -48,4 +55,8 @@ func win():
 	LevelManager.win()
 
 func _on_skip_button_pressed() -> void:
-	pass # Replace with function body.
+	var gifPOsition = Vector2(randf_range(100, 1000), randf_range(100, 500))
+	var gif = bonusSprites[randi_range(0, 3)].instantiate()
+	gif.position = gifPOsition
+	add_child(gif)
+	gif.play()
