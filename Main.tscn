@@ -35,9 +35,6 @@ transform = Transform3D(0.177645, -0.645417, 0.742886, -0.293885, 0.685651, 0.66
 [node name="HauntedMansion" parent="." instance=ExtResource("6_3dxm6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -149.584, -0.689379, -1.69503)
 
-[node name="Floor" parent="." instance=ExtResource("6_lgr22")]
-transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0.0488815, -0.757728, -1.82727)
-
 [node name="Raccoon" parent="." instance=ExtResource("7_lgr22")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -55.0482, 0.242264, 11.5166)
 
@@ -68,7 +65,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46.8345, 1.24227, -16.2593)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -41.2852, 4.36122, -36.889)
 
 [node name="Bench2" parent="." instance=ExtResource("12_5tuhn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.8433, 3.21889, 15.8433)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.8433, 3.21889, 14.7129)
 
 [node name="Carrot" parent="." instance=ExtResource("13_2gh4u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -107.192, 3.1939, 37.7684)
@@ -87,5 +84,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -60.0775, 5.63199, 14.0005)
 
 [node name="Elephant" parent="." instance=ExtResource("18_mxvw5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -60.879, 5.41054, 3.37174)
+
+[node name="Floor" parent="." instance=ExtResource("6_lgr22")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -73.921, 0, 0)
+scaleZ = 200
 
 [connection signal="hpupdate" from="Player" to="MainUi" method="_on_player_hpupdate"]
