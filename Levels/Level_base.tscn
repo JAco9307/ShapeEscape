@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://b4hf1pkfx6qnn"]
+
+[ext_resource type="PackedScene" uid="uid://bubyfj3d0t4wr" path="res://Player/Player.tscn" id="1_e8at3"]
+[ext_resource type="PackedScene" uid="uid://bke7mcf2cwfqi" path="res://Camera/camera_3d.tscn" id="2_7471u"]
+[ext_resource type="PackedScene" uid="uid://c2qnrd7mneksy" path="res://UI/MainUI.tscn" id="3_w6hyi"]
+[ext_resource type="PackedScene" uid="uid://g5m48diqvglc" path="res://Surfaces/Floor.tscn" id="17_yt31g"]
+
+[node name="Main" type="Node3D"]
+
+[node name="Player" parent="." instance=ExtResource("1_e8at3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.569, 0)
+
+[node name="Camera3D" parent="." instance=ExtResource("2_7471u")]
+transform = Transform3D(-4.37114e-08, -0.972776, 0.231748, 0, 0.231748, 0.972776, -1, 4.25214e-08, -1.013e-08, -50.7719, 102.096, 0)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.177645, -0.645417, 0.742886, -0.293885, 0.685651, 0.665968, -0.939188, -0.336629, -0.067876, 15.6558, 10.5503, -0.157694)
+
+[node name="MainUi" parent="." instance=ExtResource("3_w6hyi")]
+
+[node name="Floor" parent="." instance=ExtResource("17_yt31g")]
+
+[connection signal="hpupdate" from="Player" to="MainUi" method="_on_player_hpupdate"]
+
+[editable path="Floor"]
