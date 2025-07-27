@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://b4hf1pkfx6qnn"]
+[gd_scene load_steps=7 format=3 uid="uid://b4hf1pkfx6qnn"]
 
 [ext_resource type="PackedScene" uid="uid://bubyfj3d0t4wr" path="res://Player/Player.tscn" id="1_e8at3"]
 [ext_resource type="Script" uid="uid://b7ix6bmw2tblr" path="res://Levels/Level.gd" id="1_y4tnw"]
 [ext_resource type="PackedScene" uid="uid://bke7mcf2cwfqi" path="res://Camera/camera_3d.tscn" id="2_7471u"]
 [ext_resource type="PackedScene" uid="uid://c2qnrd7mneksy" path="res://UI/MainUI.tscn" id="3_w6hyi"]
+[ext_resource type="AudioStream" uid="uid://dq77viymxxvca" path="res://music/ingame1.mp3" id="6_kvav3"]
 [ext_resource type="PackedScene" uid="uid://g5m48diqvglc" path="res://Surfaces/Floor.tscn" id="17_yt31g"]
 
 [node name="Main" type="Node3D"]
@@ -36,6 +37,12 @@ theme_override_font_sizes/font_size = 100
 text = " GAGNER"
 
 [node name="Floor" parent="." instance=ExtResource("17_yt31g")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_kvav3")
+volume_db = -30.142
+autoplay = true
+parameters/looping = true
 
 [connection signal="hpupdate" from="Player" to="MainUi" method="_on_player_hpupdate"]
 
