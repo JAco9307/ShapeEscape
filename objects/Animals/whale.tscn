@@ -8,6 +8,6 @@
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.0284998, 0, -0.629606)
 
 [node name="CollisionShape3D2" parent="." index="1"]
-transform = Transform3D(-1.93204e-08, 0.78, 0, -0.442, -3.40949e-08, 0, 0, 0, 0.78, 2.13333, -0.099732, 4.27132)
+transform = Transform3D(-1.93204e-08, 0.78, 0, -0.442, -3.40949e-08, 0, 0, 0, 0.78, 1.99055, -0.099732, 4.27132)
 
 [editable path="shark_wAnimation"]
