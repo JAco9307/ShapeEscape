@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://c2qnrd7mneksy"]
+[gd_scene load_steps=24 format=3 uid="uid://c2qnrd7mneksy"]
 
 [ext_resource type="Script" uid="uid://dhy3kcnievdpq" path="res://UI/MainUI.gd" id="1_xv1u1"]
 [ext_resource type="Script" uid="uid://14odr4cov1sm" path="res://UI/ShapeSelectUI.gd" id="2_wwh41"]
@@ -15,9 +15,6 @@
 [ext_resource type="Texture2D" uid="uid://c8cp32145eig6" path="res://UI/MoneyEater/evildogwalk2.png" id="16_mvdky"]
 [ext_resource type="Texture2D" uid="uid://k3ubi3qplbwj" path="res://UI/MoneyEater/evildogchomp1.png" id="17_qw6lw"]
 [ext_resource type="Texture2D" uid="uid://do4hg6sewtl5n" path="res://UI/MoneyEater/evildogchomp2.png" id="18_o8o8p"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5ctpo"]
-load_path = "res://.godot/imported/Untitled.png-95bfa774404f271ff2d53dcc57aca8af.ctex"
 
 [sub_resource type="Gradient" id="Gradient_r3ckc"]
 
@@ -264,7 +261,6 @@ text = "Get more shapes!!"
 clip_children = 1
 position = Vector2(1017.25, 4.06355)
 scale = Vector2(0.928635, 0.93957)
-texture = SubResource("CompressedTexture2D_5ctpo")
 polygon = PackedVector2Array(23.7424, 19.2901, 5.9841, 45.2446, 1.88602, 77.3462, 13.4973, 114.229, 34.6676, 133.284, 75.2386, 146.808, 110.55, 132.533, 128.582, 116.756, 143.608, 85.9516, 142.854, 58.9029, 130.833, 31.8556, 108.293, 11.5701, 75.9868, 1.05165, 48.9395, 6.31085)
 uv = PackedVector2Array(23.7424, 19.2901, 5.9841, 45.2446, 1.88602, 77.3462, 13.4973, 114.229, 34.6676, 133.284, 75.2386, 146.808, 110.55, 132.533, 128.582, 116.756, 143.608, 85.9516, 142.854, 58.9029, 130.833, 31.8556, 108.293, 11.5701, 75.9868, 1.05165, 48.9395, 6.31085)
 
@@ -301,7 +297,7 @@ sprite_frames = SubResource("SpriteFrames_wjiis")
 animation = &"eat"
 frame_progress = 0.228237
 
-[node name="AnimatedSprite2D" parent="." instance=ExtResource("15_5ctpo")]
+[node name="ArmSprite" parent="." instance=ExtResource("15_5ctpo")]
 position = Vector2(345, 404)
 
 [node name="AdButton" type="Button" parent="."]

@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bslkpgpn4pmpb"]
+[gd_scene load_steps=6 format=3 uid="uid://bslkpgpn4pmpb"]
 
 [ext_resource type="Script" uid="uid://d5p1rr7l5wof" path="res://main_menu.gd" id="1_eiy7p"]
 [ext_resource type="Texture2D" uid="uid://40cfrtn6ambj" path="res://Textures/MainMenuTex.png" id="2_h7a2f"]
 [ext_resource type="Script" uid="uid://dvmo37gpu1j5r" path="res://UI/SizeBounce.gd" id="3_h7a2f"]
 [ext_resource type="PackedScene" uid="uid://bv1m5q2luya3a" path="res://Credits.tscn" id="4_qoqlk"]
+[ext_resource type="AudioStream" uid="uid://dq77viymxxvca" path="res://music/ingame1.mp3" id="5_iwfq2"]
 
 [node name="MainMenu" type="Node2D"]
 script = ExtResource("1_eiy7p")
@@ -19,6 +20,13 @@ offset_left = 239.0
 offset_top = 164.0
 offset_right = 536.0
 offset_bottom = 268.0
+
+[node name="horse" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_left = 15.0
+offset_top = 47.0
+offset_right = 183.0
+offset_bottom = 151.0
 
 [node name="CreditsButton" type="Button" parent="."]
 modulate = Color(1, 1, 1, 0)
@@ -61,7 +69,14 @@ script = ExtResource("3_h7a2f")
 [node name="Credits" parent="." instance=ExtResource("4_qoqlk")]
 visible = false
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_iwfq2")
+volume_db = -30.0
+autoplay = true
+mix_target = 1
+
 [connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="horse" to="." method="_on_horse_pressed"]
 [connection signal="pressed" from="CreditsButton" to="." method="_on_credits_button_pressed"]
 [connection signal="pressed" from="LevelButton" to="." method="_on_level_button_pressed"]
 [connection signal="drag_ended" from="VSlider" to="." method="_on_v_slider_drag_ended"]

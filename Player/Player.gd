@@ -2,6 +2,7 @@ extends Node3D
 class_name Player
 
 var playerObject
+var sound = null
 
 var monies = 0
 
@@ -41,6 +42,7 @@ func _process(delta: float) -> void:
 		shape.initialMass = shapes[0].weight
 		playerObject.health = shapes[0].health
 		playerObject.maxhealth = shapes[0].health
+		sound = null
 		GlobalVariables.player.change_object(shape)
 	
 	if monies >= 1:
@@ -60,12 +62,16 @@ func change_object(object):
 	object.position = objectPosition + Vector3(0, 2, 0)
 	object.rotation = objectRotation
 	object.linear_velocity  = objectVelocity
-
-	playerObject = object
 	
+	playerObject = object
 	playerObject.body_entered.connect(_on_horse_body_entered)
+	
+	if sound != null:
+		$AudioStreamPlayer.stream = sound
 
 func _on_horse_body_entered(body: Node) -> void:
-	print(body.get_parent().get_parent().name)
+	if sound != null:
+		
+		$AudioStreamPlayer.play()
 	if body.get_parent().get_parent() is Jail:
 		body.get_parent().get_parent().take_damage(10)

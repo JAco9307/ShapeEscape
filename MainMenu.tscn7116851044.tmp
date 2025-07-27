@@ -1,0 +1,75 @@
+[gd_scene load_steps=5 format=3 uid="uid://bslkpgpn4pmpb"]
+
+[ext_resource type="Script" uid="uid://d5p1rr7l5wof" path="res://main_menu.gd" id="1_eiy7p"]
+[ext_resource type="Texture2D" uid="uid://40cfrtn6ambj" path="res://Textures/MainMenuTex.png" id="2_h7a2f"]
+[ext_resource type="Script" uid="uid://dvmo37gpu1j5r" path="res://UI/SizeBounce.gd" id="3_h7a2f"]
+[ext_resource type="PackedScene" uid="uid://bv1m5q2luya3a" path="res://Credits.tscn" id="4_qoqlk"]
+
+[node name="MainMenu" type="Node2D"]
+script = ExtResource("1_eiy7p")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(608, 365)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("2_h7a2f")
+
+[node name="StartButton" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_left = 239.0
+offset_top = 164.0
+offset_right = 536.0
+offset_bottom = 268.0
+
+[node name="horse" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_left = 15.0
+offset_top = 47.0
+offset_right = 183.0
+offset_bottom = 151.0
+
+[node name="CreditsButton" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_left = 302.0
+offset_top = 309.0
+offset_right = 580.0
+offset_bottom = 413.0
+
+[node name="LevelButton" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_left = 270.0
+offset_top = 510.0
+offset_right = 604.0
+offset_bottom = 620.0
+
+[node name="VSlider" type="VSlider" parent="."]
+offset_left = 62.0
+offset_top = 337.0
+offset_right = 148.0
+offset_bottom = 584.0
+max_value = 1000.0
+value = 500.0
+
+[node name="Label" type="Label" parent="."]
+offset_left = 23.0
+offset_top = 293.0
+offset_right = 239.0
+offset_bottom = 341.0
+rotation = 0.127409
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 1, 1)
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 14
+text = "please dont touch the slider"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("3_h7a2f")
+
+[node name="Credits" parent="." instance=ExtResource("4_qoqlk")]
+visible = false
+
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="horse" to="." method="_on_horse_pressed"]
+[connection signal="pressed" from="CreditsButton" to="." method="_on_credits_button_pressed"]
+[connection signal="pressed" from="LevelButton" to="." method="_on_level_button_pressed"]
+[connection signal="drag_ended" from="VSlider" to="." method="_on_v_slider_drag_ended"]

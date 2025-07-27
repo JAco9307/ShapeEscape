@@ -30,9 +30,6 @@
 
 [node name="Main" type="Node3D"]
 
-[node name="Player" parent="." instance=ExtResource("1_03owx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.3334, 3.56888, -21.7872)
-
 [node name="Camera3D" parent="." instance=ExtResource("2_20pc6")]
 transform = Transform3D(-4.37114e-08, -0.972776, 0.231748, 0, 0.231748, 0.972776, -1, 4.25214e-08, -1.013e-08, -50.7719, 102.096, 0)
 
@@ -150,6 +147,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.009, 7.88523, -6.06696)
 [node name="TransWorm" parent="." instance=ExtResource("27_sqvbp")]
 transform = Transform3D(-0.164497, 0, -0.986378, 0, 1, 0, 0.986378, 0, -0.164497, -80.1279, 0.694451, -32.6443)
 
-[connection signal="hpupdate" from="Player" to="MainUi" method="_on_player_hpupdate"]
+[node name="Player" parent="." instance=ExtResource("1_03owx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42.6914, 4.56734, 0)
 
 [editable path="Floor"]
