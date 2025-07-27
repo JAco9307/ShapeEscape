@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://co6mwrya6c4i5"]
+
+[ext_resource type="PackedScene" uid="uid://bubyfj3d0t4wr" path="res://Player/Player.tscn" id="1_jq6ke"]
+[ext_resource type="PackedScene" uid="uid://c2qnrd7mneksy" path="res://UI/MainUI.tscn" id="2_c6rcp"]
+[ext_resource type="PackedScene" uid="uid://bke7mcf2cwfqi" path="res://Camera/camera_3d.tscn" id="3_sxshs"]
+[ext_resource type="PackedScene" uid="uid://g5m48diqvglc" path="res://Surfaces/Floor.tscn" id="4_3bj1a"]
+
+[node name="BaseLevel" type="Node3D"]
+
+[node name="Player" parent="." instance=ExtResource("1_jq6ke")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.03714, 6.84098, -4.34445)
+
+[node name="MainUi" parent="." instance=ExtResource("2_c6rcp")]
+
+[node name="Camera3D" parent="." instance=ExtResource("3_sxshs")]
+transform = Transform3D(-4.37114e-08, -0.972776, 0.231748, 0, 0.231748, 0.972776, -1, 4.25214e-08, -1.013e-08, 1.58438, 25.7869, -2.00472)
+
+[node name="Floor" parent="." instance=ExtResource("4_3bj1a")]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 53.1597, 0)

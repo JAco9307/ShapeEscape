@@ -15,14 +15,14 @@ func _ready() -> void:
 	max_contacts_reported = 30
 	mass = initialMass
 	
-	# this shit needs to be generalized so it doesnt care about animation name
 	for child in get_children():
-		var animplayer = self.find_child("AnimationPlayer")
-		if animplayer != null:
-			var anim = animplayer.get_animation_list()
+		var aplayer = self.find_child("AnimationPlayer")
+		if aplayer != null:
+			var anim = aplayer.get_animation_list()
 			if anim != null:
-				animplayer.get_animation(anim[0]).loop_mode =(Animation.LOOP_LINEAR)
-				animplayer.play(anim[0])
+				aplayer.get_animation(anim[0]).loop_mode =(Animation.LOOP_LINEAR)
+				aplayer.play(anim[0])
+
 		
 func _input(event):
 	if event is InputEventMouseMotion and GlobalVariables.selectedObject == self:
