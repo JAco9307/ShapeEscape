@@ -5,7 +5,6 @@
 [ext_resource type="Script" uid="uid://ckv3v1nabgbb3" path="res://UI/MOney.gd" id="3_wa2eh"]
 [ext_resource type="Theme" uid="uid://bool5gjv6pje3" path="res://UI/generaltheme.tres" id="8_uqb74"]
 [ext_resource type="Script" uid="uid://7mcyg3ijl6bn" path="res://UI/Gacha/gacha_panel.gd" id="9_ahrf8"]
-[ext_resource type="Texture2D" uid="uid://blkvhq8p7j0pm" path="res://UI/Untitled.png" id="9_lsvm6"]
 [ext_resource type="Texture2D" uid="uid://det83wsqlf7gn" path="res://UI/Gacha/NoMoneyWarn.png" id="10_e10a1"]
 [ext_resource type="Script" uid="uid://bruwpdkd55luk" path="res://UI/Gacha/NoMoneySprite.gd" id="11_i0lr5"]
 [ext_resource type="Script" uid="uid://c878p30wlmycf" path="res://UI/panel_container.gd" id="12_i0lr5"]
@@ -16,6 +15,9 @@
 [ext_resource type="Texture2D" uid="uid://c8cp32145eig6" path="res://UI/MoneyEater/evildogwalk2.png" id="16_mvdky"]
 [ext_resource type="Texture2D" uid="uid://k3ubi3qplbwj" path="res://UI/MoneyEater/evildogchomp1.png" id="17_qw6lw"]
 [ext_resource type="Texture2D" uid="uid://do4hg6sewtl5n" path="res://UI/MoneyEater/evildogchomp2.png" id="18_o8o8p"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5ctpo"]
+load_path = "res://.godot/imported/Untitled.png-95bfa774404f271ff2d53dcc57aca8af.ctex"
 
 [sub_resource type="Gradient" id="Gradient_r3ckc"]
 
@@ -262,7 +264,7 @@ text = "Get more shapes!!"
 clip_children = 1
 position = Vector2(1017.25, 4.06355)
 scale = Vector2(0.928635, 0.93957)
-texture = ExtResource("9_lsvm6")
+texture = SubResource("CompressedTexture2D_5ctpo")
 polygon = PackedVector2Array(23.7424, 19.2901, 5.9841, 45.2446, 1.88602, 77.3462, 13.4973, 114.229, 34.6676, 133.284, 75.2386, 146.808, 110.55, 132.533, 128.582, 116.756, 143.608, 85.9516, 142.854, 58.9029, 130.833, 31.8556, 108.293, 11.5701, 75.9868, 1.05165, 48.9395, 6.31085)
 uv = PackedVector2Array(23.7424, 19.2901, 5.9841, 45.2446, 1.88602, 77.3462, 13.4973, 114.229, 34.6676, 133.284, 75.2386, 146.808, 110.55, 132.533, 128.582, 116.756, 143.608, 85.9516, 142.854, 58.9029, 130.833, 31.8556, 108.293, 11.5701, 75.9868, 1.05165, 48.9395, 6.31085)
 

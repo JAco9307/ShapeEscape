@@ -2,9 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://dhppfa4y1ur2c" path="res://UI/Hand/open.png" id="1_p0tpq"]
 [ext_resource type="Texture2D" uid="uid://c7je5mlm2sdxm" path="res://UI/Hand/grab.png" id="2_iriu4"]
-[ext_resource type="Script" uid="uid://c20fkrqg56dr3" path="res://UI/ArmSprite.gd" id="3_c472b"]
+[ext_resource type="Script" uid="uid://c20fkrqg56dr3" path="res://UI/Hand/ArmSprite.gd" id="3_c472b"]
 [ext_resource type="Script" uid="uid://bk7latk1wu5ok" path="res://UI/Hand/pin_joint_2d.gd" id="4_iriu4"]
 [ext_resource type="Texture2D" uid="uid://3ubq0qajrtrm" path="res://UI/Hand/arm.png" id="4_w6764"]
+
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ahrf8"]
 animations = [{

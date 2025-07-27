@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://dbl2jh0n8y401"]
+
+[ext_resource type="PackedScene" uid="uid://baawabg2rc4sy" path="res://objects/Animals/Worms/base_worm.tscn" id="1_j3mvi"]
+[ext_resource type="PackedScene" uid="uid://bhk15mvm2d1uo" path="res://models/Animals/Worms/biworm.glb" id="2_eiry2"]
+
+[node name="BiWorm" instance=ExtResource("1_j3mvi")]
+
+[node name="biworm" parent="." index="1" instance=ExtResource("2_eiry2")]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 0, 0)

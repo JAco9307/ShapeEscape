@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bslkpgpn4pmpb"]
+[gd_scene load_steps=5 format=3 uid="uid://bslkpgpn4pmpb"]
 
 [ext_resource type="Script" uid="uid://d5p1rr7l5wof" path="res://main_menu.gd" id="1_eiy7p"]
 [ext_resource type="Texture2D" uid="uid://40cfrtn6ambj" path="res://Textures/MainMenuTex.png" id="2_h7a2f"]
-[ext_resource type="Script" uid="uid://dvmo37gpu1j5r" path="res://SizeBounce.gd" id="3_h7a2f"]
+[ext_resource type="Script" uid="uid://dvmo37gpu1j5r" path="res://UI/SizeBounce.gd" id="3_h7a2f"]
+[ext_resource type="PackedScene" uid="uid://bv1m5q2luya3a" path="res://Credits.tscn" id="4_qoqlk"]
 
 [node name="MainMenu" type="Node2D"]
 script = ExtResource("1_eiy7p")
@@ -57,6 +58,10 @@ horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("3_h7a2f")
 
+[node name="Credits" parent="." instance=ExtResource("4_qoqlk")]
+visible = false
+
 [connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="CreditsButton" to="." method="_on_credits_button_pressed"]
 [connection signal="pressed" from="LevelButton" to="." method="_on_level_button_pressed"]
+[connection signal="drag_ended" from="VSlider" to="." method="_on_v_slider_drag_ended"]

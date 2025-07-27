@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://fxc750rytn87"]
+
+[ext_resource type="PackedScene" uid="uid://baawabg2rc4sy" path="res://objects/Animals/Worms/base_worm.tscn" id="1_a5a6w"]
+[ext_resource type="PackedScene" uid="uid://cc6bttteuw7b1" path="res://models/Animals/Worms/aceworm.glb" id="2_osqho"]
+
+[node name="AceWorm" instance=ExtResource("1_a5a6w")]
+
+[node name="aceworm" parent="." index="1" instance=ExtResource("2_osqho")]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 0, 0)
