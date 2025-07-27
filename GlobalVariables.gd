@@ -8,6 +8,11 @@ var selectedObject
 var handrot:Vector3 = Vector3.ZERO
 var mouse_sensitivity: float = 0.02
 
+var achivements:Dictionary = {
+		"ads": false,
+		"fall": 0,
+	}
+
 var shapes = [
 	{
 		"name": "Default",

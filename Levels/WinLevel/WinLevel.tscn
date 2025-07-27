@@ -1,68 +1,13 @@
-[gd_scene load_steps=7 format=3 uid="uid://dfax238xjs6b0"]
+[gd_scene load_steps=6 format=3 uid="uid://dfax238xjs6b0"]
 
-[ext_resource type="AudioStream" uid="uid://bmb3wt1gev2mr" path="res://music/Victory.mp3" id="2_6l5gm"]
-[ext_resource type="Texture2D" uid="uid://ugnhc0c0hglq" path="res://Levels/AdLevel/cweam.png" id="2_8vv2f"]
-[ext_resource type="Texture2D" uid="uid://xruftn1bykhr" path="res://you_win_francais.png" id="3_6l5gm"]
-
-[sub_resource type="Gradient" id="Gradient_cgb8m"]
-colors = PackedColorArray(0, 0, 0.85098, 1, 0.796078, 0.0980392, 0.121569, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_nbcfd"]
-gradient = SubResource("Gradient_cgb8m")
-width = 1156
-repeat = 1
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jt3je"]
-texture = SubResource("GradientTexture2D_nbcfd")
+[ext_resource type="Script" uid="uid://b70je64v37u52" path="res://Levels/WinLevel/win_level.gd" id="1_8t158"]
+[ext_resource type="AudioStream" uid="uid://bxgkgtg070wwe" path="res://music/Victory.mp3" id="2_6l5gm"]
+[ext_resource type="Texture2D" uid="uid://bk4krbwq8j4u5" path="res://you_win_francais.png" id="3_6l5gm"]
+[ext_resource type="Texture2D" uid="uid://bxf10tryi3dpr" path="res://Textures/adsbadge.png" id="4_peu3d"]
+[ext_resource type="Texture2D" uid="uid://cyldb855pr5he" path="res://Textures/fallicon.jpg" id="5_peu3d"]
 
 [node name="WinLevel" type="Node2D"]
-
-[node name="Cweam" type="Sprite2D" parent="."]
-position = Vector2(575, 318.5)
-scale = Vector2(2.71963, 1.60981)
-texture = ExtResource("2_8vv2f")
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="Timer" type="Label" parent="CanvasLayer"]
-unique_name_in_owner = true
-visible = false
-offset_left = 836.0
-offset_top = 342.0
-offset_right = 1151.0
-offset_bottom = 491.0
-rotation = -0.0181944
-theme_override_colors/font_color = Color(0.520269, 1.49807e-06, 3.36915e-07, 1)
-theme_override_colors/font_outline_color = Color(1, 0, 0, 1)
-theme_override_constants/outline_size = 24
-theme_override_font_sizes/font_size = 100
-text = "1:37"
-
-[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer"]
-unique_name_in_owner = true
-visible = false
-offset_left = -2.0
-offset_top = 613.0
-offset_right = 1154.0
-offset_bottom = 648.0
-theme_override_styles/fill = SubResource("StyleBoxTexture_jt3je")
-max_value = 306.0
-value = 17.05
-show_percentage = false
-
-[node name="SkipButton" type="Button" parent="CanvasLayer"]
-unique_name_in_owner = true
-visible = false
-offset_top = 630.0
-offset_right = 43.0
-offset_bottom = 652.0
-theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_colors/font_color = Color(3.85046e-07, 0.958206, 0.86647, 1)
-theme_override_font_sizes/font_size = 10
-text = "skip ad"
+script = ExtResource("1_8t158")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_6l5gm")
@@ -74,4 +19,35 @@ position = Vector2(622, 337)
 scale = Vector2(1.66756, 1.68274)
 texture = ExtResource("3_6l5gm")
 
-[connection signal="pressed" from="CanvasLayer/SkipButton" to="." method="_on_skip_button_pressed"]
+[node name="adsbadge" type="Label" parent="."]
+visible = false
+offset_left = 152.0
+offset_top = 465.0
+offset_right = 217.0
+offset_bottom = 490.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 1, 1)
+text = "No ads"
+
+[node name="Sprite2D" type="Sprite2D" parent="adsbadge"]
+position = Vector2(28, 79)
+scale = Vector2(0.121739, 0.133292)
+texture = ExtResource("4_peu3d")
+
+[node name="fallbadge" type="Label" parent="."]
+visible = false
+offset_left = 303.0
+offset_top = 466.0
+offset_right = 469.0
+offset_bottom = 510.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 1, 1)
+text = "Good at 
+falling award"
+
+[node name="Fallicon" type="Sprite2D" parent="fallbadge"]
+position = Vector2(52, 109)
+scale = Vector2(0.232067, 0.242616)
+texture = ExtResource("5_peu3d")

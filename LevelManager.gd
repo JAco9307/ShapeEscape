@@ -7,6 +7,7 @@ var levels = [
 	"res://Levels/emilylevel1.tscn",
 	"res://Levels/Level3.tscn",
 	"res://Levels/Level4.tscn",
+	"res://Levels/Level10.tscn",
 ]
 
 func win():

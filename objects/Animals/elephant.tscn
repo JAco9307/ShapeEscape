@@ -1,22 +1,16 @@
 [gd_scene load_steps=4 format=3 uid="uid://cigf60064etxa"]
 
 [ext_resource type="PackedScene" uid="uid://du8lkrvnc16gl" path="res://objects/Rotatable.tscn" id="1_yhut3"]
-[ext_resource type="PackedScene" uid="uid://dopx6n781b7rd" path="res://models/animated/goodelephant.glb" id="3_apgdm"]
+[ext_resource type="PackedScene" uid="uid://dawwkj6hw30kq" path="res://models/animated/elephant-goodgood.glb" id="2_m4stm"]
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_b6mtu"]
-points = PackedVector3Array(-4.85765, -1.33961, -0.188501, -2.62958, 1.77866, 0.59085, 1.06001, -3.68972, 0.998318, -0.848806, -0.449486, -2.19379, 2.15939, 1.55585, -0.300148, -0.848806, 1.44416, 2.26164, 0.868544, -3.70188, -1, -1.0721, -4.01339, 1.03613, -1.0721, -4.01339, -1.07994, -1.0721, 1.33303, -2.19379, -0.960454, -0.449486, 2.26164, -4.96929, -1.00624, 0.256344, 1.49278, -2.62029, 1, 1.38542, -2.56461, -1, 2.15939, 1.22134, 0.256344, -4.63505, -0.337795, -0.300148, 1.38542, 0.226733, -1, 2.04775, 1.66697, -0.300148, -1.0721, -0.449486, -2.19379, 1.42288, 0.349312, 0.976697, -2.68176, 1.64978, -0.498221, -4.96929, -1.22849, 0.256344, -2.96383, 1.55585, 0.59085, -0.848806, 1.33303, -2.19379, 0.956015, -3.80132, 1, -4.96929, -1.22849, -0.188501, 1.94927, 1.58756, 0.25, -0.848806, -0.449486, 2.26164, 2.15939, 1.22134, -0.300148, 1.07581, -3.39191, -1, -2.79306, 1.55195, -0.5, -4.746, -0.56061, -0.300148)
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_feqhy"]
+points = PackedVector3Array(-7.5899, -0.925853, -0.234982, -4.38438, 3.56042, 0.885644, 0.923538, -4.30764, 1.47213, -1.82238, 0.353957, -3.12063, 2.50553, 3.23985, -0.395609, -1.82238, 3.07916, 3.28941, 0.650562, -4.32588, -1.4031, -2.14363, -4.77263, 1.52627, -2.14363, -4.77263, -1.51749, -2.14363, 2.91847, -3.12063, -1.982, 0.353957, 3.28941, -7.75052, -0.447046, 0.40439, 1.54747, -2.76839, 1.4743, 1.39448, -2.68906, -1.4031, 2.50553, 2.7586, 0.40439, -7.26965, 0.514647, -0.395609, 1.39448, 1.32763, -1.4031, 2.3449, 3.39973, -0.395609, -2.14363, 0.353957, -3.12063, 1.44663, 1.50389, 1.44069, -4.45928, 3.3767, -0.680934, -7.75052, -0.765979, 0.40439, -4.86526, 3.23985, 0.885644, -1.82238, 2.91847, -3.12063, 0.775218, -4.46755, 1.4743, -7.75052, -0.765979, -0.234982, 2.20379, 3.28594, 0.3953, -1.82238, 0.353957, 3.28941, 2.50553, 2.7586, -0.395609, 0.948876, -3.87975, -1.4031, -4.62079, 3.23657, -0.683627, -7.42827, 0.194082, -0.395609)
 
 [node name="Elephant" instance=ExtResource("1_yhut3")]
 
-[node name="goodelephant" parent="." index="0" instance=ExtResource("3_apgdm")]
-
-[node name="Cube" parent="goodelephant" index="0"]
-blend_shapes/ears = 1.0
-blend_shapes/trunk2 = 1.0
-blend_shapes/tail = 1.0
-"blend_shapes/ears (up down)" = 1.0
+[node name="elephant-goodgood" parent="." index="0" instance=ExtResource("2_m4stm")]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1"]
-shape = SubResource("ConvexPolygonShape3D_b6mtu")
+shape = SubResource("ConvexPolygonShape3D_feqhy")
 
-[editable path="goodelephant"]
+[editable path="elephant-goodgood"]

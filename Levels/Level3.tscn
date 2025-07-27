@@ -1,8 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://850sheetuvr"]
+[gd_scene load_steps=4 format=3 uid="uid://h2etp0ih0cjy"]
 
 [ext_resource type="PackedScene" uid="uid://b4hf1pkfx6qnn" path="res://Levels/Level_base.tscn" id="1_q5lgr"]
 [ext_resource type="PackedScene" uid="uid://deb2c3mbmcyp6" path="res://Goals/Jail.tscn" id="2_hy5j1"]
-[ext_resource type="AudioStream" uid="uid://cufvmagrn6q8" path="res://music/Alone.mp3" id="3_jon3f"]
+[ext_resource type="AudioStream" uid="uid://broi0chncv7tp" path="res://music/Alone.mp3" id="3_jon3f"]
 
 [node name="Level3" node_paths=PackedStringArray("targets") instance=ExtResource("1_q5lgr")]
 targets = [NodePath("Jail")]

@@ -10,6 +10,9 @@ var bonusSprites = [
 var adTime = 103
 var progressValue = 0
 
+func _ready() -> void:
+	GlobalVariables.achivements["ads"] = true
+
 func _process(delta: float) -> void:
 	if adTime <= 50:
 		%SkipButton.visible = true

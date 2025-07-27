@@ -24,6 +24,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if playerObject.global_position.y <= -100:
 		playerObject.global_position = Vector3(0, 5, 0)
+		GlobalVariables.achivements["fall"] += 1
 	
 	var rotationDif = playerObject.angular_velocity 
 	

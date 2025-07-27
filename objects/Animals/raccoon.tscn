@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://ch6blfiqhtt67"]
 
 [ext_resource type="PackedScene" uid="uid://du8lkrvnc16gl" path="res://objects/Rotatable.tscn" id="1_gc7wg"]
-[ext_resource type="PackedScene" uid="uid://be7863tkdeqe2" path="res://models/Animals/untextured/raccoon.glb" id="2_8psji"]
+[ext_resource type="PackedScene" uid="uid://b3uosx4cxlag4" path="res://models/animated/raccoon.glb" id="2_8psji"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ko0kv"]
 points = PackedVector3Array(-0.459304, 1.89517, 0.993917, 0.0405142, 1.88634, 0.993917, 0.0387483, 1.78145, -1.06475, -0.46107, 1.78973, -1.06475, -1.17459, 0.910333, -1.06475, -1.17459, 0.910333, 0.993917, -2.30787, -3.44803, 1.42434, 0.523849, 0.881627, 0.993917, 3.6929, -2.21753, 0.249951, 3.6929, -2.21753, -0.250211, -1.7845, -3.32051, 1.3811, 0.523849, 0.881627, -1.06475, -2.20661, -3.44361, -1.42544, -2.25547, -1.5468, -1.02542, -1.73387, -0.106526, -0.500153, -1.73387, -0.106526, 0.499892, -2.05354, -1.44522, 0.952911, -2.22427, -1.76154, 0.685117, -2.23546, -1.88796, 0.685117, -2.29492, -1.90452, -0.671151, -2.32141, -3.73399, 1.42434, -1.79333, -3.7257, 1.3811, 0.489115, -1.17031, 0.999775, 2.22464, -3.22832, 0.249951, 0.480873, -1.67046, 0.999775, 0.4638, -2.6702, 0.999775, 0.454969, -3.1698, 0.999775, 0.201822, -3.69866, 0.999775, 0.497945, -0.657463, -1.06475, 2.22464, -3.22832, -0.250211, 0.201822, -3.69866, -1.00004, 0.454969, -3.1698, -1.00004, -1.78509, -3.25095, -1.3836, -1.79274, -3.70086, -1.3836, -2.21426, -3.69755, -1.42544, -2.25547, -1.5468, -0.883154, -2.32141, -3.73399, 1.0737, -0.810178, -3.74447, 0.499892, 0.457324, -3.70307, 0.796976, 0.457324, -3.70307, -0.797237, -0.810178, -3.74447, -0.500153)
@@ -10,17 +10,17 @@ points = PackedVector3Array(-0.459304, 1.89517, 0.993917, 0.0405142, 1.88634, 0.
 yTorqueMult = 800.0
 zTorqueMult = 800.0
 
-[node name="CollisionShape3D" parent="." index="0"]
-disabled = true
-
-[node name="MeshInstance3D" parent="." index="1"]
-visible = false
-
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="." index="2"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.28543, 0)
 shape = SubResource("ConvexPolygonShape3D_ko0kv")
 
-[node name="raccoon" parent="." index="3" instance=ExtResource("2_8psji")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.51697, 0)
+[node name="raccoon2" parent="." index="1" instance=ExtResource("2_8psji")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.91671)
 
-[editable path="raccoon"]
+[node name="imagetostl_mesh0" parent="raccoon2" index="0"]
+blend_shapes/ears = 1.0
+"blend_shapes/tail 1" = 1.0
+"blend_shapes/tail 2" = 1.0
+"blend_shapes/tail up down" = 1.0
+
+[editable path="raccoon2"]

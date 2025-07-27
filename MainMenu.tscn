@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://bslkpgpn4pmpb"]
 
 [ext_resource type="Script" uid="uid://d5p1rr7l5wof" path="res://main_menu.gd" id="1_eiy7p"]
-[ext_resource type="Texture2D" uid="uid://b4h5jxh2vi7qo" path="res://Textures/MainMenuTex.png" id="2_h7a2f"]
+[ext_resource type="Texture2D" uid="uid://40cfrtn6ambj" path="res://Textures/MainMenuTex.png" id="2_h7a2f"]
 [ext_resource type="Script" uid="uid://dvmo37gpu1j5r" path="res://UI/SizeBounce.gd" id="3_h7a2f"]
 [ext_resource type="PackedScene" uid="uid://bv1m5q2luya3a" path="res://Credits.tscn" id="4_qoqlk"]
-[ext_resource type="AudioStream" uid="uid://c0okvpcr3vfwn" path="res://music/ingame1.mp3" id="5_iwfq2"]
+[ext_resource type="AudioStream" uid="uid://dq77viymxxvca" path="res://music/ingame1.mp3" id="5_iwfq2"]
 
 [node name="MainMenu" type="Node2D"]
 script = ExtResource("1_eiy7p")
