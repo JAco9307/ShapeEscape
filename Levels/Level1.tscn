@@ -75,4 +75,7 @@ initialMass = 60.0
 yTorqueMult = 2000.0
 zTorqueMult = 2000.0
 
+[node name="AudioStreamPlayer" parent="." index="14"]
+unique_name_in_owner = true
+
 [editable path="Floor"]
