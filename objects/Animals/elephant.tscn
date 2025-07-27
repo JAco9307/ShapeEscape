@@ -1,25 +1,22 @@
 [gd_scene load_steps=4 format=3 uid="uid://cigf60064etxa"]
 
 [ext_resource type="PackedScene" uid="uid://du8lkrvnc16gl" path="res://objects/Rotatable.tscn" id="1_yhut3"]
-[ext_resource type="PackedScene" uid="uid://bmh48hrxc6mlp" path="res://models/animated/elephant_wAnimation.glb" id="2_b6mtu"]
+[ext_resource type="PackedScene" uid="uid://dopx6n781b7rd" path="res://models/animated/goodelephant.glb" id="3_apgdm"]
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_apgdm"]
-points = PackedVector3Array(-6.38317, 4.5289, 0.000877559, -3.04106, 9.20549, 1.16903, 2.493, 1.0022, 1.78102, -0.36988, 5.86325, -3.00649, 4.14244, 8.87126, -0.166562, -0.36988, 8.70373, 3.67538, 2.20807, 0.982452, -1.2164, -0.704824, 0.517361, 1.83748, -0.704824, 0.517361, -1.33536, -0.704824, 8.53704, -3.00649, -0.537352, 5.86325, 3.67538, -6.55064, 5.02811, 0.668018, 3.14446, 2.60654, 1.7836, 2.9848, 2.68933, -1.2164, 4.14244, 8.36865, 0.668018, -6.04927, 6.03078, -0.166562, 2.9848, 6.87792, -1.2164, 3.97497, 9.03795, -0.166562, -0.704824, 5.86325, -3.00649, 3.03874, 7.06149, 1.74837, -3.12064, 9.01502, -0.463539, -6.55064, 4.69474, 0.668018, -3.376, 9.03795, 1.16903, -0.36988, 8.53704, -3.00649, 2.33813, 0.834603, 1.7836, -6.55064, 4.69474, 0.000877559, 3.82875, 8.92003, 0.6586, -0.36988, 5.86325, 3.67538, 4.14244, 8.36865, -0.166562, 2.52012, 1.44768, -1.2164, -3.28762, 8.86799, -0.466169, -6.2157, 5.69571, -0.166562)
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_b6mtu"]
+points = PackedVector3Array(-4.85765, -1.33961, -0.188501, -2.62958, 1.77866, 0.59085, 1.06001, -3.68972, 0.998318, -0.848806, -0.449486, -2.19379, 2.15939, 1.55585, -0.300148, -0.848806, 1.44416, 2.26164, 0.868544, -3.70188, -1, -1.0721, -4.01339, 1.03613, -1.0721, -4.01339, -1.07994, -1.0721, 1.33303, -2.19379, -0.960454, -0.449486, 2.26164, -4.96929, -1.00624, 0.256344, 1.49278, -2.62029, 1, 1.38542, -2.56461, -1, 2.15939, 1.22134, 0.256344, -4.63505, -0.337795, -0.300148, 1.38542, 0.226733, -1, 2.04775, 1.66697, -0.300148, -1.0721, -0.449486, -2.19379, 1.42288, 0.349312, 0.976697, -2.68176, 1.64978, -0.498221, -4.96929, -1.22849, 0.256344, -2.96383, 1.55585, 0.59085, -0.848806, 1.33303, -2.19379, 0.956015, -3.80132, 1, -4.96929, -1.22849, -0.188501, 1.94927, 1.58756, 0.25, -0.848806, -0.449486, 2.26164, 2.15939, 1.22134, -0.300148, 1.07581, -3.39191, -1, -2.79306, 1.55195, -0.5, -4.746, -0.56061, -0.300148)
 
 [node name="Elephant" instance=ExtResource("1_yhut3")]
 
-[node name="elephant_wAnimation" parent="." index="2" instance=ExtResource("2_b6mtu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.12476, 0)
+[node name="goodelephant" parent="." index="0" instance=ExtResource("3_apgdm")]
 
-[node name="elephant_001" parent="elephant_wAnimation" index="0"]
-blend_shapes/frame_0054 = 1.0
+[node name="Cube" parent="goodelephant" index="0"]
+blend_shapes/ears = 1.0
+blend_shapes/trunk2 = 1.0
+blend_shapes/tail = 1.0
+"blend_shapes/ears (up down)" = 1.0
 
-[node name="EYES_001" parent="elephant_wAnimation" index="1"]
-"blend_shapes/right eye pos" = 0.254098
-"blend_shapes/eye move 2" = 0.9
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1"]
+shape = SubResource("ConvexPolygonShape3D_b6mtu")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="." index="3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.12476, 0)
-shape = SubResource("ConvexPolygonShape3D_apgdm")
-
-[editable path="elephant_wAnimation"]
+[editable path="goodelephant"]

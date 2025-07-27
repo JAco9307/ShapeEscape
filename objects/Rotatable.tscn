@@ -9,5 +9,7 @@ bounce = 0.35
 [node name="Rotatable" type="RigidBody3D"]
 physics_material_override = SubResource("PhysicsMaterial_vn420")
 script = ExtResource("1_vn420")
+yTorqueMult = 100.0
+zTorqueMult = 100.0
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]

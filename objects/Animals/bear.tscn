@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://0v6baqd5r51g"]
+
+[ext_resource type="PackedScene" uid="uid://du8lkrvnc16gl" path="res://objects/Rotatable.tscn" id="1_yki4u"]
+[ext_resource type="PackedScene" uid="uid://kx87yeok015a" path="res://models/animated/bear.glb" id="2_c2m31"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yki4u"]
+size = Vector3(4.18594, 4.64215, 2.98462)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_c2m31"]
+size = Vector3(2.31647, 2.31226, 1.74805)
+
+[node name="Bear" instance=ExtResource("1_yki4u")]
+
+[node name="bear" parent="." index="0" instance=ExtResource("2_c2m31")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.617481, -1.87805, -0.366952)
+
+[node name="Cube" parent="bear" index="0"]
+"blend_shapes/arms (side to side)" = 1.0
+blend_shapes/tail = 1.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.444229, 0.481781, -0.391235)
+shape = SubResource("BoxShape3D_yki4u")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0518494, 3.91901, -0.374023)
+shape = SubResource("BoxShape3D_c2m31")
+
+[editable path="bear"]
