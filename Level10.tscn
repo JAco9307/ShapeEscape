@@ -1,7 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://bx0loeluigdub"]
-
-[ext_resource type="PackedScene" uid="uid://b4hf1pkfx6qnn" path="res://Levels/Level_base.tscn" id="1_kjv8g"]
-
-[node name="Main" instance=ExtResource("1_kjv8g")]
-
-[editable path="Floor"]
