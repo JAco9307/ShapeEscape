@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://b7ix6bmw2tblr" path="res://Levels/Level.gd" id="1_y4tnw"]
 [ext_resource type="PackedScene" uid="uid://bke7mcf2cwfqi" path="res://Camera/camera_3d.tscn" id="2_7471u"]
 [ext_resource type="PackedScene" uid="uid://c2qnrd7mneksy" path="res://UI/MainUI.tscn" id="3_w6hyi"]
-[ext_resource type="AudioStream" uid="uid://dq77viymxxvca" path="res://music/ingame1.mp3" id="6_kvav3"]
+[ext_resource type="AudioStream" uid="uid://c0okvpcr3vfwn" path="res://music/ingame1.mp3" id="6_kvav3"]
 [ext_resource type="PackedScene" uid="uid://g5m48diqvglc" path="res://Surfaces/Floor.tscn" id="17_yt31g"]
 
 [node name="Main" type="Node3D"]
@@ -40,7 +40,7 @@ text = " GAGNER"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_kvav3")
-volume_db = -30.142
+volume_db = -20.163
 autoplay = true
 parameters/looping = true
 

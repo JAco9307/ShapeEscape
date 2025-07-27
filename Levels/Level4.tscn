@@ -1,10 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://850sheetuvr"]
+[gd_scene load_steps=4 format=3 uid="uid://cswfnsqtv0rrb"]
 
-[ext_resource type="PackedScene" uid="uid://b4hf1pkfx6qnn" path="res://Levels/Level_base.tscn" id="1_q5lgr"]
-[ext_resource type="PackedScene" uid="uid://deb2c3mbmcyp6" path="res://Goals/Jail.tscn" id="2_hy5j1"]
-[ext_resource type="AudioStream" uid="uid://cufvmagrn6q8" path="res://music/Alone.mp3" id="3_jon3f"]
+[ext_resource type="PackedScene" uid="uid://b4hf1pkfx6qnn" path="res://Levels/Level_base.tscn" id="1_rkafn"]
+[ext_resource type="PackedScene" uid="uid://deb2c3mbmcyp6" path="res://Goals/Jail.tscn" id="2_2qv2g"]
+[ext_resource type="AudioStream" uid="uid://cufvmagrn6q8" path="res://music/Alone.mp3" id="3_0sogr"]
 
-[node name="Level3" node_paths=PackedStringArray("targets") instance=ExtResource("1_q5lgr")]
+[node name="Level3" node_paths=PackedStringArray("targets") instance=ExtResource("1_rkafn")]
 targets = [NodePath("Jail")]
 
 [node name="Player" parent="." index="0"]
@@ -28,12 +28,12 @@ scaleZ = 200
 [node name="MeshInstance3D" parent="Floor/StaticBody3D" index="1"]
 transform = Transform3D(-0.0119377, 0, -0.999929, 0, 1, 0, 0.999929, 0, -0.0119377, 0, 0, 0)
 
-[node name="Jail" parent="." index="5" instance=ExtResource("2_hy5j1")]
+[node name="Jail" parent="." index="5" instance=ExtResource("2_2qv2g")]
 transform = Transform3D(-0.000820323, 0, -1, 0, 1, 0, 1, 0, -0.000820323, -36.3725, -0.425413, -1.38989)
 health = 50
 
 [node name="AudioStreamPlayer" parent="." index="6"]
-stream = ExtResource("3_jon3f")
+stream = ExtResource("3_0sogr")
 volume_db = -1.755
 
 [editable path="Floor"]

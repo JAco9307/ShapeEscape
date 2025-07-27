@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://c10fn1dsarrib"]
 
 [ext_resource type="Script" uid="uid://db51ukbid0xex" path="res://Levels/AdLevel/AdLevel.gd" id="1_cgb8m"]
-[ext_resource type="Texture2D" uid="uid://cnejiwyb15pbj" path="res://Levels/AdLevel/cweam.png" id="1_ye2yu"]
-[ext_resource type="AudioStream" uid="uid://t6fad23d2q10" path="res://music/Song 1.mp3" id="3_nbcfd"]
+[ext_resource type="Texture2D" uid="uid://ugnhc0c0hglq" path="res://Levels/AdLevel/cweam.png" id="1_ye2yu"]
+[ext_resource type="AudioStream" uid="uid://cc8s0unk6npuy" path="res://music/Song 1.mp3" id="3_nbcfd"]
 
 [sub_resource type="Gradient" id="Gradient_cgb8m"]
 colors = PackedColorArray(0, 0, 0.85098, 1, 0.796078, 0.0980392, 0.121569, 1)
