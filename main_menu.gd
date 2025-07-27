@@ -1,5 +1,9 @@
 extends Node2D
 
+func _ready() -> void:
+	var scaledval = remap(750, 0,1000,0.2,0.0002)
+	print(scaledval)
+	GlobalVariables.mouse_sensitivity = scaledval
 
 func _on_start_button_pressed() -> void:
 	print("start")
