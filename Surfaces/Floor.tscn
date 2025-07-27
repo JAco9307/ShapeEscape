@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://g5m48diqvglc"]
 
-[ext_resource type="Texture2D" uid="uid://dh5bbkqjb741n" path="res://Textures/grass-texture2.png" id="1_jm8jd"]
+[ext_resource type="Texture2D" uid="uid://d07xoes7vokvd" path="res://Textures/grass-texture2.png" id="1_jm8jd"]
 [ext_resource type="Script" uid="uid://cofn84w0xhtrd" path="res://Surfaces/floor.gd" id="1_l1jxy"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_y6dek"]

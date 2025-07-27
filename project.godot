@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="ShapeEscape"
-run/main_scene="uid://bt5a8babn8gyn"
+run/main_scene="uid://bslkpgpn4pmpb"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
