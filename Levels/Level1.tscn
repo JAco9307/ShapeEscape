@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://o2leg6cbupmx"]
+
+[ext_resource type="PackedScene" uid="uid://bgn7g0gfx5hom" path="res://Levels/Level.tscn" id="1_w77jt"]
+
+[node name="Level1" instance=ExtResource("1_w77jt")]
+
+[node name="Player" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.8211, 3.35716, -0.266262)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 25.884, 0)

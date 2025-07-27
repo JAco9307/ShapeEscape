@@ -91,4 +91,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -73.921, 0, 0)
 [connection signal="hpupdate" from="Player" to="MainUi" method="_on_player_hpupdate"]
 
 [editable path="Floor"]
-[editable path="Floor/stage"]

@@ -1,7 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://u7bdboxc0d11"]
+[gd_scene load_steps=9 format=3 uid="uid://dtemopxvjwvjn"]
 
 [ext_resource type="PackedScene" uid="uid://du8lkrvnc16gl" path="res://objects/Rotatable.tscn" id="1_qqjn8"]
-[ext_resource type="PackedScene" uid="uid://ch03qibt15lla" path="res://models/Player/super.glb" id="2_u25vh"]
+[ext_resource type="PackedScene" uid="uid://e6d4djgr7u0y" path="res://models/Player/super.glb" id="2_u25vh"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_v5s0y"]
 size = Vector3(1, 0.557373, 3.00427)

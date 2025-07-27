@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://g5m48diqvglc"]
 
-[ext_resource type="Texture2D" uid="uid://dh5bbkqjb741n" path="res://Textures/grass-texture2.png" id="1_jm8jd"]
+[ext_resource type="Texture2D" uid="uid://cgv6ju4gbh6ng" path="res://Textures/grass-texture2.png" id="1_jm8jd"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_y6dek"]
 
