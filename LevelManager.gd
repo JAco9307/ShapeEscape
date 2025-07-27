@@ -11,4 +11,7 @@ var levels = [
 
 func win():
 	levelIndex += 1
-	get_tree().change_scene_to_file(levels[levelIndex])
+	if levelIndex >= levels.size():
+		get_tree().change_scene_to_file("res://Levels/WinLevel/WinLevel.tscn")
+	else:
+		get_tree().change_scene_to_file(levels[levelIndex])

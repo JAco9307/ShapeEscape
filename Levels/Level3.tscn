@@ -33,7 +33,11 @@ transform = Transform3D(-0.000820323, 0, -1, 0, 1, 0, 1, 0, -0.000820323, -36.37
 health = 50
 
 [node name="AudioStreamPlayer" parent="." index="6"]
+unique_name_in_owner = true
 stream = ExtResource("3_jon3f")
 volume_db = -1.755
+
+[node name="VictorySound" parent="." index="7"]
+volume_db = 2.948
 
 [editable path="Floor"]

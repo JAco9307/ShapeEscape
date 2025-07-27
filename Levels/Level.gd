@@ -22,6 +22,9 @@ func _process(_delta: float) -> void:
 			LevelManager.win()
 
 func win():
+	if !won:
+		%VictorySound.play()
+		%AudioStreamPlayer.stop()
 	%WinLabel.visible = true
 	won = true
 
