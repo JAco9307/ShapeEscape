@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://coo2x1j1m45fd"]
+[gd_scene load_steps=10 format=3 uid="uid://coo2x1j1m45fd"]
 
 [ext_resource type="PackedScene" uid="uid://b4hf1pkfx6qnn" path="res://Levels/Level_base.tscn" id="1_w0h0a"]
 [ext_resource type="PackedScene" uid="uid://deb2c3mbmcyp6" path="res://Goals/Jail.tscn" id="2_m3ha0"]
@@ -6,7 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://bhsex6u8gylho" path="res://objects/Animals/Worms/trans_worm.tscn" id="4_v115i"]
 [ext_resource type="PackedScene" uid="uid://dbl2jh0n8y401" path="res://objects/Animals/Worms/bi_worm.tscn" id="5_w0h0a"]
 [ext_resource type="PackedScene" uid="uid://6anqf4f0cxv" path="res://objects/Animals/Worms/lesbian_worm.tscn" id="6_m3ha0"]
+[ext_resource type="PackedScene" uid="uid://bfxd4jljbqxdq" path="res://objects/Animals/Worms/aro_worm.tscn" id="6_vd23k"]
 [ext_resource type="PackedScene" uid="uid://fxc750rytn87" path="res://objects/Animals/Worms/ace_worm.tscn" id="7_vd23k"]
+[ext_resource type="PackedScene" uid="uid://cvya4tiv8mqxm" path="res://objects/Animals/Worms/gay_worm.tscn" id="9_x7rwe"]
 
 [node name="Level2" node_paths=PackedStringArray("targets") instance=ExtResource("1_w0h0a")]
 targets = [NodePath("Jail"), NodePath("Jail3"), NodePath("Jail4")]
@@ -50,12 +52,28 @@ initialMass = 100.0
 yTorqueMult = 200000.0
 
 [node name="BiWorm" parent="." index="10" instance=ExtResource("5_w0h0a")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.3519, 16.6066, 0)
+transform = Transform3D(-0.100692, 0, -0.994918, 0, 1, 0, 0.994918, 0, -0.100692, -48.6371, 0.908964, 39.7974)
+initialMass = 100.0
+yTorqueMult = 200000.0
 
-[node name="LesbianWorm" parent="." index="11" instance=ExtResource("6_m3ha0")]
+[node name="AroWorm" parent="." index="11" instance=ExtResource("6_vd23k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -45.0623, 0, 0)
+initialMass = 100.0
+yTorqueMult = 200000.0
+
+[node name="LesbianWorm" parent="." index="12" instance=ExtResource("6_m3ha0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.8744, 7.51508, 0)
+initialMass = 100.0
+yTorqueMult = 200000.0
 
-[node name="AceWorm" parent="." index="12" instance=ExtResource("7_vd23k")]
+[node name="AceWorm" parent="." index="13" instance=ExtResource("7_vd23k")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.4811, 29.2692, 2.43869)
+initialMass = 100.0
+yTorqueMult = 200000.0
+
+[node name="GayWorm" parent="." index="14" instance=ExtResource("9_x7rwe")]
+transform = Transform3D(0.147084, 0, -0.989124, 0, 1, 0, 0.989124, 0, 0.147084, -37.9721, 10.1582, -34.3038)
+initialMass = 100.0
+yTorqueMult = 200000.0
 
 [editable path="Floor"]
